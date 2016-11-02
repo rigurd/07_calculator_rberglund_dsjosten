@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import java.awt.Color;
 
 /**
  * <h1>GUI for the calculator</h1>
@@ -85,7 +86,6 @@ public class Gui extends JFrame implements ActionListener {
 	// Instanciating the labels
 	JLabel label_equals = new JLabel("=");
 	JLabel label_choosenOperation = new JLabel("");
-	private final JTextField answerField = new JTextField();
 
 	/**
 	 * Create the application.
@@ -100,12 +100,10 @@ public class Gui extends JFrame implements ActionListener {
 	 * Initialize the contents of the frame.
 	 */
 	private void createGUI() {
-		answerField.setBounds(131, 381, 289, 31);
-		answerField.setColumns(10);
 		frmCalculator = new JFrame();
 
-		frmCalculator.setTitle("Calculator");
-		frmCalculator.setBounds(100, 100, 450, 526);
+		frmCalculator.setTitle("Calculator By Rickard and Daniel S");
+		frmCalculator.setBounds(100, 100, 470, 526);
 		frmCalculator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmCalculator.getContentPane().setLayout(null);
 
@@ -116,61 +114,61 @@ public class Gui extends JFrame implements ActionListener {
 	 */
 	public void addComponentsToFrame() {
 
-		btn7.setBounds(86, 112, 58, 49);
+		btn7.setBounds(121, 112, 58, 49);
 		frmCalculator.getContentPane().add(btn7);
 
-		btn8.setBounds(157, 112, 58, 49);
+		btn8.setBounds(191, 112, 58, 49);
 		frmCalculator.getContentPane().add(btn8);
 
-		btn9.setBounds(227, 112, 58, 49);
+		btn9.setBounds(261, 112, 58, 49);
 		frmCalculator.getContentPane().add(btn9);
 
-		btn4.setBounds(86, 174, 58, 49);
+		btn4.setBounds(121, 174, 58, 49);
 		frmCalculator.getContentPane().add(btn4);
 
-		btn5.setBounds(157, 174, 58, 49);
+		btn5.setBounds(191, 174, 58, 49);
 		frmCalculator.getContentPane().add(btn5);
 
-		btn6.setBounds(227, 174, 58, 49);
+		btn6.setBounds(261, 174, 58, 49);
 		frmCalculator.getContentPane().add(btn6);
 
-		btn1.setBounds(86, 230, 58, 49);
+		btn1.setBounds(121, 230, 58, 49);
 		frmCalculator.getContentPane().add(btn1);
 
-		btn2.setBounds(157, 230, 58, 49);
+		btn2.setBounds(191, 230, 58, 49);
 		frmCalculator.getContentPane().add(btn2);
 
-		btn3.setBounds(227, 230, 58, 49);
+		btn3.setBounds(261, 230, 58, 49);
 		frmCalculator.getContentPane().add(btn3);
 
-		btn0.setBounds(157, 292, 58, 49);
+		btn0.setBounds(191, 292, 58, 49);
 		frmCalculator.getContentPane().add(btn0);
 
-		btn_squirt.setBounds(12, 112, 62, 49);
+		btn_squirt.setBounds(12, 112, 79, 49);
 		frmCalculator.getContentPane().add(btn_squirt);
 
-		btn_pow.setBounds(12, 174, 62, 49);
+		btn_pow.setBounds(12, 174, 79, 49);
 		frmCalculator.getContentPane().add(btn_pow);
 
-		btn_degrees.setBounds(12, 230, 62, 49);
+		btn_degrees.setBounds(12, 230, 79, 49);
 		frmCalculator.getContentPane().add(btn_degrees);
 
-		btn_radian.setBounds(12, 292, 71, 49);
+		btn_radian.setBounds(12, 292, 79, 49);
 		frmCalculator.getContentPane().add(btn_radian);
 
-		btn_clear.setBounds(227, 292, 58, 49);
+		btn_clear.setBounds(121, 292, 58, 49);
 		frmCalculator.getContentPane().add(btn_clear);
 
-		btn_addition.setBounds(313, 174, 58, 49);
+		btn_addition.setBounds(349, 174, 58, 49);
 		frmCalculator.getContentPane().add(btn_addition);
 
-		btn_subtraction.setBounds(313, 230, 58, 49);
+		btn_subtraction.setBounds(349, 230, 58, 49);
 		frmCalculator.getContentPane().add(btn_subtraction);
 
-		btn_division.setBounds(313, 292, 58, 49);
+		btn_division.setBounds(349, 292, 58, 49);
 		frmCalculator.getContentPane().add(btn_division);
 
-		btn_multiply.setBounds(313, 112, 58, 49);
+		btn_multiply.setBounds(349, 112, 58, 49);
 		frmCalculator.getContentPane().add(btn_multiply);
 
 		btn_random.setBounds(12, 351, 79, 49);
@@ -179,14 +177,20 @@ public class Gui extends JFrame implements ActionListener {
 
 		btn_cos.setBounds(12, 406, 79, 49);
 		frmCalculator.getContentPane().add(btn_cos);
+		field_input1.setBackground(Color.WHITE);
+		field_input1.setEditable(false);
 
 		field_input1.setBounds(12, 27, 108, 40);
 		frmCalculator.getContentPane().add(field_input1);
 		field_input1.setColumns(10);
+		field_input2.setBackground(Color.WHITE);
+		field_input2.setEditable(false);
 
 		field_input2.setColumns(10);
 		field_input2.setBounds(157, 27, 108, 40);
 		frmCalculator.getContentPane().add(field_input2);
+		field_result.setBackground(Color.WHITE);
+		field_result.setEditable(false);
 
 		field_result.setColumns(10);
 		field_result.setBounds(312, 27, 108, 40);
@@ -199,10 +203,8 @@ public class Gui extends JFrame implements ActionListener {
 		label_choosenOperation.setBounds(131, 27, 33, 40);
 		frmCalculator.getContentPane().add(label_choosenOperation);
 
-		btn_equals.setBounds(86, 292, 58, 49);
+		btn_equals.setBounds(261, 292, 58, 49);
 		frmCalculator.getContentPane().add(btn_equals);
-
-		frmCalculator.getContentPane().add(answerField);
 	}
 
 	public void addActionListners() {
