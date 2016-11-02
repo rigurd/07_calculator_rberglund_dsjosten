@@ -1,5 +1,7 @@
 package classes;
 
-public class AdvancedOperations {
+import interfaces.CalculatorAdvancedOperationsInterface;
+
+public class AdvancedOperations implements CalculatorAdvancedOperationsInterface{
 
 }
