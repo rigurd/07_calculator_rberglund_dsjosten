@@ -1,6 +1,7 @@
 package classes;
 
 import java.awt.EventQueue;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -8,7 +9,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import java.awt.Font;
 
 /**
  * <h1>GUI for the calculator</h1>
@@ -18,6 +18,21 @@ import java.awt.Font;
  * @since 2016-11-02
  */
 public class Gui extends JFrame implements ActionListener {
+
+	AdvancedOperations ao = new AdvancedOperations();
+	
+	private JFrame frmCalculator;
+	private String value1 = null, value2 = null, sAnswer;
+	// String value1 = "";
+	// String value2 = "";
+
+	// double number1 = 0;
+	// double number2 = 0;
+
+	private double answer = 0.0;
+	boolean equalsClicked = false;
+	boolean opChosen = false;
+	char operation = ' ';
 
 	/**
 	 * Launch the application.
@@ -32,19 +47,11 @@ public class Gui extends JFrame implements ActionListener {
 			}
 		});
 	}
-	
-	
+
 	/**
 	 * Setting serialVersionUID
 	 */
 	private static final long serialVersionUID = 1L;
-
-	private JFrame frmCalculator;
-	String value1 = "";
-	String value2 = "";
-	
-	double number1 = 0;
-	double number2 = 0;
 
 	// Instanciating the buttons
 	private JButton btn7 = new JButton("7");
@@ -78,8 +85,7 @@ public class Gui extends JFrame implements ActionListener {
 	// Instanciating the labels
 	JLabel label_equals = new JLabel("=");
 	JLabel label_choosenOperation = new JLabel("");
-
-
+	private final JTextField answerField = new JTextField();
 
 	/**
 	 * Create the application.
@@ -94,6 +100,8 @@ public class Gui extends JFrame implements ActionListener {
 	 * Initialize the contents of the frame.
 	 */
 	private void createGUI() {
+		answerField.setBounds(131, 381, 289, 31);
+		answerField.setColumns(10);
 		frmCalculator = new JFrame();
 
 		frmCalculator.setTitle("Calculator");
@@ -164,7 +172,6 @@ public class Gui extends JFrame implements ActionListener {
 
 		btn_multiply.setBounds(313, 112, 58, 49);
 		frmCalculator.getContentPane().add(btn_multiply);
-		
 
 		btn_random.setBounds(12, 351, 79, 49);
 		frmCalculator.getContentPane().add(btn_random);
@@ -194,6 +201,8 @@ public class Gui extends JFrame implements ActionListener {
 
 		btn_equals.setBounds(86, 292, 58, 49);
 		frmCalculator.getContentPane().add(btn_equals);
+
+		frmCalculator.getContentPane().add(answerField);
 	}
 
 	public void addActionListners() {
@@ -225,70 +234,237 @@ public class Gui extends JFrame implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		// Button 7
-		
+
 		if (e.getSource() == btn7) {
-			field_input1.requestFocus(true);
-			if (field_input1.hasFocus()) {
-				value1 += 7;
-				field_input1.setText(value1);
-			
-			}else if (field_input2.hasFocus()){
-				value2 += 7;
-				field_input2.setText(value2);
+			if (opChosen == false) {
+				if (value1 == null) {
+					value1 = "7";
+				} else {
+					value1 += "7";
+				}
+			} else {
+				if (value2 == null) {
+					value2 = "7";
+				} else {
+					value2 += "7";
+				}
 			}
-			
-
-//			else if(!field_input1.isFocusOwner()){
-//				value2 += 7;
-//				field_input2.setText(value2);
-//			}
-
-
+			if (equalsClicked == false) {
+				if (opChosen == false) {
+					field_input1.setText(value1);
+				} else {
+					field_input2.setText(value2);
+				}
+			}
 		}
 		// Button 8
 		if (e.getSource() == btn8) {
-			value1 += 8;
-			field_input1.setText(value1);
+			if (opChosen == false) {
+				if (value1 == null) {
+					value1 = "8";
+				} else {
+					value1 += "8";
+				}
+			} else {
+				if (value2 == null) {
+					value2 = "8";
+				} else {
+					value2 += "8";
+				}
+			}
+			if (equalsClicked == false) {
+				if (opChosen == false) {
+					field_input1.setText(value1);
+				} else {
+					field_input2.setText(value2);
+				}
+			}
 		}
 		// Button 9
 		if (e.getSource() == btn9) {
-			value1 += 9;
-			field_input1.setText(value1);
+			if (opChosen == false) {
+				if (value1 == null) {
+					value1 = "9";
+				} else {
+					value1 += "9";
+				}
+			} else {
+				if (value2 == null) {
+					value2 = "9";
+				} else {
+					value2 += "9";
+				}
+			}
+			if (equalsClicked == false) {
+				if (opChosen == false) {
+					field_input1.setText(value1);
+				} else {
+					field_input2.setText(value2);
+				}
+			}
 		}
 		// Button 4
 		if (e.getSource() == btn4) {
-			value1 += 4;
-			field_input1.setText(value1);
+			if (opChosen == false) {
+				if (value1 == null) {
+					value1 = "4";
+				} else {
+					value1 += "4";
+				}
+			} else {
+				if (value2 == null) {
+					value2 = "4";
+				} else {
+					value2 += "4";
+				}
+			}
+			if (equalsClicked == false) {
+				if (opChosen == false) {
+					field_input1.setText(value1);
+				} else {
+					field_input2.setText(value2);
+				}
+			}
 		}
 		// Button 5
 		if (e.getSource() == btn5) {
-			value1 += 5;
-			field_input1.setText(value1);
+			if (opChosen == false) {
+				if (value1 == null) {
+					value1 = "5";
+				} else {
+					value1 += "5";
+				}
+			} else {
+				if (value2 == null) {
+					value2 = "5";
+				} else {
+					value2 += "5";
+				}
+			}
+			if (equalsClicked == false) {
+				if (opChosen == false) {
+					field_input1.setText(value1);
+				} else {
+					field_input2.setText(value2);
+				}
+			}
 		}
 		// Button 6
 		if (e.getSource() == btn6) {
-			value1 += 6;
-			field_input1.setText(value1);
+			if (opChosen == false) {
+				if (value1 == null) {
+					value1 = "6";
+				} else {
+					value1 += "6";
+				}
+			} else {
+				if (value2 == null) {
+					value2 = "6";
+				} else {
+					value2 += "6";
+				}
+			}
+			if (equalsClicked == false) {
+				if (opChosen == false) {
+					field_input1.setText(value1);
+				} else {
+					field_input2.setText(value2);
+				}
+			}
 		}
 		// Button 1
 		if (e.getSource() == btn1) {
-			value1 += 1;
-			field_input1.setText(value1);
+			if (opChosen == false) {
+				if (value1 == null) {
+					value1 = "1";
+				} else {
+					value1 += "1";
+				}
+			} else {
+				if (value2 == null) {
+					value2 = "1";
+				} else {
+					value2 += "1";
+				}
+			}
+			if (equalsClicked == false) {
+				if (opChosen == false) {
+					field_input1.setText(value1);
+				} else {
+					field_input2.setText(value2);
+				}
+			}
 		}
 		// Button 2
 		if (e.getSource() == btn2) {
-			value1 += 2;
-			field_input1.setText(value1);
+			if (opChosen == false) {
+				if (value1 == null) {
+					value1 = "2";
+				} else {
+					value1 += "2";
+				}
+			} else {
+				if (value2 == null) {
+					value2 = "2";
+				} else {
+					value2 += "2";
+				}
+			}
+			if (equalsClicked == false) {
+				if (opChosen == false) {
+					field_input1.setText(value1);
+				} else {
+					field_input2.setText(value2);
+				}
+			}
 		}
 		// Button 3
 		if (e.getSource() == btn3) {
-			value1 += 3;
-			field_input1.setText(value1);
+			if (opChosen == false) {
+				if (value1 == null) {
+					value1 = "3";
+				} else {
+					value1 += "3";
+				}
+			} else {
+				if (value2 == null) {
+					value2 = "3";
+				} else {
+					value2 += "3";
+				}
+			}
+			if (equalsClicked == false) {
+				if (opChosen == false) {
+					field_input1.setText(value1);
+				} else {
+					field_input2.setText(value2);
+				}
+			}
 		}
 		// Button 0
 		if (e.getSource() == btn0) {
-			value1 += 0;
-			field_input1.setText(value1);
+			if (opChosen == false) {
+				if (value1 == null) {
+					value1 = "0";
+				} else {
+					value1 += "0";
+				}
+			} else {
+				if (value2 == null) {
+					value2 = "0";
+				} else {
+					value2 += "0";
+				}
+			}
+
+			if (equalsClicked == false) {
+				if (opChosen == false) {
+					field_input1.setText(value1);
+				} else {
+					field_input2.setText(value2);
+				}
+			}
+
 		}
 		// Button sqr
 		if (e.getSource() == btn_squirt) {
@@ -308,65 +484,127 @@ public class Gui extends JFrame implements ActionListener {
 		}
 		// Button add
 		if (e.getSource() == btn_addition) {
-
-			label_choosenOperation.setText("+");
-			field_input2.requestFocus();
-			number1 = Double.parseDouble(field_input1.getText());
-			
-//			if (a.getSource() == bAdd){
-//				ctr=0;
-//				o = '+';
-//				value="";
-//				tField.setText("" +value);
+			if (value1==null) {
+				System.out.println("Pick a number first");
+			}else if (value1 != null && value2 == null){
+				opChosen = true;
+				label_choosenOperation.setText("+");
+				operation = '+';
+			}else if (value1 != null && value2 != null){
+				System.out.println("Two operations only");
 			}
+		}
 
-		
 		// Button subtract
 		if (e.getSource() == btn_subtraction) {
-			label_choosenOperation.setText("-");
-			field_input2.requestFocus();
-			number1 = Double.parseDouble(field_input1.getText());
-
+			if (value1==null) {
+				System.out.println("Pick a number first");
+			}else if (value1 != null && value2 == null){
+				opChosen = true;
+				label_choosenOperation.setText("-");
+				operation = '-';
+			}else if (value1 != null && value2 != null){
+				System.out.println("Two operations only");
+			}
 		}
 		// Button division
 		if (e.getSource() == btn_division) {
-			label_choosenOperation.setText("/");
-			field_input2.requestFocus();
-			number1 = Double.parseDouble(field_input1.getText());
-
+			if (value1==null) {
+				System.out.println("Pick a number first");
+			}else if (value1 != null && value2 == null){
+				opChosen = true;
+				label_choosenOperation.setText("/");
+				operation = '/';
+			}else if (value1 != null && value2 != null){
+				System.out.println("Two operations only");
+			}
 		}
 		// Button multiplication
 		if (e.getSource() == btn_multiply) {
-			label_choosenOperation.setText("*");
-			field_input2.requestFocus();
-			number1 = Double.parseDouble(field_input1.getText());
-
+			if (value1==null) {
+				System.out.println("Pick a number first");
+			}else if (value1 != null && value2 == null){
+				opChosen = true;
+				label_choosenOperation.setText("*");
+				operation = '*';
+			}else if (value1 != null && value2 != null){
+				System.out.println("Two operations only");
+			}
 		}
 		// Button random
 		if (e.getSource() == btn_random) {
+//			
+//			if (value1==null) {
+//				double random = ao.Random();
+//				String 
+//				field_input1.setText();
+//				
+//			}else if (value1 != null && value2 == null){
+//				ao.Random();
+//				
+//			}else if (value1 != null && value2 != null){
+//				System.out.println("Two operations only");
+//			}
+			
+			
+			
+			
 
 		}
 		// Button cos
 		if (e.getSource() == btn_cos) {
-
+			opChosen = true;
 		}
-		//Button Equals
+		// Button Equals
 		if (e.getSource() == btn_equals) {
+			if (value1==null) {
+				System.out.println("Pick a number first");
+			}else if (value1 != null && value2 == null){
+				System.out.println("Pick the number first");
 
-			field_result.requestFocus();
-			number2 = Double.parseDouble(field_input2.getText());
+			}else if (value1 != null && value2 != null){
+				double number1 = 0.0;
+				double number2 = 0.0;
+				
+				number1 = Double.parseDouble(value1);
+				number2 = Double.parseDouble(value2);
+				
+				switch (operation) {
+				case '+':
+					answer = ao.Addition(number1, number2);
+					break;
+				case '-':
+					answer = ao.Subtraction(number1, number2);
+					break;
+				case '*':
+					answer = ao.Multiplication(number1, number2);
+					break;
+				case '/':
+					answer = ao.Division(number1, number2);
+					break;
+
+				default:
+					break;
+				}
+				sAnswer = Double.toString(answer);
+				field_result.setText(sAnswer);
+			}
 		}
-		
+
 		// Button clear
 		if (e.getSource() == btn_clear) {
 			label_choosenOperation.setText("");
 			field_input1.setText("");
 			field_input2.setText("");
 			field_result.setText("");
-			value1 = "";
+			value1 = null;
+			value2 = null;	
+			answer = 0.0;
+			equalsClicked = false;
+			opChosen = false;
+			operation = ' ';
+			
 		}
-
-
 
 	} // Action performed
 
