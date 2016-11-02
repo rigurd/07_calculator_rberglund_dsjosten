@@ -8,6 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import java.awt.Font;
 
 
 /**
@@ -182,8 +183,9 @@ public class Gui extends JFrame implements ActionListener{
 				
 		label_equals.setBounds(285, 39, 15, 16);
 		frmCalculator.getContentPane().add(label_equals);
+		label_choosenOperation.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		
-		label_choosenOperation.setBounds(123, 27, 33, 40);
+		label_choosenOperation.setBounds(131, 27, 33, 40);
 		frmCalculator.getContentPane().add(label_choosenOperation);
 	}
 		
@@ -272,18 +274,23 @@ public class Gui extends JFrame implements ActionListener{
 				}
 				//Button add
 				if (e.getSource() == btn_addition) {
-
+					
+					label_choosenOperation.setText("+");
+					
 				}
 				//Button subtract
 				if (e.getSource() == btn_subtraction) {
+					label_choosenOperation.setText("-");
 
 				}
 				//Button division
 				if (e.getSource() == btn_division) {
+					label_choosenOperation.setText("/");
 
 				}
 				//Button multiplication
 				if (e.getSource() == btn_multiply) {
+					label_choosenOperation.setText("*");
 
 				}
 				//Button random
@@ -296,7 +303,7 @@ public class Gui extends JFrame implements ActionListener{
 				}
 				//Button clear
 				if (e.getSource() == btn_clear) {
-
+					label_choosenOperation.setText("");
 				}
 	
 				
