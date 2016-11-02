@@ -13,5 +13,6 @@ public class App
         System.out.println("test1");
         System.out.println("Adding this from my devbranch");
         System.out.println("Hej");
+        System.out.println("Adding new line from dev_d");
     }
 }
