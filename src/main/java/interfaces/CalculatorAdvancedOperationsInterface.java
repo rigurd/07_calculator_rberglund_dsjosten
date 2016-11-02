@@ -2,11 +2,11 @@ package interfaces;
 
 public interface CalculatorAdvancedOperationsInterface {
 	
-	public void SquareRoot();
-	public void Pow();
-	public void toDegrees();
-	public void toRadians();
-	public void Random();
-	public void Cos();
+	public double SquareRoot(double firstNumber);
+	public double Pow(double firstNumber, double secondNumber);
+	public double toDegrees(double firstNumber);
+	public double toRadians(double firstNumber);
+	public double Random();
+	public double Cos(double firstNumber);
 
 }
