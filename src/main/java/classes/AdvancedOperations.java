@@ -24,8 +24,8 @@ public class AdvancedOperations extends BasicOperations implements CalculatorAdv
 		return Math.random();
 	}
 
-	public double Cos(double firstNumber) {
-		return Math.cos(firstNumber);
+	public double Modula(double firstNumber, double secondNumber){
+		return firstNumber % secondNumber;
 	}
 
 

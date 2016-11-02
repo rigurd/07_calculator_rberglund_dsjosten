@@ -7,6 +7,6 @@ public interface CalculatorAdvancedOperationsInterface {
 	public double toDegrees(double firstNumber);
 	public double toRadians(double firstNumber);
 	public double Random();
-	public double Cos(double firstNumber);
+	public double Modula(double firstNumber, double secondNumber);
 
 }

@@ -3,9 +3,7 @@ package junit_tests;
 import java.text.DecimalFormat;
 import java.util.Random;
 import java.util.logging.Logger;
-
 import org.junit.Test;
-
 import classes.BasicOperations;
 import junit.framework.TestCase;
 
