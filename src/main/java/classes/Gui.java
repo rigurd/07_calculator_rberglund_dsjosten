@@ -554,7 +554,15 @@ public class Gui extends JFrame implements ActionListener {
 		}
 		// Button mod
 		if (e.getSource() == btn_mod) {
-			opChosen = true;
+			if (value1==null) {
+				System.out.println("Pick a number first");
+			}else if (value1 != null && value2 == null){
+				opChosen = true;
+				label_choosenOperation.setText("%");
+				operation = '%';
+			}else if (value1 != null && value2 != null){
+				JOptionPane.showMessageDialog(frmCalculator, "You can only do calc on 2 numbers..", "Info", JOptionPane.INFORMATION_MESSAGE);
+			}
 		}
 		
 		// Button Equals
@@ -586,6 +594,9 @@ public class Gui extends JFrame implements ActionListener {
 					break;
 				case '/':
 					answer = ao.Division(number1, number2);
+					break;
+				case '%':
+					answer = ao.Modula(number1, number2);
 					break;
 
 				default:
