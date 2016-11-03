@@ -671,14 +671,14 @@ public class Gui extends JFrame implements ActionListener {
 					answer = ao.Pow(number1, number2);
 					break;
 				case 'S':
-					answer = ao.SquareRoot(number1);
-					break;
-				case 'D':
-					answer = ao.toDegrees(number1);
-					break;
-				case 'R':
-					answer = ao.toRadians(number1);
-					break;
+//					answer = ao.SquareRoot(number1);
+//					break;
+//				case 'D':
+//					answer = ao.toDegrees(number1);
+//					break;
+//				case 'R':
+//					answer = ao.toRadians(number1);
+//					break;
 
 				default:
 					break;
