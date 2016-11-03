@@ -189,20 +189,21 @@ public class Gui extends JFrame implements ActionListener {
 		field_input2.setEditable(false);
 
 		field_input2.setColumns(10);
-		field_input2.setBounds(157, 27, 108, 40);
+		field_input2.setBounds(201, 27, 108, 40);
 		frmCalculator.getContentPane().add(field_input2);
 		field_result.setBackground(Color.WHITE);
 		field_result.setEditable(false);
 
 		field_result.setColumns(10);
-		field_result.setBounds(312, 27, 108, 40);
+		field_result.setBounds(332, 27, 108, 40);
 		frmCalculator.getContentPane().add(field_result);
+		label_equals.setFont(new Font("Tahoma", Font.PLAIN, 15));
 
-		label_equals.setBounds(285, 39, 15, 16);
+		label_equals.setBounds(315, 38, 15, 16);
 		frmCalculator.getContentPane().add(label_equals);
 		label_choosenOperation.setFont(new Font("Tahoma", Font.PLAIN, 20));
 
-		label_choosenOperation.setBounds(131, 27, 33, 40);
+		label_choosenOperation.setBounds(131, 27, 58, 40);
 		frmCalculator.getContentPane().add(label_choosenOperation);
 
 		btn_equals.setBounds(261, 292, 58, 49);
@@ -472,24 +473,65 @@ public class Gui extends JFrame implements ActionListener {
 		}
 		// Button sqr
 		if (e.getSource() == btn_squirt) {
-
+				if (value1==null) {
+					JOptionPane.showMessageDialog(frmCalculator, "Pick the nr to get sqrt of", "Info", JOptionPane.INFORMATION_MESSAGE);
+				}else if (value1 != null){
+					opChosen = true;
+					equalsClicked = true;
+					label_choosenOperation.setText("Sqrt");
+					operation = 'S';
+					value2 = "0";
+					JOptionPane.showMessageDialog(frmCalculator, "Now click the equalsbutton", "Info", JOptionPane.INFORMATION_MESSAGE);
+				}else if (value1 != null && value2 != null){
+					JOptionPane.showMessageDialog(frmCalculator, "You can only do calc on 2 numbers..", "Info", JOptionPane.INFORMATION_MESSAGE);
+				}
 		}
 		// Button pow
 		if (e.getSource() == btn_pow) {
-			label_choosenOperation.setText("pow");
+			if (value1==null) {
+				JOptionPane.showMessageDialog(frmCalculator, "Pick the first number", "Info", JOptionPane.INFORMATION_MESSAGE);
+			}else if (value1 != null && value2 == null){
+				opChosen = true;
+				label_choosenOperation.setText("Pow");
+				operation = 'P';
+			}else if (value1 != null && value2 != null){
+				JOptionPane.showMessageDialog(frmCalculator, "You can only do calc on 2 numbers..", "Info", JOptionPane.INFORMATION_MESSAGE);
+			}
 		}
 		// Button degrees
 		if (e.getSource() == btn_degrees) {
-
+			if (value1==null) {
+				JOptionPane.showMessageDialog(frmCalculator, "Pick the nr to convert to degrees", "Info", JOptionPane.INFORMATION_MESSAGE);
+			}else if (value1 != null){
+				opChosen = true;
+				equalsClicked = true;
+				label_choosenOperation.setText("toDgr");
+				operation = 'D';
+				value2 = "0";
+				JOptionPane.showMessageDialog(frmCalculator, "Now click the equalsbutton", "Info", JOptionPane.INFORMATION_MESSAGE);
+			}else if (value1 != null && value2 != null){
+				JOptionPane.showMessageDialog(frmCalculator, "You can only do calc on 2 numbers..", "Info", JOptionPane.INFORMATION_MESSAGE);
+			}
 		}
 		// Button radian
 		if (e.getSource() == btn_radian) {
-
+			if (value1==null) {
+				JOptionPane.showMessageDialog(frmCalculator, "Pick the nr to convert to radians", "Info", JOptionPane.INFORMATION_MESSAGE);
+			}else if (value1 != null){
+				opChosen = true;
+				equalsClicked = true;
+				label_choosenOperation.setText("toRdn");
+				operation = 'R';
+				value2 = "0";
+				JOptionPane.showMessageDialog(frmCalculator, "Now click the equalsbutton", "Info", JOptionPane.INFORMATION_MESSAGE);
+			}else if (value1 != null && value2 != null){
+				JOptionPane.showMessageDialog(frmCalculator, "You can only do calc on 2 numbers..", "Info", JOptionPane.INFORMATION_MESSAGE);
+			}
 		}
 		// Button add
 		if (e.getSource() == btn_addition) {
 			if (value1==null) {
-				System.out.println("Pick a number first");
+				JOptionPane.showMessageDialog(frmCalculator, "Pick the first number", "Info", JOptionPane.INFORMATION_MESSAGE);
 			}else if (value1 != null && value2 == null){
 				opChosen = true;
 				label_choosenOperation.setText("+");
@@ -502,7 +544,7 @@ public class Gui extends JFrame implements ActionListener {
 		// Button subtract
 		if (e.getSource() == btn_subtraction) {
 			if (value1==null) {
-				System.out.println("Pick a number first");
+				JOptionPane.showMessageDialog(frmCalculator, "Pick the first number", "Info", JOptionPane.INFORMATION_MESSAGE);
 			}else if (value1 != null && value2 == null){
 				opChosen = true;
 				label_choosenOperation.setText("-");
@@ -514,7 +556,7 @@ public class Gui extends JFrame implements ActionListener {
 		// Button division
 		if (e.getSource() == btn_division) {
 			if (value1==null) {
-				System.out.println("Pick a number first");
+				JOptionPane.showMessageDialog(frmCalculator, "Pick the first number", "Info", JOptionPane.INFORMATION_MESSAGE);
 			}else if (value1 != null && value2 == null){
 				opChosen = true;
 				label_choosenOperation.setText("/");
@@ -526,7 +568,7 @@ public class Gui extends JFrame implements ActionListener {
 		// Button multiplication
 		if (e.getSource() == btn_multiply) {
 			if (value1==null) {
-				System.out.println("Pick a number first");
+				JOptionPane.showMessageDialog(frmCalculator, "Pick the first number", "Info", JOptionPane.INFORMATION_MESSAGE);
 			}else if (value1 != null && value2 == null){
 				opChosen = true;
 				label_choosenOperation.setText("*");
@@ -555,7 +597,7 @@ public class Gui extends JFrame implements ActionListener {
 		// Button mod
 		if (e.getSource() == btn_mod) {
 			if (value1==null) {
-				System.out.println("Pick a number first");
+				JOptionPane.showMessageDialog(frmCalculator, "Pick the first number", "Info", JOptionPane.INFORMATION_MESSAGE);
 			}else if (value1 != null && value2 == null){
 				opChosen = true;
 				label_choosenOperation.setText("%");
@@ -597,6 +639,18 @@ public class Gui extends JFrame implements ActionListener {
 					break;
 				case '%':
 					answer = ao.Modula(number1, number2);
+					break;
+				case 'P':
+					answer = ao.Pow(number1, number2);
+					break;
+				case 'S':
+					answer = ao.SquareRoot(number1);
+					break;
+				case 'D':
+					answer = ao.toDegrees(number1);
+					break;
+				case 'R':
+					answer = ao.toRadians(number1);
 					break;
 
 				default:
