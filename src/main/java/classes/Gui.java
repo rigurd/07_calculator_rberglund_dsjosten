@@ -524,21 +524,13 @@ public class Gui extends JFrame implements ActionListener {
 				operation = 'D';
 				value2 = "0";
 				
-<<<<<<< HEAD
-				double n1 = 0.0;
-				n1 = Double.parseDouble(value1);
-				answer = ao.toDegrees(n1);
-				sAnswer = Double.toString(answer);
-				field_result.setText(sAnswer);
-//				JOptionPane.showMessageDialog(frmCalculator, "Now click the equalsbutton", "Info", JOptionPane.INFORMATION_MESSAGE);
-=======
+
 				double number1 = 0.0;
 				number1 = Double.parseDouble(value1);
 				answer = ao.toDegrees(number1);
 				sAnswer = Double.toString(answer);
 				field_result.setText(sAnswer);
 				
->>>>>>> 666d2ec7fe81b37fb8822d4c0cdd3a6ebe16d44c
 			}else if (value1 != null && value2 != null){
 				JOptionPane.showMessageDialog(frmCalculator, "You can only do calc on 2 numbers..", "Info", JOptionPane.INFORMATION_MESSAGE);
 			}
