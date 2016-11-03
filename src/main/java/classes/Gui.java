@@ -508,7 +508,13 @@ public class Gui extends JFrame implements ActionListener {
 				label_choosenOperation.setText("toDgr");
 				operation = 'D';
 				value2 = "0";
-				JOptionPane.showMessageDialog(frmCalculator, "Now click the equalsbutton", "Info", JOptionPane.INFORMATION_MESSAGE);
+				
+				double n1 = 0.0;
+				n1 = Double.parseDouble(value1);
+				answer = ao.toDegrees(n1);
+				sAnswer = Double.toString(answer);
+				field_result.setText(sAnswer);
+//				JOptionPane.showMessageDialog(frmCalculator, "Now click the equalsbutton", "Info", JOptionPane.INFORMATION_MESSAGE);
 			}else if (value1 != null && value2 != null){
 				JOptionPane.showMessageDialog(frmCalculator, "You can only do calc on 2 numbers..", "Info", JOptionPane.INFORMATION_MESSAGE);
 			}
