@@ -1,0 +1,7 @@
+classes\BasicOperations.class
+classes\AdvancedOperations.class
+classes\Main.class
+classes\Gui.class
+interfaces\CalculatorBasicOperationsInterface.class
+classes\Gui$1.class
+interfaces\CalculatorAdvancedOperationsInterface.class
