@@ -8,8 +8,10 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import java.awt.Color;
+import javax.swing.SwingConstants;
 
 /**
  * <h1>GUI for the calculator</h1>
@@ -75,7 +77,7 @@ public class Gui extends JFrame implements ActionListener {
 	private JButton btn_division = new JButton("/");
 	private JButton btn_multiply = new JButton("*");
 	private JButton btn_random = new JButton("Random");
-	private JButton btn_cos = new JButton("Cos");
+	private JButton btn_mod = new JButton("Mod");
 	private JButton btn_equals = new JButton("=");
 
 	// Instanciating the textfields
@@ -175,8 +177,8 @@ public class Gui extends JFrame implements ActionListener {
 		frmCalculator.getContentPane().add(btn_random);
 		btn_random.setToolTipText("Generates a number between 0-1");
 
-		btn_cos.setBounds(12, 406, 79, 49);
-		frmCalculator.getContentPane().add(btn_cos);
+		btn_mod.setBounds(12, 406, 79, 49);
+		frmCalculator.getContentPane().add(btn_mod);
 		field_input1.setBackground(Color.WHITE);
 		field_input1.setEditable(false);
 
@@ -229,7 +231,7 @@ public class Gui extends JFrame implements ActionListener {
 		btn_division.addActionListener(this);
 		btn_multiply.addActionListener(this);
 		btn_random.addActionListener(this);
-		btn_cos.addActionListener(this);
+		btn_mod.addActionListener(this);
 		btn_equals.addActionListener(this);
 
 	}
@@ -493,7 +495,7 @@ public class Gui extends JFrame implements ActionListener {
 				label_choosenOperation.setText("+");
 				operation = '+';
 			}else if (value1 != null && value2 != null){
-				System.out.println("Two operations only");
+				JOptionPane.showMessageDialog(frmCalculator, "You can only do calc on 2 numbers..", "Info", JOptionPane.INFORMATION_MESSAGE);
 			}
 		}
 
@@ -506,7 +508,7 @@ public class Gui extends JFrame implements ActionListener {
 				label_choosenOperation.setText("-");
 				operation = '-';
 			}else if (value1 != null && value2 != null){
-				System.out.println("Two operations only");
+				JOptionPane.showMessageDialog(frmCalculator, "You can only do calc on 2 numbers..", "Info", JOptionPane.INFORMATION_MESSAGE);
 			}
 		}
 		// Button division
@@ -518,7 +520,7 @@ public class Gui extends JFrame implements ActionListener {
 				label_choosenOperation.setText("/");
 				operation = '/';
 			}else if (value1 != null && value2 != null){
-				System.out.println("Two operations only");
+				JOptionPane.showMessageDialog(frmCalculator, "You can only do calc on 2 numbers..", "Info", JOptionPane.INFORMATION_MESSAGE);
 			}
 		}
 		// Button multiplication
@@ -530,39 +532,40 @@ public class Gui extends JFrame implements ActionListener {
 				label_choosenOperation.setText("*");
 				operation = '*';
 			}else if (value1 != null && value2 != null){
-				System.out.println("Two operations only");
+				JOptionPane.showMessageDialog(frmCalculator, "You can only do calc on 2 numbers..", "Info", JOptionPane.INFORMATION_MESSAGE);
 			}
 		}
+		
 		// Button random
 		if (e.getSource() == btn_random) {
-//			
-//			if (value1==null) {
-//				double random = ao.Random();
-//				String 
-//				field_input1.setText();
-//				
-//			}else if (value1 != null && value2 == null){
-//				ao.Random();
-//				
-//			}else if (value1 != null && value2 != null){
-//				System.out.println("Two operations only");
-//			}
-			
-			
-			
-			
-
+				if (value1==null) {
+					double random1 = ao.Random();
+					value1 = Double.toString(random1);
+					field_input1.setText(value1);
+				}else if (value1 != null && value2 == null && opChosen == true){
+					double random2 = ao.Random();
+					value2 = Double.toString(random2);
+					field_input2.setText(value2);
+				}else if (value1 != null && value2 == null && opChosen == false) {
+					JOptionPane.showMessageDialog(frmCalculator, "Pick operation before generating the second random nr", "Error", JOptionPane.ERROR_MESSAGE);
+				}else if (value1 != null && value2 != null){
+					JOptionPane.showMessageDialog(frmCalculator, "You can only do calc on 2 numbers..", "Info", JOptionPane.INFORMATION_MESSAGE);
+				}
 		}
-		// Button cos
-		if (e.getSource() == btn_cos) {
+		// Button mod
+		if (e.getSource() == btn_mod) {
 			opChosen = true;
 		}
+		
 		// Button Equals
 		if (e.getSource() == btn_equals) {
 			if (value1==null) {
-				System.out.println("Pick a number first");
+				JOptionPane.showMessageDialog(frmCalculator, "Pick the first number", "Info", JOptionPane.INFORMATION_MESSAGE);
+			}else if (value1 != null && opChosen == false){
+				JOptionPane.showMessageDialog(frmCalculator, "Choose operation", "Info", JOptionPane.INFORMATION_MESSAGE);
+
 			}else if (value1 != null && value2 == null){
-				System.out.println("Pick the number first");
+				JOptionPane.showMessageDialog(frmCalculator, "Pick the second number", "Info", JOptionPane.INFORMATION_MESSAGE);
 
 			}else if (value1 != null && value2 != null){
 				double number1 = 0.0;
@@ -593,7 +596,7 @@ public class Gui extends JFrame implements ActionListener {
 			}
 		}
 
-		// Button clear
+		// Button clear, resetting all the variables
 		if (e.getSource() == btn_clear) {
 			label_choosenOperation.setText("");
 			field_input1.setText("");
