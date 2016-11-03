@@ -88,6 +88,8 @@ public class Gui extends JFrame implements ActionListener {
 	// Instanciating the labels
 	JLabel label_equals = new JLabel("=");
 	JLabel label_choosenOperation = new JLabel("");
+	private final JLabel lblInput = new JLabel("Input1");
+	private final JLabel lblInput_1 = new JLabel("input2");
 
 	/**
 	 * Create the application.
@@ -116,34 +118,34 @@ public class Gui extends JFrame implements ActionListener {
 	 */
 	public void addComponentsToFrame() {
 
-		btn7.setBounds(121, 112, 58, 49);
+		btn7.setBounds(121, 220, 58, 49);
 		frmCalculator.getContentPane().add(btn7);
 
-		btn8.setBounds(191, 112, 58, 49);
+		btn8.setBounds(191, 220, 58, 49);
 		frmCalculator.getContentPane().add(btn8);
 
-		btn9.setBounds(261, 112, 58, 49);
+		btn9.setBounds(261, 220, 58, 49);
 		frmCalculator.getContentPane().add(btn9);
 
-		btn4.setBounds(121, 174, 58, 49);
+		btn4.setBounds(121, 282, 58, 49);
 		frmCalculator.getContentPane().add(btn4);
 
-		btn5.setBounds(191, 174, 58, 49);
+		btn5.setBounds(191, 282, 58, 49);
 		frmCalculator.getContentPane().add(btn5);
 
-		btn6.setBounds(261, 174, 58, 49);
+		btn6.setBounds(261, 282, 58, 49);
 		frmCalculator.getContentPane().add(btn6);
 
-		btn1.setBounds(121, 230, 58, 49);
+		btn1.setBounds(121, 344, 58, 49);
 		frmCalculator.getContentPane().add(btn1);
 
-		btn2.setBounds(191, 230, 58, 49);
+		btn2.setBounds(191, 344, 58, 49);
 		frmCalculator.getContentPane().add(btn2);
 
-		btn3.setBounds(261, 230, 58, 49);
+		btn3.setBounds(261, 344, 58, 49);
 		frmCalculator.getContentPane().add(btn3);
 
-		btn0.setBounds(191, 292, 58, 49);
+		btn0.setBounds(191, 406, 58, 49);
 		frmCalculator.getContentPane().add(btn0);
 
 		btn_squirt.setBounds(12, 112, 79, 49);
@@ -158,19 +160,19 @@ public class Gui extends JFrame implements ActionListener {
 		btn_radian.setBounds(12, 292, 79, 49);
 		frmCalculator.getContentPane().add(btn_radian);
 
-		btn_clear.setBounds(121, 292, 58, 49);
+		btn_clear.setBounds(121, 406, 58, 49);
 		frmCalculator.getContentPane().add(btn_clear);
 
-		btn_addition.setBounds(349, 174, 58, 49);
+		btn_addition.setBounds(349, 279, 58, 49);
 		frmCalculator.getContentPane().add(btn_addition);
 
-		btn_subtraction.setBounds(349, 230, 58, 49);
+		btn_subtraction.setBounds(349, 344, 58, 49);
 		frmCalculator.getContentPane().add(btn_subtraction);
 
-		btn_division.setBounds(349, 292, 58, 49);
+		btn_division.setBounds(349, 406, 58, 49);
 		frmCalculator.getContentPane().add(btn_division);
 
-		btn_multiply.setBounds(349, 112, 58, 49);
+		btn_multiply.setBounds(349, 217, 58, 49);
 		frmCalculator.getContentPane().add(btn_multiply);
 
 		btn_random.setBounds(12, 351, 79, 49);
@@ -182,32 +184,38 @@ public class Gui extends JFrame implements ActionListener {
 		field_input1.setBackground(Color.WHITE);
 		field_input1.setEditable(false);
 
-		field_input1.setBounds(12, 27, 108, 40);
+		field_input1.setBounds(165, 26, 154, 40);
 		frmCalculator.getContentPane().add(field_input1);
 		field_input1.setColumns(10);
 		field_input2.setBackground(Color.WHITE);
 		field_input2.setEditable(false);
 
 		field_input2.setColumns(10);
-		field_input2.setBounds(201, 27, 108, 40);
+		field_input2.setBounds(165, 79, 154, 40);
 		frmCalculator.getContentPane().add(field_input2);
 		field_result.setBackground(Color.WHITE);
 		field_result.setEditable(false);
 
 		field_result.setColumns(10);
-		field_result.setBounds(332, 27, 108, 40);
+		field_result.setBounds(165, 154, 231, 40);
 		frmCalculator.getContentPane().add(field_result);
 		label_equals.setFont(new Font("Tahoma", Font.PLAIN, 15));
 
-		label_equals.setBounds(315, 38, 15, 16);
+		label_equals.setBounds(135, 165, 15, 16);
 		frmCalculator.getContentPane().add(label_equals);
 		label_choosenOperation.setFont(new Font("Tahoma", Font.PLAIN, 20));
 
-		label_choosenOperation.setBounds(131, 27, 58, 40);
+		label_choosenOperation.setBounds(331, 26, 58, 40);
 		frmCalculator.getContentPane().add(label_choosenOperation);
 
-		btn_equals.setBounds(261, 292, 58, 49);
+		btn_equals.setBounds(261, 406, 58, 49);
 		frmCalculator.getContentPane().add(btn_equals);
+		lblInput.setBounds(86, 38, 56, 16);
+		
+		frmCalculator.getContentPane().add(lblInput);
+		lblInput_1.setBounds(86, 83, 56, 16);
+		
+		frmCalculator.getContentPane().add(lblInput_1);
 	}
 
 	public void addActionListners() {
@@ -481,8 +489,15 @@ public class Gui extends JFrame implements ActionListener {
 					label_choosenOperation.setText("Sqrt");
 					operation = 'S';
 					value2 = "0";
-					JOptionPane.showMessageDialog(frmCalculator, "Now click the equalsbutton", "Info", JOptionPane.INFORMATION_MESSAGE);
-				}else if (value1 != null && value2 != null){
+
+					double number1 = 0.0;
+					number1 = Double.parseDouble(value1);
+					answer = ao.SquareRoot(number1);
+					sAnswer = Double.toString(answer);
+					field_result.setText(sAnswer);
+					
+				}
+				else if (value1 != null && value2 != null){
 					JOptionPane.showMessageDialog(frmCalculator, "You can only do calc on 2 numbers..", "Info", JOptionPane.INFORMATION_MESSAGE);
 				}
 		}
@@ -509,12 +524,21 @@ public class Gui extends JFrame implements ActionListener {
 				operation = 'D';
 				value2 = "0";
 				
+<<<<<<< HEAD
 				double n1 = 0.0;
 				n1 = Double.parseDouble(value1);
 				answer = ao.toDegrees(n1);
 				sAnswer = Double.toString(answer);
 				field_result.setText(sAnswer);
 //				JOptionPane.showMessageDialog(frmCalculator, "Now click the equalsbutton", "Info", JOptionPane.INFORMATION_MESSAGE);
+=======
+				double number1 = 0.0;
+				number1 = Double.parseDouble(value1);
+				answer = ao.toDegrees(number1);
+				sAnswer = Double.toString(answer);
+				field_result.setText(sAnswer);
+				
+>>>>>>> 666d2ec7fe81b37fb8822d4c0cdd3a6ebe16d44c
 			}else if (value1 != null && value2 != null){
 				JOptionPane.showMessageDialog(frmCalculator, "You can only do calc on 2 numbers..", "Info", JOptionPane.INFORMATION_MESSAGE);
 			}
@@ -529,7 +553,13 @@ public class Gui extends JFrame implements ActionListener {
 				label_choosenOperation.setText("toRdn");
 				operation = 'R';
 				value2 = "0";
-				JOptionPane.showMessageDialog(frmCalculator, "Now click the equalsbutton", "Info", JOptionPane.INFORMATION_MESSAGE);
+				
+				double number1 = 0.0;
+				number1 = Double.parseDouble(value1);
+				answer = ao.toRadians(number1);
+				sAnswer = Double.toString(answer);
+				field_result.setText(sAnswer);
+				
 			}else if (value1 != null && value2 != null){
 				JOptionPane.showMessageDialog(frmCalculator, "You can only do calc on 2 numbers..", "Info", JOptionPane.INFORMATION_MESSAGE);
 			}
@@ -650,14 +680,14 @@ public class Gui extends JFrame implements ActionListener {
 					answer = ao.Pow(number1, number2);
 					break;
 				case 'S':
-					answer = ao.SquareRoot(number1);
-					break;
-				case 'D':
-					answer = ao.toDegrees(number1);
-					break;
-				case 'R':
-					answer = ao.toRadians(number1);
-					break;
+//					answer = ao.SquareRoot(number1);
+//					break;
+//				case 'D':
+//					answer = ao.toDegrees(number1);
+//					break;
+//				case 'R':
+//					answer = ao.toRadians(number1);
+//					break;
 
 				default:
 					break;
