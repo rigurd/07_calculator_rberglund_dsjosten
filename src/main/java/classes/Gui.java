@@ -24,7 +24,7 @@ public class Gui extends JFrame implements ActionListener {
 
 	AdvancedOperations ao = new AdvancedOperations();
 	
-	private JFrame frmCalculator;
+	JFrame frmCalculator;
 	private String value1 = null, value2 = null, sAnswer;
 	// String value1 = "";
 	// String value2 = "";
@@ -36,20 +36,6 @@ public class Gui extends JFrame implements ActionListener {
 	boolean equalsClicked = false;
 	boolean opChosen = false;
 	char operation = ' ';
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-
-				Gui window = new Gui();
-				window.frmCalculator.setVisible(true);
-
-			}
-		});
-	}
 
 	/**
 	 * Setting serialVersionUID
