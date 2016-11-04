@@ -654,15 +654,7 @@ public class Gui extends JFrame implements ActionListener {
 				case 'P':
 					answer = ao.Pow(number1, number2);
 					break;
-				case 'S':
-//					answer = ao.SquareRoot(number1);
-//					break;
-//				case 'D':
-//					answer = ao.toDegrees(number1);
-//					break;
-//				case 'R':
-//					answer = ao.toRadians(number1);
-//					break;
+
 
 				default:
 					break;
@@ -688,5 +680,285 @@ public class Gui extends JFrame implements ActionListener {
 		}
 
 	} // Action performed
+	
+	public JButton getBtn8() {
+        return btn8;
+    }
+
+    public void setBtn8(JButton btn8) {
+        this.btn8 = btn8;
+    }
+
+    public String getValue1() {
+        return value1;
+    }
+
+    public void setValue1(String value1) {
+        this.value1 = value1;
+    }
+
+    public String getValue2() {
+        return value2;
+    }
+
+    public void setValue2(String value2) {
+        this.value2 = value2;
+    }
+
+    public String getsAnswer() {
+        return sAnswer;
+    }
+
+    public void setsAnswer(String sAnswer) {
+        this.sAnswer = sAnswer;
+    }
+
+    public double getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(double answer) {
+        this.answer = answer;
+    }
+
+    public boolean isEqualsClicked() {
+        return equalsClicked;
+    }
+
+    public void setEqualsClicked(boolean equalsClicked) {
+        this.equalsClicked = equalsClicked;
+    }
+
+    public boolean isOpChosen() {
+        return opChosen;
+    }
+
+    public void setOpChosen(boolean opChosen) {
+        this.opChosen = opChosen;
+    }
+
+    public char getOperation() {
+        return operation;
+    }
+
+    public void setOperation(char operation) {
+        this.operation = operation;
+    }
+
+    public JButton getBtn7() {
+        return btn7;
+    }
+
+    public void setBtn7(JButton btn7) {
+        this.btn7 = btn7;
+    }
+
+    public JButton getBtn9() {
+        return btn9;
+    }
+
+    public void setBtn9(JButton btn9) {
+        this.btn9 = btn9;
+    }
+
+    public JButton getBtn4() {
+        return btn4;
+    }
+
+    public void setBtn4(JButton btn4) {
+        this.btn4 = btn4;
+    }
+
+    public JButton getBtn5() {
+        return btn5;
+    }
+
+    public void setBtn5(JButton btn5) {
+        this.btn5 = btn5;
+    }
+
+    public JButton getBtn6() {
+        return btn6;
+    }
+
+    public void setBtn6(JButton btn6) {
+        this.btn6 = btn6;
+    }
+
+    public JButton getBtn1() {
+        return btn1;
+    }
+
+    public void setBtn1(JButton btn1) {
+        this.btn1 = btn1;
+    }
+
+    public JButton getBtn2() {
+        return btn2;
+    }
+
+    public void setBtn2(JButton btn2) {
+        this.btn2 = btn2;
+    }
+
+    public JButton getBtn3() {
+        return btn3;
+    }
+
+    public void setBtn3(JButton btn3) {
+        this.btn3 = btn3;
+    }
+
+    public JButton getBtn0() {
+        return btn0;
+    }
+
+    public void setBtn0(JButton btn0) {
+        this.btn0 = btn0;
+    }
+
+    public JButton getBtn_squirt() {
+        return btn_squirt;
+    }
+
+    public void setBtn_squirt(JButton btn_squirt) {
+        this.btn_squirt = btn_squirt;
+    }
+
+    public JButton getBtn_pow() {
+        return btn_pow;
+    }
+
+    public void setBtn_pow(JButton btn_pow) {
+        this.btn_pow = btn_pow;
+    }
+
+    public JButton getBtn_degrees() {
+        return btn_degrees;
+    }
+
+    public void setBtn_degrees(JButton btn_degrees) {
+        this.btn_degrees = btn_degrees;
+    }
+
+    public JButton getBtn_radian() {
+        return btn_radian;
+    }
+
+    public void setBtn_radian(JButton btn_radian) {
+        this.btn_radian = btn_radian;
+    }
+
+    public JButton getBtn_clear() {
+        return btn_clear;
+    }
+
+    public void setBtn_clear(JButton btn_clear) {
+        this.btn_clear = btn_clear;
+    }
+
+    public JButton getBtn_addition() {
+        return btn_addition;
+    }
+
+    public void setBtn_addition(JButton btn_addition) {
+        this.btn_addition = btn_addition;
+    }
+
+    public JButton getBtn_subtraction() {
+        return btn_subtraction;
+    }
+
+    public void setBtn_subtraction(JButton btn_subtraction) {
+        this.btn_subtraction = btn_subtraction;
+    }
+
+    public JButton getBtn_division() {
+        return btn_division;
+    }
+
+    public void setBtn_division(JButton btn_division) {
+        this.btn_division = btn_division;
+    }
+
+    public JButton getBtn_multiply() {
+        return btn_multiply;
+    }
+
+    public void setBtn_multiply(JButton btn_multiply) {
+        this.btn_multiply = btn_multiply;
+    }
+
+    public JButton getBtn_random() {
+        return btn_random;
+    }
+
+    public void setBtn_random(JButton btn_random) {
+        this.btn_random = btn_random;
+    }
+
+    public JButton getBtn_mod() {
+        return btn_mod;
+    }
+
+    public void setBtn_mod(JButton btn_mod) {
+        this.btn_mod = btn_mod;
+    }
+
+    public JButton getBtn_equals() {
+        return btn_equals;
+    }
+
+    public void setBtn_equals(JButton btn_equals) {
+        this.btn_equals = btn_equals;
+    }
+
+    public JTextField getField_input1() {
+        return field_input1;
+    }
+
+    public void setField_input1(JTextField field_input1) {
+        this.field_input1 = field_input1;
+    }
+
+    public JTextField getField_input2() {
+        return field_input2;
+    }
+
+    public void setField_input2(JTextField field_input2) {
+        this.field_input2 = field_input2;
+    }
+
+    public JTextField getField_result() {
+        return field_result;
+    }
+
+    public void setField_result(JTextField field_result) {
+        this.field_result = field_result;
+    }
+
+    public JLabel getLabel_equals() {
+        return label_equals;
+    }
+
+    public void setLabel_equals(JLabel label_equals) {
+        this.label_equals = label_equals;
+    }
+
+    public JLabel getLabel_choosenOperation() {
+        return label_choosenOperation;
+    }
+
+    public void setLabel_choosenOperation(JLabel label_choosenOperation) {
+        this.label_choosenOperation = label_choosenOperation;
+    }
+
+    public JLabel getLblInput() {
+        return lblInput;
+    }
+
+    public JLabel getLblInput_1() {
+        return lblInput_1;
+    }
 
 } // Class

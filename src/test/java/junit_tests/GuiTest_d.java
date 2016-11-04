@@ -8,13 +8,13 @@ import org.junit.Test;
 import classes.Gui;
 import junit.framework.TestCase;
 
-public class GuiTest extends TestCase{
+public class GuiTest_d extends TestCase{
 
 	
 	Gui gui = new Gui();
 
 	@Test
-	public void testGui(){
+	public void GuiTest_d(){
 		gui.addComponentsToFrame();
 	}
 	@Test
@@ -168,14 +168,14 @@ public class GuiTest extends TestCase{
 		gui.setValue1("1");
 		gui.getBtn_squirt().doClick();
 
-		//Case2. VARFÖR TÄCKER INTE DETTA DET ANDRA IF/ELSE????*****
+		//Case2. VARFï¿½R Tï¿½CKER INTE DETTA DET ANDRA IF/ELSE????*****
 		gui.setValue1("1");
 		gui.setValue2("2");
 		gui.getBtn_squirt().doClick();
 	}
 	
 	@Test
-	public void testGuiButtonPow(){ //funkar ej för alla if/else låter vara sålänge
+	public void testGuiButtonPow(){ //funkar ej fï¿½r alla if/else lï¿½ter vara sï¿½lï¿½nge
 		gui.addActionListners();
 		//Case1
 		gui.getBtn_pow().doClick();
@@ -190,7 +190,7 @@ public class GuiTest extends TestCase{
 	}
 	
 	@Test
-	public void testGuiButtonDegrees(){ //funkar ej för alla if/else låter vara sålänge
+	public void testGuiButtonDegrees(){ //funkar ej fï¿½r alla if/else lï¿½ter vara sï¿½lï¿½nge
 		gui.addActionListners();
 		//Case1
 		gui.getBtn_degrees().doClick();
@@ -204,7 +204,7 @@ public class GuiTest extends TestCase{
 	}
 	
 	@Test
-	public void testGuiButtonRadian(){ //funkar ej för alla if/else låter vara sålänge
+	public void testGuiButtonRadian(){ //funkar ej fï¿½r alla if/else lï¿½ter vara sï¿½lï¿½nge
 		gui.addActionListners();
 		//Case1
 		gui.getBtn_radian().doClick();
