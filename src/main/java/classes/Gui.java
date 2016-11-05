@@ -480,9 +480,6 @@ public class Gui extends JFrame implements ActionListener {
 					field_result.setText(sAnswer);
 					
 				}
-				else if (value1 != null && value2 != null){
-					JOptionPane.showMessageDialog(frmCalculator, "You can only do calc on 2 numbers..", "Info", JOptionPane.INFORMATION_MESSAGE);
-				}
 		}
 		// Button pow
 		if (e.getSource() == btn_pow) {
@@ -514,8 +511,6 @@ public class Gui extends JFrame implements ActionListener {
 				sAnswer = Double.toString(answer);
 				field_result.setText(sAnswer);
 				
-			}else if (value1 != null && value2 != null){
-				JOptionPane.showMessageDialog(frmCalculator, "You can only do calc on 2 numbers..", "Info", JOptionPane.INFORMATION_MESSAGE);
 			}
 		}
 		// Button radian
@@ -535,8 +530,6 @@ public class Gui extends JFrame implements ActionListener {
 				sAnswer = Double.toString(answer);
 				field_result.setText(sAnswer);
 				
-			}else if (value1 != null && value2 != null){
-				JOptionPane.showMessageDialog(frmCalculator, "You can only do calc on 2 numbers..", "Info", JOptionPane.INFORMATION_MESSAGE);
 			}
 		}
 		// Button add

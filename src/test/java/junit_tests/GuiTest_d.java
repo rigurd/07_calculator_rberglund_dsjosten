@@ -175,13 +175,13 @@ public class GuiTest_d extends TestCase{
 	}
 	
 	@Test
-	public void testGuiButtonPow(){ //funkar ej f�r alla if/else l�ter vara s�l�nge
+	public void testGuiButtonPow(){ 
 		gui.addActionListners();
 		//Case1
 		gui.getBtn_pow().doClick();
 		gui.setValue1("1");
 		gui.setValue2(null);
-		gui.getBtn_squirt().doClick();
+		gui.getBtn_pow().doClick();
 
 		//Case2. 
 		gui.setValue1("1");
@@ -190,7 +190,7 @@ public class GuiTest_d extends TestCase{
 	}
 	
 	@Test
-	public void testGuiButtonDegrees(){ //funkar ej f�r alla if/else l�ter vara s�l�nge
+	public void testGuiButtonDegrees(){
 		gui.addActionListners();
 		//Case1
 		gui.getBtn_degrees().doClick();
@@ -204,12 +204,12 @@ public class GuiTest_d extends TestCase{
 	}
 	
 	@Test
-	public void testGuiButtonRadian(){ //funkar ej f�r alla if/else l�ter vara s�l�nge
+	public void testGuiButtonRadian(){
 		gui.addActionListners();
 		//Case1
 		gui.getBtn_radian().doClick();
 		gui.setValue1("1");
-		gui.getBtn_squirt().doClick();
+		gui.getBtn_radian().doClick();
 
 		//Case2. 
 		gui.setValue1("1");
@@ -315,8 +315,6 @@ public class GuiTest_d extends TestCase{
 		//Case3. 
 		gui.setValue1("2");
 		gui.setOpChosen(true);
-		System.out.println(gui.getValue2());
-		System.out.println(gui.getValue1());
 		gui.getBtn_equals().doClick();
 		//Case4.
 		gui.setValue1("5");
@@ -367,7 +365,37 @@ public class GuiTest_d extends TestCase{
 	@Test
 	public void testSetters(){
 		
+		gui.setBtn1(null);
+		gui.setBtn2(null);
+		gui.setBtn3(null);
+		gui.setBtn4(null);
+		gui.setBtn5(null);
+		gui.setBtn6(null);
+		gui.setBtn7(null);
 		gui.setBtn8(null);
+		gui.setBtn9(null);
+		gui.setBtn0(null);
+		gui.setBtn_addition(null);
+		gui.setBtn_subtraction(null);
+		gui.setBtn_division(null);
+		gui.setBtn_multiply(null);
+		gui.setBtn_squirt(null);
+		gui.setBtn_degrees(null);
+		gui.setBtn_radian(null);
+		gui.setBtn_random(null);
+		gui.setBtn_pow(null);
+		gui.setBtn_mod(null);
+		gui.setBtn_equals(null);
+		gui.setBtn_clear(null);
+		gui.setAnswer(10.0);
+		gui.setEqualsClicked(true);
+		gui.setField_input1(null);
+		gui.setField_input2(null);
+		gui.setField_result(null);
+		gui.setLabel_choosenOperation(null);
+		gui.setLabel_equals(null);
+		
+		
 	}
 
 }
