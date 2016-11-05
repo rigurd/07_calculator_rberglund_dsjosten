@@ -302,26 +302,52 @@ public class GuiTest_d extends TestCase{
 	}
 	@Test
 	public void testGuiButtonEquals(){ 
+		double a = 0.0;
+		
 		gui.addActionListners();
 		//Case1
+		gui.setValue1(null);
 		gui.getBtn_equals().doClick();
 		//Case2. 
 		gui.setValue1("1");
 		gui.setOpChosen(false);
 		gui.getBtn_equals().doClick();
-		//Case3. funkar ej*****************
-		gui.setValue1("1");
-		gui.setValue2(null);
+		//Case3. 
+		gui.setValue1("2");
+		gui.setOpChosen(true);
+		System.out.println(gui.getValue2());
+		System.out.println(gui.getValue1());
 		gui.getBtn_equals().doClick();
-		//Case4. funkar ej ****************
-		gui.setValue1("10");
+		//Case4.
+		gui.setValue1("5");
 		gui.setValue2("5");
 		
 		gui.setOperation('+');
-		
-		
+		a = 10.0;
+		assertEquals(a, 5.0, 5.0);
 		gui.getBtn_equals().doClick();
-		assertEquals("Should be 5", "5", gui.getAnswer());
+		
+		gui.setOperation('-');
+		assertEquals(a, 15.0, 5.0);
+		gui.getBtn_equals().doClick();
+		
+		gui.setOperation('*');
+		assertEquals(a, 2.0, 10.0);
+		gui.getBtn_equals().doClick();
+		
+		gui.setOperation('/');
+		assertEquals(a, 10.0);
+		gui.getBtn_equals().doClick();
+		
+		gui.setOperation('%');
+		assertEquals(a, 50.0, 40.0);
+		gui.getBtn_equals().doClick();
+		
+		gui.setOperation('P');
+		assertEquals(a, 15.0, 5.0);
+		gui.getBtn_equals().doClick();
+		
+		
 	}
 	@Test
 	public void testGuiButtonClear(){ 
