@@ -13,7 +13,7 @@ import java.awt.Color;
 /**
  * <h1>GUI for the calculator</h1>
  * 
- * @author Rickard Berglund, Daniel Sjösten
+ * @author Rickard Berglund and Daniel Sjosten
  * @version 1.0
  * @since 2016-11-09
  */
@@ -1075,7 +1075,7 @@ public class Gui extends JFrame implements ActionListener {
     }
 	/**
 	 * Method for setting btn_equals
-	 * @param btn8btn_equals
+	 * @param btn_equals
 	 */
     public void setBtn_equals(JButton btn_equals) {
         this.btn_equals = btn_equals;

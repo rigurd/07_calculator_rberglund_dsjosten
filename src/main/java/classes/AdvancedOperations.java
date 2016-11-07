@@ -3,7 +3,7 @@ package classes;
 import interfaces.CalculatorAdvancedOperationsInterface;
 
 /**
- * @author Rickard Bergund & Daniel Sjösten
+ * @author Rickard Bergund and Daniel Sjosten
  * @since 9/11 - 2016
  * @version 1.0
  * 

@@ -1,6 +1,5 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-calculator_rickardb_daniels,classes,Gui,2113,0,267,0,417,0,142,0,6,0
-calculator_rickardb_daniels,classes,Main,8,0,0,0,3,0,2,0,2,0
+calculator_rickardb_daniels,classes,Gui,1524,783,255,0,370,140,199,4,69,4
+calculator_rickardb_daniels,classes,Main,0,12,0,0,0,4,0,2,0,2
 calculator_rickardb_daniels,classes,BasicOperations,0,19,0,0,0,5,0,5,0,5
-calculator_rickardb_daniels,classes,Gui.new Runnable() {...},12,0,0,0,4,0,2,0,2,0
 calculator_rickardb_daniels,classes,AdvancedOperations,0,22,0,0,0,7,0,7,0,7

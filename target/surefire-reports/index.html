@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">30 methods,   30 passed</span>
+                    <span class="method-stats">31 methods,   31 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -127,6 +127,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="junit_tests.BasicOperationsTest" hash-for-method="testDivision3">testDivision3</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="junit_tests.MainTest" hash-for-method="testMain">testMain</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -487,6 +492,21 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">junit_tests.MainTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMain">
+                  </a> <!-- testMain -->
+                  <span class="method-name">testMain</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
         </div> <!-- panel Surefire_suite -->
         <div panel-name="test-xml-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -500,6 +520,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;junit_tests.AdvancedOperationsTest&quot;/&gt;
       &lt;class name=&quot;junit_tests.BasicOperationsTest&quot;/&gt;
+      &lt;class name=&quot;junit_tests.MainTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Surefire test --&gt;
 &lt;/suite&gt; &lt;!-- Surefire suite --&gt;
@@ -513,7 +534,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Surefire test (2 classes)</span>
+                <span class="test-name">Surefire test (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -539,132 +560,136 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(30);
+data.addRows(31);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testMultiplication1')
-data.setCell(0, 2, 'junit_tests.BasicOperationsTest')
-data.setCell(0, 3, 109);
+data.setCell(0, 1, 'testMain')
+data.setCell(0, 2, 'junit_tests.MainTest')
+data.setCell(0, 3, 349);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testMultiplication2')
+data.setCell(1, 1, 'testDivision3')
 data.setCell(1, 2, 'junit_tests.BasicOperationsTest')
-data.setCell(1, 3, 60);
+data.setCell(1, 3, 83);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testMultiplication3')
+data.setCell(2, 1, 'testAddition2')
 data.setCell(2, 2, 'junit_tests.BasicOperationsTest')
-data.setCell(2, 3, 48);
+data.setCell(2, 3, 70);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testAddition1')
+data.setCell(3, 1, 'testMultiplication1')
 data.setCell(3, 2, 'junit_tests.BasicOperationsTest')
-data.setCell(3, 3, 48);
+data.setCell(3, 3, 61);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testDivision2')
+data.setCell(4, 1, 'testMultiplication2')
 data.setCell(4, 2, 'junit_tests.BasicOperationsTest')
-data.setCell(4, 3, 41);
+data.setCell(4, 3, 59);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testPow1')
-data.setCell(5, 2, 'junit_tests.AdvancedOperationsTest')
-data.setCell(5, 3, 37);
+data.setCell(5, 1, 'testDivision2')
+data.setCell(5, 2, 'junit_tests.BasicOperationsTest')
+data.setCell(5, 3, 32);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testDivision3')
+data.setCell(6, 1, 'testAddition1')
 data.setCell(6, 2, 'junit_tests.BasicOperationsTest')
-data.setCell(6, 3, 36);
+data.setCell(6, 3, 27);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'testDivision1')
+data.setCell(7, 1, 'testSubtraction1')
 data.setCell(7, 2, 'junit_tests.BasicOperationsTest')
-data.setCell(7, 3, 32);
+data.setCell(7, 3, 23);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'testSubtraction2')
+data.setCell(8, 1, 'testDivision1')
 data.setCell(8, 2, 'junit_tests.BasicOperationsTest')
-data.setCell(8, 3, 26);
+data.setCell(8, 3, 23);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'testAddition2')
+data.setCell(9, 1, 'testMultiplication3')
 data.setCell(9, 2, 'junit_tests.BasicOperationsTest')
-data.setCell(9, 3, 23);
+data.setCell(9, 3, 19);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'testPow2')
+data.setCell(10, 1, 'testRandom1')
 data.setCell(10, 2, 'junit_tests.AdvancedOperationsTest')
-data.setCell(10, 3, 21);
+data.setCell(10, 3, 16);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'testModula3')
-data.setCell(11, 2, 'junit_tests.AdvancedOperationsTest')
-data.setCell(11, 3, 17);
+data.setCell(11, 1, 'testSubtraction2')
+data.setCell(11, 2, 'junit_tests.BasicOperationsTest')
+data.setCell(11, 3, 13);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'testSquareRoot3')
+data.setCell(12, 1, 'testModula3')
 data.setCell(12, 2, 'junit_tests.AdvancedOperationsTest')
-data.setCell(12, 3, 12);
+data.setCell(12, 3, 13);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'testSubtraction1')
-data.setCell(13, 2, 'junit_tests.BasicOperationsTest')
-data.setCell(13, 3, 10);
+data.setCell(13, 1, 'testToDegrees2')
+data.setCell(13, 2, 'junit_tests.AdvancedOperationsTest')
+data.setCell(13, 3, 13);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'testToDegrees2')
+data.setCell(14, 1, 'testToDegrees1')
 data.setCell(14, 2, 'junit_tests.AdvancedOperationsTest')
-data.setCell(14, 3, 10);
+data.setCell(14, 3, 12);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'testPow3')
-data.setCell(15, 2, 'junit_tests.AdvancedOperationsTest')
-data.setCell(15, 3, 9);
+data.setCell(15, 1, 'testAddition3')
+data.setCell(15, 2, 'junit_tests.BasicOperationsTest')
+data.setCell(15, 3, 12);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'testAddition3')
-data.setCell(16, 2, 'junit_tests.BasicOperationsTest')
-data.setCell(16, 3, 9);
+data.setCell(16, 1, 'testPow2')
+data.setCell(16, 2, 'junit_tests.AdvancedOperationsTest')
+data.setCell(16, 3, 10);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'testModula2')
+data.setCell(17, 1, 'testToRadians1')
 data.setCell(17, 2, 'junit_tests.AdvancedOperationsTest')
 data.setCell(17, 3, 8);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'testModula1')
-data.setCell(18, 2, 'junit_tests.AdvancedOperationsTest')
+data.setCell(18, 1, 'testSubtraction3')
+data.setCell(18, 2, 'junit_tests.BasicOperationsTest')
 data.setCell(18, 3, 8);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'testSquareRoot2')
+data.setCell(19, 1, 'testRandom3')
 data.setCell(19, 2, 'junit_tests.AdvancedOperationsTest')
-data.setCell(19, 3, 8);
+data.setCell(19, 3, 7);
 data.setCell(20, 0, 20)
-data.setCell(20, 1, 'testSubtraction3')
-data.setCell(20, 2, 'junit_tests.BasicOperationsTest')
-data.setCell(20, 3, 8);
+data.setCell(20, 1, 'testSquareRoot3')
+data.setCell(20, 2, 'junit_tests.AdvancedOperationsTest')
+data.setCell(20, 3, 7);
 data.setCell(21, 0, 21)
-data.setCell(21, 1, 'testToRadians3')
+data.setCell(21, 1, 'testToRadians2')
 data.setCell(21, 2, 'junit_tests.AdvancedOperationsTest')
 data.setCell(21, 3, 7);
 data.setCell(22, 0, 22)
-data.setCell(22, 1, 'testRandom1')
+data.setCell(22, 1, 'testToDegrees3')
 data.setCell(22, 2, 'junit_tests.AdvancedOperationsTest')
 data.setCell(22, 3, 7);
 data.setCell(23, 0, 23)
-data.setCell(23, 1, 'testToDegrees1')
+data.setCell(23, 1, 'testPow1')
 data.setCell(23, 2, 'junit_tests.AdvancedOperationsTest')
 data.setCell(23, 3, 7);
 data.setCell(24, 0, 24)
-data.setCell(24, 1, 'testRandom2')
+data.setCell(24, 1, 'testModula1')
 data.setCell(24, 2, 'junit_tests.AdvancedOperationsTest')
-data.setCell(24, 3, 7);
+data.setCell(24, 3, 6);
 data.setCell(25, 0, 25)
-data.setCell(25, 1, 'testToRadians1')
+data.setCell(25, 1, 'testRandom2')
 data.setCell(25, 2, 'junit_tests.AdvancedOperationsTest')
-data.setCell(25, 3, 7);
+data.setCell(25, 3, 6);
 data.setCell(26, 0, 26)
-data.setCell(26, 1, 'testSquareRoot1')
+data.setCell(26, 1, 'testPow3')
 data.setCell(26, 2, 'junit_tests.AdvancedOperationsTest')
 data.setCell(26, 3, 6);
 data.setCell(27, 0, 27)
-data.setCell(27, 1, 'testRandom3')
+data.setCell(27, 1, 'testToRadians3')
 data.setCell(27, 2, 'junit_tests.AdvancedOperationsTest')
 data.setCell(27, 3, 6);
 data.setCell(28, 0, 28)
-data.setCell(28, 1, 'testToRadians2')
+data.setCell(28, 1, 'testSquareRoot1')
 data.setCell(28, 2, 'junit_tests.AdvancedOperationsTest')
 data.setCell(28, 3, 6);
 data.setCell(29, 0, 29)
-data.setCell(29, 1, 'testToDegrees3')
+data.setCell(29, 1, 'testSquareRoot2')
 data.setCell(29, 2, 'junit_tests.AdvancedOperationsTest')
-data.setCell(29, 3, 4);
+data.setCell(29, 3, 6);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'testModula2')
+data.setCell(30, 2, 'junit_tests.AdvancedOperationsTest')
+data.setCell(30, 3, 5);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 637 ms</span>
+              <span class="suite-total-time">Total running time: 927 ms</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -697,122 +722,129 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testMultiplication2</span>
-                <span class="method-start">113 ms</span>
+                <span class="method-start">63 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testMultiplication3</span>
-                <span class="method-start">175 ms</span>
+                <span class="method-start">124 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testDivision1</span>
-                <span class="method-start">224 ms</span>
+                <span class="method-start">143 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testDivision2</span>
-                <span class="method-start">257 ms</span>
+                <span class="method-start">167 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testDivision3</span>
-                <span class="method-start">300 ms</span>
+                <span class="method-start">200 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testAddition1</span>
-                <span class="method-start">336 ms</span>
+                <span class="method-start">284 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testAddition2</span>
-                <span class="method-start">384 ms</span>
+                <span class="method-start">311 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testAddition3</span>
-                <span class="method-start">407 ms</span>
+                <span class="method-start">382 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testSubtraction1</span>
-                <span class="method-start">416 ms</span>
+                <span class="method-start">394 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testSubtraction2</span>
-                <span class="method-start">426 ms</span>
+                <span class="method-start">417 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testSubtraction3</span>
-                <span class="method-start">452 ms</span>
+                <span class="method-start">430 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">junit_tests.AdvancedOperationsTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testPow1</span>
-                <span class="method-start">470 ms</span>
+                <span class="method-start">446 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testPow2</span>
-                <span class="method-start">508 ms</span>
+                <span class="method-start">453 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testPow3</span>
-                <span class="method-start">530 ms</span>
+                <span class="method-start">463 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testToRadians1</span>
-                <span class="method-start">539 ms</span>
+                <span class="method-start">470 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testToRadians2</span>
-                <span class="method-start">546 ms</span>
+                <span class="method-start">479 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testToRadians3</span>
-                <span class="method-start">552 ms</span>
+                <span class="method-start">486 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testSquareRoot1</span>
-                <span class="method-start">559 ms</span>
+                <span class="method-start">492 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testSquareRoot2</span>
-                <span class="method-start">565 ms</span>
+                <span class="method-start">498 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testSquareRoot3</span>
-                <span class="method-start">573 ms</span>
+                <span class="method-start">504 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testToDegrees1</span>
-                <span class="method-start">586 ms</span>
+                <span class="method-start">511 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testToDegrees2</span>
-                <span class="method-start">594 ms</span>
+                <span class="method-start">531 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testToDegrees3</span>
-                <span class="method-start">604 ms</span>
+                <span class="method-start">544 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testRandom1</span>
-                <span class="method-start">608 ms</span>
+                <span class="method-start">552 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testRandom2</span>
-                <span class="method-start">615 ms</span>
+                <span class="method-start">568 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testRandom3</span>
-                <span class="method-start">623 ms</span>
+                <span class="method-start">574 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testModula1</span>
-                <span class="method-start">629 ms</span>
+                <span class="method-start">581 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testModula2</span>
-                <span class="method-start">637 ms</span>
+                <span class="method-start">588 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testModula3</span>
-                <span class="method-start">645 ms</span>
+                <span class="method-start">593 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">junit_tests.MainTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testMain</span>
+                <span class="method-start">608 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

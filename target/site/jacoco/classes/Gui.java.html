@@ -1,55 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="sv"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Gui.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">calculator_rickardb_daniels</a> &gt; <a href="index.source.html" class="el_package">classes</a> &gt; <span class="el_source">Gui.java</span></div><h1>Gui.java</h1><pre class="source lang-java linenums">package classes;
 
-import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import java.awt.Color;
-import javax.swing.SwingConstants;
 
 /**
  * &lt;h1&gt;GUI for the calculator&lt;/h1&gt;
  * 
- * @author
+ * @author Rickard Berglund and Daniel Sjosten
  * @version 1.0
- * @since 2016-11-02
+ * @since 2016-11-09
  */
 public class Gui extends JFrame implements ActionListener {
 
-<span class="nc" id="L25">	AdvancedOperations ao = new AdvancedOperations();</span>
+<span class="fc" id="L22">	AdvancedOperations ao = new AdvancedOperations();</span>
 	
-	private JFrame frmCalculator;
-<span class="nc" id="L28">	private String value1 = null, value2 = null, sAnswer;</span>
-	// String value1 = &quot;&quot;;
-	// String value2 = &quot;&quot;;
+	JFrame frmCalculator;
+<span class="fc" id="L25">	private String value1 = null, value2 = null, sAnswer;</span>
 
-	// double number1 = 0;
-	// double number2 = 0;
-
-<span class="nc" id="L35">	private double answer = 0.0;</span>
-<span class="nc" id="L36">	boolean equalsClicked = false;</span>
-<span class="nc" id="L37">	boolean opChosen = false;</span>
-<span class="nc" id="L38">	char operation = ' ';</span>
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-<span class="nc" id="L44">		EventQueue.invokeLater(new Runnable() {</span>
-			public void run() {
-
-<span class="nc" id="L47">				Gui window = new Gui();</span>
-<span class="nc" id="L48">				window.frmCalculator.setVisible(true);</span>
-
-<span class="nc" id="L50">			}</span>
-		});
-<span class="nc" id="L52">	}</span>
+<span class="fc" id="L27">	private double answer = 0.0;</span>
+<span class="fc" id="L28">	boolean equalsClicked = false;</span>
+<span class="fc" id="L29">	boolean opChosen = false;</span>
+<span class="fc" id="L30">	char operation = ' ';</span>
 
 	/**
 	 * Setting serialVersionUID
@@ -57,653 +35,1121 @@ public class Gui extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 
 	// Instanciating the buttons
-<span class="nc" id="L60">	private JButton btn7 = new JButton(&quot;7&quot;);</span>
-<span class="nc" id="L61">	private JButton btn8 = new JButton(&quot;8&quot;);</span>
-<span class="nc" id="L62">	private JButton btn9 = new JButton(&quot;9&quot;);</span>
-<span class="nc" id="L63">	private JButton btn4 = new JButton(&quot;4&quot;);</span>
-<span class="nc" id="L64">	private JButton btn5 = new JButton(&quot;5&quot;);</span>
-<span class="nc" id="L65">	private JButton btn6 = new JButton(&quot;6&quot;);</span>
-<span class="nc" id="L66">	private JButton btn1 = new JButton(&quot;1&quot;);</span>
-<span class="nc" id="L67">	private JButton btn2 = new JButton(&quot;2&quot;);</span>
-<span class="nc" id="L68">	private JButton btn3 = new JButton(&quot;3&quot;);</span>
-<span class="nc" id="L69">	private JButton btn0 = new JButton(&quot;0&quot;);</span>
-<span class="nc" id="L70">	private JButton btn_squirt = new JButton(&quot;Sqr&quot;);</span>
-<span class="nc" id="L71">	private JButton btn_pow = new JButton(&quot;Pow&quot;);</span>
-<span class="nc" id="L72">	private JButton btn_degrees = new JButton(&quot;Dgr&quot;);</span>
-<span class="nc" id="L73">	private JButton btn_radian = new JButton(&quot;Radian&quot;);</span>
-<span class="nc" id="L74">	private JButton btn_clear = new JButton(&quot;C&quot;);</span>
-<span class="nc" id="L75">	private JButton btn_addition = new JButton(&quot;+&quot;);</span>
-<span class="nc" id="L76">	private JButton btn_subtraction = new JButton(&quot;-&quot;);</span>
-<span class="nc" id="L77">	private JButton btn_division = new JButton(&quot;/&quot;);</span>
-<span class="nc" id="L78">	private JButton btn_multiply = new JButton(&quot;*&quot;);</span>
-<span class="nc" id="L79">	private JButton btn_random = new JButton(&quot;Random&quot;);</span>
-<span class="nc" id="L80">	private JButton btn_mod = new JButton(&quot;Mod&quot;);</span>
-<span class="nc" id="L81">	private JButton btn_equals = new JButton(&quot;=&quot;);</span>
+<span class="fc" id="L38">	private JButton btn7 = new JButton(&quot;7&quot;);</span>
+<span class="fc" id="L39">	private JButton btn8 = new JButton(&quot;8&quot;);</span>
+<span class="fc" id="L40">	private JButton btn9 = new JButton(&quot;9&quot;);</span>
+<span class="fc" id="L41">	private JButton btn4 = new JButton(&quot;4&quot;);</span>
+<span class="fc" id="L42">	private JButton btn5 = new JButton(&quot;5&quot;);</span>
+<span class="fc" id="L43">	private JButton btn6 = new JButton(&quot;6&quot;);</span>
+<span class="fc" id="L44">	private JButton btn1 = new JButton(&quot;1&quot;);</span>
+<span class="fc" id="L45">	private JButton btn2 = new JButton(&quot;2&quot;);</span>
+<span class="fc" id="L46">	private JButton btn3 = new JButton(&quot;3&quot;);</span>
+<span class="fc" id="L47">	private JButton btn0 = new JButton(&quot;0&quot;);</span>
+<span class="fc" id="L48">	private JButton btn_squirt = new JButton(&quot;Sqr&quot;);</span>
+<span class="fc" id="L49">	private JButton btn_pow = new JButton(&quot;Pow&quot;);</span>
+<span class="fc" id="L50">	private JButton btn_degrees = new JButton(&quot;Dgr&quot;);</span>
+<span class="fc" id="L51">	private JButton btn_radian = new JButton(&quot;Radian&quot;);</span>
+<span class="fc" id="L52">	private JButton btn_clear = new JButton(&quot;C&quot;);</span>
+<span class="fc" id="L53">	private JButton btn_addition = new JButton(&quot;+&quot;);</span>
+<span class="fc" id="L54">	private JButton btn_subtraction = new JButton(&quot;-&quot;);</span>
+<span class="fc" id="L55">	private JButton btn_division = new JButton(&quot;/&quot;);</span>
+<span class="fc" id="L56">	private JButton btn_multiply = new JButton(&quot;*&quot;);</span>
+<span class="fc" id="L57">	private JButton btn_random = new JButton(&quot;Random&quot;);</span>
+<span class="fc" id="L58">	private JButton btn_mod = new JButton(&quot;Mod&quot;);</span>
+<span class="fc" id="L59">	private JButton btn_equals = new JButton(&quot;=&quot;);</span>
 
 	// Instanciating the textfields
-<span class="nc" id="L84">	private JTextField field_input1 = new JTextField();</span>
-<span class="nc" id="L85">	private JTextField field_input2 = new JTextField();</span>
-<span class="nc" id="L86">	private JTextField field_result = new JTextField();</span>
+<span class="fc" id="L62">	private JTextField field_input1 = new JTextField();</span>
+<span class="fc" id="L63">	private JTextField field_input2 = new JTextField();</span>
+<span class="fc" id="L64">	private JTextField field_result = new JTextField();</span>
 
 	// Instanciating the labels
-<span class="nc" id="L89">	JLabel label_equals = new JLabel(&quot;=&quot;);</span>
-<span class="nc" id="L90">	JLabel label_choosenOperation = new JLabel(&quot;&quot;);</span>
-<span class="nc" id="L91">	private final JLabel lblInput = new JLabel(&quot;Input1&quot;);</span>
-<span class="nc" id="L92">	private final JLabel lblInput_1 = new JLabel(&quot;input2&quot;);</span>
+<span class="fc" id="L67">	JLabel label_equals = new JLabel(&quot;=&quot;);</span>
+<span class="fc" id="L68">	JLabel label_choosenOperation = new JLabel(&quot;&quot;);</span>
+<span class="fc" id="L69">	private final JLabel lblInput = new JLabel(&quot;Input1&quot;);</span>
+<span class="fc" id="L70">	private final JLabel lblInput_1 = new JLabel(&quot;input2&quot;);</span>
 
 	/**
 	 * Create the application.
 	 */
-<span class="nc" id="L97">	public Gui() {</span>
-<span class="nc" id="L98">		createGUI();</span>
-<span class="nc" id="L99">		addComponentsToFrame();</span>
-<span class="nc" id="L100">		addActionListners();</span>
-<span class="nc" id="L101">	}</span>
+<span class="fc" id="L75">	public Gui() {</span>
+<span class="fc" id="L76">		createGUI();</span>
+<span class="fc" id="L77">		addComponentsToFrame();</span>
+<span class="fc" id="L78">		addActionListners();</span>
+<span class="fc" id="L79">	}</span>
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
 	private void createGUI() {
-<span class="nc" id="L107">		frmCalculator = new JFrame();</span>
+<span class="fc" id="L85">		frmCalculator = new JFrame();</span>
 
-<span class="nc" id="L109">		frmCalculator.setTitle(&quot;Calculator By Rickard and Daniel S&quot;);</span>
-<span class="nc" id="L110">		frmCalculator.setBounds(100, 100, 470, 526);</span>
-<span class="nc" id="L111">		frmCalculator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
-<span class="nc" id="L112">		frmCalculator.getContentPane().setLayout(null);</span>
+<span class="fc" id="L87">		frmCalculator.setTitle(&quot;Calculator By Rickard and Daniel S&quot;);</span>
+<span class="fc" id="L88">		frmCalculator.setBounds(100, 100, 470, 526);</span>
+<span class="fc" id="L89">		frmCalculator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
+<span class="fc" id="L90">		frmCalculator.getContentPane().setLayout(null);</span>
 
-<span class="nc" id="L114">	}</span>
+<span class="fc" id="L92">	}</span>
 
 	/**
 	 * Method for adding the components to the frame
 	 */
 	public void addComponentsToFrame() {
 
-<span class="nc" id="L121">		btn7.setBounds(121, 220, 58, 49);</span>
-<span class="nc" id="L122">		frmCalculator.getContentPane().add(btn7);</span>
+<span class="fc" id="L99">		btn7.setBounds(121, 220, 58, 49);</span>
+<span class="fc" id="L100">		frmCalculator.getContentPane().add(btn7);</span>
 
-<span class="nc" id="L124">		btn8.setBounds(191, 220, 58, 49);</span>
-<span class="nc" id="L125">		frmCalculator.getContentPane().add(btn8);</span>
+<span class="fc" id="L102">		btn8.setBounds(191, 220, 58, 49);</span>
+<span class="fc" id="L103">		frmCalculator.getContentPane().add(btn8);</span>
 
-<span class="nc" id="L127">		btn9.setBounds(261, 220, 58, 49);</span>
-<span class="nc" id="L128">		frmCalculator.getContentPane().add(btn9);</span>
+<span class="fc" id="L105">		btn9.setBounds(261, 220, 58, 49);</span>
+<span class="fc" id="L106">		frmCalculator.getContentPane().add(btn9);</span>
 
-<span class="nc" id="L130">		btn4.setBounds(121, 282, 58, 49);</span>
-<span class="nc" id="L131">		frmCalculator.getContentPane().add(btn4);</span>
+<span class="fc" id="L108">		btn4.setBounds(121, 282, 58, 49);</span>
+<span class="fc" id="L109">		frmCalculator.getContentPane().add(btn4);</span>
 
-<span class="nc" id="L133">		btn5.setBounds(191, 282, 58, 49);</span>
-<span class="nc" id="L134">		frmCalculator.getContentPane().add(btn5);</span>
+<span class="fc" id="L111">		btn5.setBounds(191, 282, 58, 49);</span>
+<span class="fc" id="L112">		frmCalculator.getContentPane().add(btn5);</span>
 
-<span class="nc" id="L136">		btn6.setBounds(261, 282, 58, 49);</span>
-<span class="nc" id="L137">		frmCalculator.getContentPane().add(btn6);</span>
+<span class="fc" id="L114">		btn6.setBounds(261, 282, 58, 49);</span>
+<span class="fc" id="L115">		frmCalculator.getContentPane().add(btn6);</span>
 
-<span class="nc" id="L139">		btn1.setBounds(121, 344, 58, 49);</span>
-<span class="nc" id="L140">		frmCalculator.getContentPane().add(btn1);</span>
+<span class="fc" id="L117">		btn1.setBounds(121, 344, 58, 49);</span>
+<span class="fc" id="L118">		frmCalculator.getContentPane().add(btn1);</span>
 
-<span class="nc" id="L142">		btn2.setBounds(191, 344, 58, 49);</span>
-<span class="nc" id="L143">		frmCalculator.getContentPane().add(btn2);</span>
+<span class="fc" id="L120">		btn2.setBounds(191, 344, 58, 49);</span>
+<span class="fc" id="L121">		frmCalculator.getContentPane().add(btn2);</span>
 
-<span class="nc" id="L145">		btn3.setBounds(261, 344, 58, 49);</span>
-<span class="nc" id="L146">		frmCalculator.getContentPane().add(btn3);</span>
+<span class="fc" id="L123">		btn3.setBounds(261, 344, 58, 49);</span>
+<span class="fc" id="L124">		frmCalculator.getContentPane().add(btn3);</span>
 
-<span class="nc" id="L148">		btn0.setBounds(191, 406, 58, 49);</span>
-<span class="nc" id="L149">		frmCalculator.getContentPane().add(btn0);</span>
+<span class="fc" id="L126">		btn0.setBounds(191, 406, 58, 49);</span>
+<span class="fc" id="L127">		frmCalculator.getContentPane().add(btn0);</span>
 
-<span class="nc" id="L151">		btn_squirt.setBounds(12, 112, 79, 49);</span>
-<span class="nc" id="L152">		frmCalculator.getContentPane().add(btn_squirt);</span>
+<span class="fc" id="L129">		btn_squirt.setBounds(12, 112, 79, 49);</span>
+<span class="fc" id="L130">		frmCalculator.getContentPane().add(btn_squirt);</span>
 
-<span class="nc" id="L154">		btn_pow.setBounds(12, 174, 79, 49);</span>
-<span class="nc" id="L155">		frmCalculator.getContentPane().add(btn_pow);</span>
+<span class="fc" id="L132">		btn_pow.setBounds(12, 174, 79, 49);</span>
+<span class="fc" id="L133">		frmCalculator.getContentPane().add(btn_pow);</span>
 
-<span class="nc" id="L157">		btn_degrees.setBounds(12, 230, 79, 49);</span>
-<span class="nc" id="L158">		frmCalculator.getContentPane().add(btn_degrees);</span>
+<span class="fc" id="L135">		btn_degrees.setBounds(12, 230, 79, 49);</span>
+<span class="fc" id="L136">		frmCalculator.getContentPane().add(btn_degrees);</span>
 
-<span class="nc" id="L160">		btn_radian.setBounds(12, 292, 79, 49);</span>
-<span class="nc" id="L161">		frmCalculator.getContentPane().add(btn_radian);</span>
+<span class="fc" id="L138">		btn_radian.setBounds(12, 292, 79, 49);</span>
+<span class="fc" id="L139">		frmCalculator.getContentPane().add(btn_radian);</span>
 
-<span class="nc" id="L163">		btn_clear.setBounds(121, 406, 58, 49);</span>
-<span class="nc" id="L164">		frmCalculator.getContentPane().add(btn_clear);</span>
+<span class="fc" id="L141">		btn_clear.setBounds(121, 406, 58, 49);</span>
+<span class="fc" id="L142">		frmCalculator.getContentPane().add(btn_clear);</span>
 
-<span class="nc" id="L166">		btn_addition.setBounds(349, 279, 58, 49);</span>
-<span class="nc" id="L167">		frmCalculator.getContentPane().add(btn_addition);</span>
+<span class="fc" id="L144">		btn_addition.setBounds(349, 279, 58, 49);</span>
+<span class="fc" id="L145">		frmCalculator.getContentPane().add(btn_addition);</span>
 
-<span class="nc" id="L169">		btn_subtraction.setBounds(349, 344, 58, 49);</span>
-<span class="nc" id="L170">		frmCalculator.getContentPane().add(btn_subtraction);</span>
+<span class="fc" id="L147">		btn_subtraction.setBounds(349, 344, 58, 49);</span>
+<span class="fc" id="L148">		frmCalculator.getContentPane().add(btn_subtraction);</span>
 
-<span class="nc" id="L172">		btn_division.setBounds(349, 406, 58, 49);</span>
-<span class="nc" id="L173">		frmCalculator.getContentPane().add(btn_division);</span>
+<span class="fc" id="L150">		btn_division.setBounds(349, 406, 58, 49);</span>
+<span class="fc" id="L151">		frmCalculator.getContentPane().add(btn_division);</span>
 
-<span class="nc" id="L175">		btn_multiply.setBounds(349, 217, 58, 49);</span>
-<span class="nc" id="L176">		frmCalculator.getContentPane().add(btn_multiply);</span>
+<span class="fc" id="L153">		btn_multiply.setBounds(349, 217, 58, 49);</span>
+<span class="fc" id="L154">		frmCalculator.getContentPane().add(btn_multiply);</span>
 
-<span class="nc" id="L178">		btn_random.setBounds(12, 351, 79, 49);</span>
-<span class="nc" id="L179">		frmCalculator.getContentPane().add(btn_random);</span>
-<span class="nc" id="L180">		btn_random.setToolTipText(&quot;Generates a number between 0-1&quot;);</span>
+<span class="fc" id="L156">		btn_random.setBounds(12, 351, 79, 49);</span>
+<span class="fc" id="L157">		frmCalculator.getContentPane().add(btn_random);</span>
+<span class="fc" id="L158">		btn_random.setToolTipText(&quot;Generates a number between 0-1&quot;);</span>
 
-<span class="nc" id="L182">		btn_mod.setBounds(12, 406, 79, 49);</span>
-<span class="nc" id="L183">		frmCalculator.getContentPane().add(btn_mod);</span>
-<span class="nc" id="L184">		field_input1.setBackground(Color.WHITE);</span>
-<span class="nc" id="L185">		field_input1.setEditable(false);</span>
+<span class="fc" id="L160">		btn_mod.setBounds(12, 406, 79, 49);</span>
+<span class="fc" id="L161">		frmCalculator.getContentPane().add(btn_mod);</span>
+<span class="fc" id="L162">		field_input1.setBackground(Color.WHITE);</span>
+<span class="fc" id="L163">		field_input1.setEditable(false);</span>
 
-<span class="nc" id="L187">		field_input1.setBounds(165, 26, 154, 40);</span>
-<span class="nc" id="L188">		frmCalculator.getContentPane().add(field_input1);</span>
-<span class="nc" id="L189">		field_input1.setColumns(10);</span>
-<span class="nc" id="L190">		field_input2.setBackground(Color.WHITE);</span>
-<span class="nc" id="L191">		field_input2.setEditable(false);</span>
+<span class="fc" id="L165">		field_input1.setBounds(165, 26, 154, 40);</span>
+<span class="fc" id="L166">		frmCalculator.getContentPane().add(field_input1);</span>
+<span class="fc" id="L167">		field_input1.setColumns(10);</span>
+<span class="fc" id="L168">		field_input2.setBackground(Color.WHITE);</span>
+<span class="fc" id="L169">		field_input2.setEditable(false);</span>
 
-<span class="nc" id="L193">		field_input2.setColumns(10);</span>
-<span class="nc" id="L194">		field_input2.setBounds(165, 79, 154, 40);</span>
-<span class="nc" id="L195">		frmCalculator.getContentPane().add(field_input2);</span>
-<span class="nc" id="L196">		field_result.setBackground(Color.WHITE);</span>
-<span class="nc" id="L197">		field_result.setEditable(false);</span>
+<span class="fc" id="L171">		field_input2.setColumns(10);</span>
+<span class="fc" id="L172">		field_input2.setBounds(165, 79, 154, 40);</span>
+<span class="fc" id="L173">		frmCalculator.getContentPane().add(field_input2);</span>
+<span class="fc" id="L174">		field_result.setBackground(Color.WHITE);</span>
+<span class="fc" id="L175">		field_result.setEditable(false);</span>
 
-<span class="nc" id="L199">		field_result.setColumns(10);</span>
-<span class="nc" id="L200">		field_result.setBounds(165, 154, 231, 40);</span>
-<span class="nc" id="L201">		frmCalculator.getContentPane().add(field_result);</span>
-<span class="nc" id="L202">		label_equals.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 15));</span>
+<span class="fc" id="L177">		field_result.setColumns(10);</span>
+<span class="fc" id="L178">		field_result.setBounds(165, 154, 231, 40);</span>
+<span class="fc" id="L179">		frmCalculator.getContentPane().add(field_result);</span>
+<span class="fc" id="L180">		label_equals.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 15));</span>
 
-<span class="nc" id="L204">		label_equals.setBounds(135, 165, 15, 16);</span>
-<span class="nc" id="L205">		frmCalculator.getContentPane().add(label_equals);</span>
-<span class="nc" id="L206">		label_choosenOperation.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
+<span class="fc" id="L182">		label_equals.setBounds(135, 165, 15, 16);</span>
+<span class="fc" id="L183">		frmCalculator.getContentPane().add(label_equals);</span>
+<span class="fc" id="L184">		label_choosenOperation.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 20));</span>
 
-<span class="nc" id="L208">		label_choosenOperation.setBounds(331, 26, 58, 40);</span>
-<span class="nc" id="L209">		frmCalculator.getContentPane().add(label_choosenOperation);</span>
+<span class="fc" id="L186">		label_choosenOperation.setBounds(331, 26, 58, 40);</span>
+<span class="fc" id="L187">		frmCalculator.getContentPane().add(label_choosenOperation);</span>
 
-<span class="nc" id="L211">		btn_equals.setBounds(261, 406, 58, 49);</span>
-<span class="nc" id="L212">		frmCalculator.getContentPane().add(btn_equals);</span>
-<span class="nc" id="L213">		lblInput.setBounds(86, 38, 56, 16);</span>
+<span class="fc" id="L189">		btn_equals.setBounds(261, 406, 58, 49);</span>
+<span class="fc" id="L190">		frmCalculator.getContentPane().add(btn_equals);</span>
+<span class="fc" id="L191">		lblInput.setBounds(86, 38, 56, 16);</span>
 		
-<span class="nc" id="L215">		frmCalculator.getContentPane().add(lblInput);</span>
-<span class="nc" id="L216">		lblInput_1.setBounds(86, 83, 56, 16);</span>
+<span class="fc" id="L193">		frmCalculator.getContentPane().add(lblInput);</span>
+<span class="fc" id="L194">		lblInput_1.setBounds(86, 83, 56, 16);</span>
 		
-<span class="nc" id="L218">		frmCalculator.getContentPane().add(lblInput_1);</span>
-<span class="nc" id="L219">	}</span>
-
+<span class="fc" id="L196">		frmCalculator.getContentPane().add(lblInput_1);</span>
+<span class="fc" id="L197">	}</span>
+	/**
+	 * Method for adding the actionlistners to the buttons
+	 */
 	public void addActionListners() {
 		// add actionlistner to the buttons
-<span class="nc" id="L223">		btn7.addActionListener(this);</span>
-<span class="nc" id="L224">		btn8.addActionListener(this);</span>
-<span class="nc" id="L225">		btn9.addActionListener(this);</span>
-<span class="nc" id="L226">		btn4.addActionListener(this);</span>
-<span class="nc" id="L227">		btn5.addActionListener(this);</span>
-<span class="nc" id="L228">		btn6.addActionListener(this);</span>
-<span class="nc" id="L229">		btn1.addActionListener(this);</span>
-<span class="nc" id="L230">		btn2.addActionListener(this);</span>
-<span class="nc" id="L231">		btn3.addActionListener(this);</span>
-<span class="nc" id="L232">		btn0.addActionListener(this);</span>
-<span class="nc" id="L233">		btn_squirt.addActionListener(this);</span>
-<span class="nc" id="L234">		btn_pow.addActionListener(this);</span>
-<span class="nc" id="L235">		btn_degrees.addActionListener(this);</span>
-<span class="nc" id="L236">		btn_radian.addActionListener(this);</span>
-<span class="nc" id="L237">		btn_clear.addActionListener(this);</span>
-<span class="nc" id="L238">		btn_addition.addActionListener(this);</span>
-<span class="nc" id="L239">		btn_subtraction.addActionListener(this);</span>
-<span class="nc" id="L240">		btn_division.addActionListener(this);</span>
-<span class="nc" id="L241">		btn_multiply.addActionListener(this);</span>
-<span class="nc" id="L242">		btn_random.addActionListener(this);</span>
-<span class="nc" id="L243">		btn_mod.addActionListener(this);</span>
-<span class="nc" id="L244">		btn_equals.addActionListener(this);</span>
+<span class="fc" id="L203">		btn7.addActionListener(this);</span>
+<span class="fc" id="L204">		btn8.addActionListener(this);</span>
+<span class="fc" id="L205">		btn9.addActionListener(this);</span>
+<span class="fc" id="L206">		btn4.addActionListener(this);</span>
+<span class="fc" id="L207">		btn5.addActionListener(this);</span>
+<span class="fc" id="L208">		btn6.addActionListener(this);</span>
+<span class="fc" id="L209">		btn1.addActionListener(this);</span>
+<span class="fc" id="L210">		btn2.addActionListener(this);</span>
+<span class="fc" id="L211">		btn3.addActionListener(this);</span>
+<span class="fc" id="L212">		btn0.addActionListener(this);</span>
+<span class="fc" id="L213">		btn_squirt.addActionListener(this);</span>
+<span class="fc" id="L214">		btn_pow.addActionListener(this);</span>
+<span class="fc" id="L215">		btn_degrees.addActionListener(this);</span>
+<span class="fc" id="L216">		btn_radian.addActionListener(this);</span>
+<span class="fc" id="L217">		btn_clear.addActionListener(this);</span>
+<span class="fc" id="L218">		btn_addition.addActionListener(this);</span>
+<span class="fc" id="L219">		btn_subtraction.addActionListener(this);</span>
+<span class="fc" id="L220">		btn_division.addActionListener(this);</span>
+<span class="fc" id="L221">		btn_multiply.addActionListener(this);</span>
+<span class="fc" id="L222">		btn_random.addActionListener(this);</span>
+<span class="fc" id="L223">		btn_mod.addActionListener(this);</span>
+<span class="fc" id="L224">		btn_equals.addActionListener(this);</span>
 
-<span class="nc" id="L246">	}</span>
+<span class="fc" id="L226">	}</span>
 
+	/**
+	 * Method for actionsPerformed for each button
+	 */
 	public void actionPerformed(ActionEvent e) {
 		// Button 7
 
-<span class="nc bnc" id="L251" title="All 2 branches missed.">		if (e.getSource() == btn7) {</span>
-<span class="nc bnc" id="L252" title="All 2 branches missed.">			if (opChosen == false) {</span>
-<span class="nc bnc" id="L253" title="All 2 branches missed.">				if (value1 == null) {</span>
-<span class="nc" id="L254">					value1 = &quot;7&quot;;</span>
+<span class="nc bnc" id="L234" title="All 2 branches missed.">		if (e.getSource() == btn7) {</span>
+<span class="nc bnc" id="L235" title="All 2 branches missed.">			if (opChosen == false) {</span>
+<span class="nc bnc" id="L236" title="All 2 branches missed.">				if (value1 == null) {</span>
+<span class="nc" id="L237">					value1 = &quot;7&quot;;</span>
 				} else {
-<span class="nc" id="L256">					value1 += &quot;7&quot;;</span>
+<span class="nc" id="L239">					value1 += &quot;7&quot;;</span>
 				}
 			} else {
-<span class="nc bnc" id="L259" title="All 2 branches missed.">				if (value2 == null) {</span>
-<span class="nc" id="L260">					value2 = &quot;7&quot;;</span>
+<span class="nc bnc" id="L242" title="All 2 branches missed.">				if (value2 == null) {</span>
+<span class="nc" id="L243">					value2 = &quot;7&quot;;</span>
 				} else {
-<span class="nc" id="L262">					value2 += &quot;7&quot;;</span>
+<span class="nc" id="L245">					value2 += &quot;7&quot;;</span>
 				}
 			}
-<span class="nc bnc" id="L265" title="All 2 branches missed.">			if (equalsClicked == false) {</span>
-<span class="nc bnc" id="L266" title="All 2 branches missed.">				if (opChosen == false) {</span>
-<span class="nc" id="L267">					field_input1.setText(value1);</span>
+<span class="nc bnc" id="L248" title="All 2 branches missed.">			if (equalsClicked == false) {</span>
+<span class="nc bnc" id="L249" title="All 2 branches missed.">				if (opChosen == false) {</span>
+<span class="nc" id="L250">					field_input1.setText(value1);</span>
 				} else {
-<span class="nc" id="L269">					field_input2.setText(value2);</span>
+<span class="nc" id="L252">					field_input2.setText(value2);</span>
 				}
 			}
 		}
 		// Button 8
-<span class="nc bnc" id="L274" title="All 2 branches missed.">		if (e.getSource() == btn8) {</span>
-<span class="nc bnc" id="L275" title="All 2 branches missed.">			if (opChosen == false) {</span>
-<span class="nc bnc" id="L276" title="All 2 branches missed.">				if (value1 == null) {</span>
-<span class="nc" id="L277">					value1 = &quot;8&quot;;</span>
+<span class="nc bnc" id="L257" title="All 2 branches missed.">		if (e.getSource() == btn8) {</span>
+<span class="nc bnc" id="L258" title="All 2 branches missed.">			if (opChosen == false) {</span>
+<span class="nc bnc" id="L259" title="All 2 branches missed.">				if (value1 == null) {</span>
+<span class="nc" id="L260">					value1 = &quot;8&quot;;</span>
 				} else {
-<span class="nc" id="L279">					value1 += &quot;8&quot;;</span>
+<span class="nc" id="L262">					value1 += &quot;8&quot;;</span>
 				}
 			} else {
-<span class="nc bnc" id="L282" title="All 2 branches missed.">				if (value2 == null) {</span>
-<span class="nc" id="L283">					value2 = &quot;8&quot;;</span>
+<span class="nc bnc" id="L265" title="All 2 branches missed.">				if (value2 == null) {</span>
+<span class="nc" id="L266">					value2 = &quot;8&quot;;</span>
 				} else {
-<span class="nc" id="L285">					value2 += &quot;8&quot;;</span>
+<span class="nc" id="L268">					value2 += &quot;8&quot;;</span>
 				}
 			}
-<span class="nc bnc" id="L288" title="All 2 branches missed.">			if (equalsClicked == false) {</span>
-<span class="nc bnc" id="L289" title="All 2 branches missed.">				if (opChosen == false) {</span>
-<span class="nc" id="L290">					field_input1.setText(value1);</span>
+<span class="nc bnc" id="L271" title="All 2 branches missed.">			if (equalsClicked == false) {</span>
+<span class="nc bnc" id="L272" title="All 2 branches missed.">				if (opChosen == false) {</span>
+<span class="nc" id="L273">					field_input1.setText(value1);</span>
 				} else {
-<span class="nc" id="L292">					field_input2.setText(value2);</span>
+<span class="nc" id="L275">					field_input2.setText(value2);</span>
 				}
 			}
 		}
 		// Button 9
-<span class="nc bnc" id="L297" title="All 2 branches missed.">		if (e.getSource() == btn9) {</span>
-<span class="nc bnc" id="L298" title="All 2 branches missed.">			if (opChosen == false) {</span>
-<span class="nc bnc" id="L299" title="All 2 branches missed.">				if (value1 == null) {</span>
-<span class="nc" id="L300">					value1 = &quot;9&quot;;</span>
+<span class="nc bnc" id="L280" title="All 2 branches missed.">		if (e.getSource() == btn9) {</span>
+<span class="nc bnc" id="L281" title="All 2 branches missed.">			if (opChosen == false) {</span>
+<span class="nc bnc" id="L282" title="All 2 branches missed.">				if (value1 == null) {</span>
+<span class="nc" id="L283">					value1 = &quot;9&quot;;</span>
 				} else {
-<span class="nc" id="L302">					value1 += &quot;9&quot;;</span>
+<span class="nc" id="L285">					value1 += &quot;9&quot;;</span>
 				}
 			} else {
-<span class="nc bnc" id="L305" title="All 2 branches missed.">				if (value2 == null) {</span>
-<span class="nc" id="L306">					value2 = &quot;9&quot;;</span>
+<span class="nc bnc" id="L288" title="All 2 branches missed.">				if (value2 == null) {</span>
+<span class="nc" id="L289">					value2 = &quot;9&quot;;</span>
 				} else {
-<span class="nc" id="L308">					value2 += &quot;9&quot;;</span>
+<span class="nc" id="L291">					value2 += &quot;9&quot;;</span>
 				}
 			}
-<span class="nc bnc" id="L311" title="All 2 branches missed.">			if (equalsClicked == false) {</span>
-<span class="nc bnc" id="L312" title="All 2 branches missed.">				if (opChosen == false) {</span>
-<span class="nc" id="L313">					field_input1.setText(value1);</span>
+<span class="nc bnc" id="L294" title="All 2 branches missed.">			if (equalsClicked == false) {</span>
+<span class="nc bnc" id="L295" title="All 2 branches missed.">				if (opChosen == false) {</span>
+<span class="nc" id="L296">					field_input1.setText(value1);</span>
 				} else {
-<span class="nc" id="L315">					field_input2.setText(value2);</span>
+<span class="nc" id="L298">					field_input2.setText(value2);</span>
 				}
 			}
 		}
 		// Button 4
-<span class="nc bnc" id="L320" title="All 2 branches missed.">		if (e.getSource() == btn4) {</span>
-<span class="nc bnc" id="L321" title="All 2 branches missed.">			if (opChosen == false) {</span>
-<span class="nc bnc" id="L322" title="All 2 branches missed.">				if (value1 == null) {</span>
-<span class="nc" id="L323">					value1 = &quot;4&quot;;</span>
+<span class="nc bnc" id="L303" title="All 2 branches missed.">		if (e.getSource() == btn4) {</span>
+<span class="nc bnc" id="L304" title="All 2 branches missed.">			if (opChosen == false) {</span>
+<span class="nc bnc" id="L305" title="All 2 branches missed.">				if (value1 == null) {</span>
+<span class="nc" id="L306">					value1 = &quot;4&quot;;</span>
 				} else {
-<span class="nc" id="L325">					value1 += &quot;4&quot;;</span>
+<span class="nc" id="L308">					value1 += &quot;4&quot;;</span>
 				}
 			} else {
-<span class="nc bnc" id="L328" title="All 2 branches missed.">				if (value2 == null) {</span>
-<span class="nc" id="L329">					value2 = &quot;4&quot;;</span>
+<span class="nc bnc" id="L311" title="All 2 branches missed.">				if (value2 == null) {</span>
+<span class="nc" id="L312">					value2 = &quot;4&quot;;</span>
 				} else {
-<span class="nc" id="L331">					value2 += &quot;4&quot;;</span>
+<span class="nc" id="L314">					value2 += &quot;4&quot;;</span>
 				}
 			}
-<span class="nc bnc" id="L334" title="All 2 branches missed.">			if (equalsClicked == false) {</span>
-<span class="nc bnc" id="L335" title="All 2 branches missed.">				if (opChosen == false) {</span>
-<span class="nc" id="L336">					field_input1.setText(value1);</span>
+<span class="nc bnc" id="L317" title="All 2 branches missed.">			if (equalsClicked == false) {</span>
+<span class="nc bnc" id="L318" title="All 2 branches missed.">				if (opChosen == false) {</span>
+<span class="nc" id="L319">					field_input1.setText(value1);</span>
 				} else {
-<span class="nc" id="L338">					field_input2.setText(value2);</span>
+<span class="nc" id="L321">					field_input2.setText(value2);</span>
 				}
 			}
 		}
 		// Button 5
-<span class="nc bnc" id="L343" title="All 2 branches missed.">		if (e.getSource() == btn5) {</span>
-<span class="nc bnc" id="L344" title="All 2 branches missed.">			if (opChosen == false) {</span>
-<span class="nc bnc" id="L345" title="All 2 branches missed.">				if (value1 == null) {</span>
-<span class="nc" id="L346">					value1 = &quot;5&quot;;</span>
+<span class="nc bnc" id="L326" title="All 2 branches missed.">		if (e.getSource() == btn5) {</span>
+<span class="nc bnc" id="L327" title="All 2 branches missed.">			if (opChosen == false) {</span>
+<span class="nc bnc" id="L328" title="All 2 branches missed.">				if (value1 == null) {</span>
+<span class="nc" id="L329">					value1 = &quot;5&quot;;</span>
 				} else {
-<span class="nc" id="L348">					value1 += &quot;5&quot;;</span>
+<span class="nc" id="L331">					value1 += &quot;5&quot;;</span>
 				}
 			} else {
-<span class="nc bnc" id="L351" title="All 2 branches missed.">				if (value2 == null) {</span>
-<span class="nc" id="L352">					value2 = &quot;5&quot;;</span>
+<span class="nc bnc" id="L334" title="All 2 branches missed.">				if (value2 == null) {</span>
+<span class="nc" id="L335">					value2 = &quot;5&quot;;</span>
 				} else {
-<span class="nc" id="L354">					value2 += &quot;5&quot;;</span>
+<span class="nc" id="L337">					value2 += &quot;5&quot;;</span>
 				}
 			}
-<span class="nc bnc" id="L357" title="All 2 branches missed.">			if (equalsClicked == false) {</span>
-<span class="nc bnc" id="L358" title="All 2 branches missed.">				if (opChosen == false) {</span>
-<span class="nc" id="L359">					field_input1.setText(value1);</span>
+<span class="nc bnc" id="L340" title="All 2 branches missed.">			if (equalsClicked == false) {</span>
+<span class="nc bnc" id="L341" title="All 2 branches missed.">				if (opChosen == false) {</span>
+<span class="nc" id="L342">					field_input1.setText(value1);</span>
 				} else {
-<span class="nc" id="L361">					field_input2.setText(value2);</span>
+<span class="nc" id="L344">					field_input2.setText(value2);</span>
 				}
 			}
 		}
 		// Button 6
-<span class="nc bnc" id="L366" title="All 2 branches missed.">		if (e.getSource() == btn6) {</span>
-<span class="nc bnc" id="L367" title="All 2 branches missed.">			if (opChosen == false) {</span>
-<span class="nc bnc" id="L368" title="All 2 branches missed.">				if (value1 == null) {</span>
-<span class="nc" id="L369">					value1 = &quot;6&quot;;</span>
+<span class="nc bnc" id="L349" title="All 2 branches missed.">		if (e.getSource() == btn6) {</span>
+<span class="nc bnc" id="L350" title="All 2 branches missed.">			if (opChosen == false) {</span>
+<span class="nc bnc" id="L351" title="All 2 branches missed.">				if (value1 == null) {</span>
+<span class="nc" id="L352">					value1 = &quot;6&quot;;</span>
 				} else {
-<span class="nc" id="L371">					value1 += &quot;6&quot;;</span>
+<span class="nc" id="L354">					value1 += &quot;6&quot;;</span>
 				}
 			} else {
-<span class="nc bnc" id="L374" title="All 2 branches missed.">				if (value2 == null) {</span>
-<span class="nc" id="L375">					value2 = &quot;6&quot;;</span>
+<span class="nc bnc" id="L357" title="All 2 branches missed.">				if (value2 == null) {</span>
+<span class="nc" id="L358">					value2 = &quot;6&quot;;</span>
 				} else {
-<span class="nc" id="L377">					value2 += &quot;6&quot;;</span>
+<span class="nc" id="L360">					value2 += &quot;6&quot;;</span>
 				}
 			}
-<span class="nc bnc" id="L380" title="All 2 branches missed.">			if (equalsClicked == false) {</span>
-<span class="nc bnc" id="L381" title="All 2 branches missed.">				if (opChosen == false) {</span>
-<span class="nc" id="L382">					field_input1.setText(value1);</span>
+<span class="nc bnc" id="L363" title="All 2 branches missed.">			if (equalsClicked == false) {</span>
+<span class="nc bnc" id="L364" title="All 2 branches missed.">				if (opChosen == false) {</span>
+<span class="nc" id="L365">					field_input1.setText(value1);</span>
 				} else {
-<span class="nc" id="L384">					field_input2.setText(value2);</span>
+<span class="nc" id="L367">					field_input2.setText(value2);</span>
 				}
 			}
 		}
 		// Button 1
-<span class="nc bnc" id="L389" title="All 2 branches missed.">		if (e.getSource() == btn1) {</span>
-<span class="nc bnc" id="L390" title="All 2 branches missed.">			if (opChosen == false) {</span>
-<span class="nc bnc" id="L391" title="All 2 branches missed.">				if (value1 == null) {</span>
-<span class="nc" id="L392">					value1 = &quot;1&quot;;</span>
+<span class="nc bnc" id="L372" title="All 2 branches missed.">		if (e.getSource() == btn1) {</span>
+<span class="nc bnc" id="L373" title="All 2 branches missed.">			if (opChosen == false) {</span>
+<span class="nc bnc" id="L374" title="All 2 branches missed.">				if (value1 == null) {</span>
+<span class="nc" id="L375">					value1 = &quot;1&quot;;</span>
 				} else {
-<span class="nc" id="L394">					value1 += &quot;1&quot;;</span>
+<span class="nc" id="L377">					value1 += &quot;1&quot;;</span>
 				}
 			} else {
-<span class="nc bnc" id="L397" title="All 2 branches missed.">				if (value2 == null) {</span>
-<span class="nc" id="L398">					value2 = &quot;1&quot;;</span>
+<span class="nc bnc" id="L380" title="All 2 branches missed.">				if (value2 == null) {</span>
+<span class="nc" id="L381">					value2 = &quot;1&quot;;</span>
 				} else {
-<span class="nc" id="L400">					value2 += &quot;1&quot;;</span>
+<span class="nc" id="L383">					value2 += &quot;1&quot;;</span>
 				}
 			}
-<span class="nc bnc" id="L403" title="All 2 branches missed.">			if (equalsClicked == false) {</span>
-<span class="nc bnc" id="L404" title="All 2 branches missed.">				if (opChosen == false) {</span>
-<span class="nc" id="L405">					field_input1.setText(value1);</span>
+<span class="nc bnc" id="L386" title="All 2 branches missed.">			if (equalsClicked == false) {</span>
+<span class="nc bnc" id="L387" title="All 2 branches missed.">				if (opChosen == false) {</span>
+<span class="nc" id="L388">					field_input1.setText(value1);</span>
 				} else {
-<span class="nc" id="L407">					field_input2.setText(value2);</span>
+<span class="nc" id="L390">					field_input2.setText(value2);</span>
 				}
 			}
 		}
 		// Button 2
-<span class="nc bnc" id="L412" title="All 2 branches missed.">		if (e.getSource() == btn2) {</span>
-<span class="nc bnc" id="L413" title="All 2 branches missed.">			if (opChosen == false) {</span>
-<span class="nc bnc" id="L414" title="All 2 branches missed.">				if (value1 == null) {</span>
-<span class="nc" id="L415">					value1 = &quot;2&quot;;</span>
+<span class="nc bnc" id="L395" title="All 2 branches missed.">		if (e.getSource() == btn2) {</span>
+<span class="nc bnc" id="L396" title="All 2 branches missed.">			if (opChosen == false) {</span>
+<span class="nc bnc" id="L397" title="All 2 branches missed.">				if (value1 == null) {</span>
+<span class="nc" id="L398">					value1 = &quot;2&quot;;</span>
 				} else {
-<span class="nc" id="L417">					value1 += &quot;2&quot;;</span>
+<span class="nc" id="L400">					value1 += &quot;2&quot;;</span>
 				}
 			} else {
-<span class="nc bnc" id="L420" title="All 2 branches missed.">				if (value2 == null) {</span>
-<span class="nc" id="L421">					value2 = &quot;2&quot;;</span>
+<span class="nc bnc" id="L403" title="All 2 branches missed.">				if (value2 == null) {</span>
+<span class="nc" id="L404">					value2 = &quot;2&quot;;</span>
 				} else {
-<span class="nc" id="L423">					value2 += &quot;2&quot;;</span>
+<span class="nc" id="L406">					value2 += &quot;2&quot;;</span>
 				}
 			}
-<span class="nc bnc" id="L426" title="All 2 branches missed.">			if (equalsClicked == false) {</span>
-<span class="nc bnc" id="L427" title="All 2 branches missed.">				if (opChosen == false) {</span>
-<span class="nc" id="L428">					field_input1.setText(value1);</span>
+<span class="nc bnc" id="L409" title="All 2 branches missed.">			if (equalsClicked == false) {</span>
+<span class="nc bnc" id="L410" title="All 2 branches missed.">				if (opChosen == false) {</span>
+<span class="nc" id="L411">					field_input1.setText(value1);</span>
 				} else {
-<span class="nc" id="L430">					field_input2.setText(value2);</span>
+<span class="nc" id="L413">					field_input2.setText(value2);</span>
 				}
 			}
 		}
 		// Button 3
-<span class="nc bnc" id="L435" title="All 2 branches missed.">		if (e.getSource() == btn3) {</span>
-<span class="nc bnc" id="L436" title="All 2 branches missed.">			if (opChosen == false) {</span>
-<span class="nc bnc" id="L437" title="All 2 branches missed.">				if (value1 == null) {</span>
-<span class="nc" id="L438">					value1 = &quot;3&quot;;</span>
+<span class="nc bnc" id="L418" title="All 2 branches missed.">		if (e.getSource() == btn3) {</span>
+<span class="nc bnc" id="L419" title="All 2 branches missed.">			if (opChosen == false) {</span>
+<span class="nc bnc" id="L420" title="All 2 branches missed.">				if (value1 == null) {</span>
+<span class="nc" id="L421">					value1 = &quot;3&quot;;</span>
 				} else {
-<span class="nc" id="L440">					value1 += &quot;3&quot;;</span>
+<span class="nc" id="L423">					value1 += &quot;3&quot;;</span>
 				}
 			} else {
-<span class="nc bnc" id="L443" title="All 2 branches missed.">				if (value2 == null) {</span>
-<span class="nc" id="L444">					value2 = &quot;3&quot;;</span>
+<span class="nc bnc" id="L426" title="All 2 branches missed.">				if (value2 == null) {</span>
+<span class="nc" id="L427">					value2 = &quot;3&quot;;</span>
 				} else {
-<span class="nc" id="L446">					value2 += &quot;3&quot;;</span>
+<span class="nc" id="L429">					value2 += &quot;3&quot;;</span>
 				}
 			}
-<span class="nc bnc" id="L449" title="All 2 branches missed.">			if (equalsClicked == false) {</span>
-<span class="nc bnc" id="L450" title="All 2 branches missed.">				if (opChosen == false) {</span>
-<span class="nc" id="L451">					field_input1.setText(value1);</span>
+<span class="nc bnc" id="L432" title="All 2 branches missed.">			if (equalsClicked == false) {</span>
+<span class="nc bnc" id="L433" title="All 2 branches missed.">				if (opChosen == false) {</span>
+<span class="nc" id="L434">					field_input1.setText(value1);</span>
 				} else {
-<span class="nc" id="L453">					field_input2.setText(value2);</span>
+<span class="nc" id="L436">					field_input2.setText(value2);</span>
 				}
 			}
 		}
 		// Button 0
-<span class="nc bnc" id="L458" title="All 2 branches missed.">		if (e.getSource() == btn0) {</span>
-<span class="nc bnc" id="L459" title="All 2 branches missed.">			if (opChosen == false) {</span>
-<span class="nc bnc" id="L460" title="All 2 branches missed.">				if (value1 == null) {</span>
-<span class="nc" id="L461">					value1 = &quot;0&quot;;</span>
+<span class="nc bnc" id="L441" title="All 2 branches missed.">		if (e.getSource() == btn0) {</span>
+<span class="nc bnc" id="L442" title="All 2 branches missed.">			if (opChosen == false) {</span>
+<span class="nc bnc" id="L443" title="All 2 branches missed.">				if (value1 == null) {</span>
+<span class="nc" id="L444">					value1 = &quot;0&quot;;</span>
 				} else {
-<span class="nc" id="L463">					value1 += &quot;0&quot;;</span>
+<span class="nc" id="L446">					value1 += &quot;0&quot;;</span>
 				}
 			} else {
-<span class="nc bnc" id="L466" title="All 2 branches missed.">				if (value2 == null) {</span>
-<span class="nc" id="L467">					value2 = &quot;0&quot;;</span>
+<span class="nc bnc" id="L449" title="All 2 branches missed.">				if (value2 == null) {</span>
+<span class="nc" id="L450">					value2 = &quot;0&quot;;</span>
 				} else {
-<span class="nc" id="L469">					value2 += &quot;0&quot;;</span>
+<span class="nc" id="L452">					value2 += &quot;0&quot;;</span>
 				}
 			}
 
-<span class="nc bnc" id="L473" title="All 2 branches missed.">			if (equalsClicked == false) {</span>
-<span class="nc bnc" id="L474" title="All 2 branches missed.">				if (opChosen == false) {</span>
-<span class="nc" id="L475">					field_input1.setText(value1);</span>
+<span class="nc bnc" id="L456" title="All 2 branches missed.">			if (equalsClicked == false) {</span>
+<span class="nc bnc" id="L457" title="All 2 branches missed.">				if (opChosen == false) {</span>
+<span class="nc" id="L458">					field_input1.setText(value1);</span>
 				} else {
-<span class="nc" id="L477">					field_input2.setText(value2);</span>
+<span class="nc" id="L460">					field_input2.setText(value2);</span>
 				}
 			}
 
 		}
 		// Button sqr
-<span class="nc bnc" id="L483" title="All 2 branches missed.">		if (e.getSource() == btn_squirt) {</span>
-<span class="nc bnc" id="L484" title="All 2 branches missed.">				if (value1==null) {</span>
-<span class="nc" id="L485">					JOptionPane.showMessageDialog(frmCalculator, &quot;Pick the nr to get sqrt of&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
-<span class="nc bnc" id="L486" title="All 2 branches missed.">				}else if (value1 != null){</span>
-<span class="nc" id="L487">					opChosen = true;</span>
-<span class="nc" id="L488">					equalsClicked = true;</span>
-<span class="nc" id="L489">					label_choosenOperation.setText(&quot;Sqrt&quot;);</span>
-<span class="nc" id="L490">					operation = 'S';</span>
-<span class="nc" id="L491">					value2 = &quot;0&quot;;</span>
+<span class="nc bnc" id="L466" title="All 2 branches missed.">		if (e.getSource() == btn_squirt) {</span>
+<span class="nc bnc" id="L467" title="All 2 branches missed.">				if (value1==null) {</span>
+<span class="nc" id="L468">					JOptionPane.showMessageDialog(frmCalculator, &quot;Pick the nr to get sqrt of&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
+<span class="nc bnc" id="L469" title="All 2 branches missed.">				}else if (value1 != null){</span>
+<span class="nc" id="L470">					opChosen = true;</span>
+<span class="nc" id="L471">					equalsClicked = true;</span>
+<span class="nc" id="L472">					label_choosenOperation.setText(&quot;Sqrt&quot;);</span>
+<span class="nc" id="L473">					operation = 'S';</span>
+<span class="nc" id="L474">					value2 = &quot;0&quot;;</span>
 
-<span class="nc" id="L493">					double number1 = 0.0;</span>
-<span class="nc" id="L494">					number1 = Double.parseDouble(value1);</span>
-<span class="nc" id="L495">					answer = ao.SquareRoot(number1);</span>
-<span class="nc" id="L496">					sAnswer = Double.toString(answer);</span>
-<span class="nc" id="L497">					field_result.setText(sAnswer);</span>
+<span class="nc" id="L476">					double number1 = 0.0;</span>
+<span class="nc" id="L477">					number1 = Double.parseDouble(value1);</span>
+<span class="nc" id="L478">					answer = ao.SquareRoot(number1);</span>
+<span class="nc" id="L479">					sAnswer = Double.toString(answer);</span>
+<span class="nc" id="L480">					field_result.setText(sAnswer);</span>
 					
-<span class="nc" id="L499">				}</span>
-<span class="nc bnc" id="L500" title="All 4 branches missed.">				else if (value1 != null &amp;&amp; value2 != null){</span>
-<span class="nc" id="L501">					JOptionPane.showMessageDialog(frmCalculator, &quot;You can only do calc on 2 numbers..&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
 				}
 		}
 		// Button pow
-<span class="nc bnc" id="L505" title="All 2 branches missed.">		if (e.getSource() == btn_pow) {</span>
-<span class="nc bnc" id="L506" title="All 2 branches missed.">			if (value1==null) {</span>
-<span class="nc" id="L507">				JOptionPane.showMessageDialog(frmCalculator, &quot;Pick the first number&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
-<span class="nc bnc" id="L508" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 == null){</span>
-<span class="nc" id="L509">				opChosen = true;</span>
-<span class="nc" id="L510">				label_choosenOperation.setText(&quot;Pow&quot;);</span>
-<span class="nc" id="L511">				operation = 'P';</span>
-<span class="nc bnc" id="L512" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 != null){</span>
-<span class="nc" id="L513">				JOptionPane.showMessageDialog(frmCalculator, &quot;You can only do calc on 2 numbers..&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
+<span class="nc bnc" id="L485" title="All 2 branches missed.">		if (e.getSource() == btn_pow) {</span>
+<span class="nc bnc" id="L486" title="All 2 branches missed.">			if (value1==null) {</span>
+<span class="nc" id="L487">				JOptionPane.showMessageDialog(frmCalculator, &quot;Pick the first number&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
+<span class="nc bnc" id="L488" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 == null){</span>
+<span class="nc" id="L489">				opChosen = true;</span>
+<span class="nc" id="L490">				label_choosenOperation.setText(&quot;Pow&quot;);</span>
+<span class="nc" id="L491">				operation = 'P';</span>
+<span class="nc bnc" id="L492" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 != null){</span>
+<span class="nc" id="L493">				JOptionPane.showMessageDialog(frmCalculator, &quot;You can only do calc on 2 numbers..&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
 			}
 		}
 		// Button degrees
-<span class="nc bnc" id="L517" title="All 2 branches missed.">		if (e.getSource() == btn_degrees) {</span>
+<span class="nc bnc" id="L497" title="All 2 branches missed.">		if (e.getSource() == btn_degrees) {</span>
+<span class="nc bnc" id="L498" title="All 2 branches missed.">			if (value1==null) {</span>
+<span class="nc" id="L499">				JOptionPane.showMessageDialog(frmCalculator, &quot;Pick the nr to convert to degrees&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
+<span class="nc bnc" id="L500" title="All 2 branches missed.">			}else if (value1 != null){</span>
+<span class="nc" id="L501">				opChosen = true;</span>
+<span class="nc" id="L502">				equalsClicked = true;</span>
+<span class="nc" id="L503">				label_choosenOperation.setText(&quot;toDgr&quot;);</span>
+<span class="nc" id="L504">				operation = 'D';</span>
+<span class="nc" id="L505">				value2 = &quot;0&quot;;</span>
+				
+
+<span class="nc" id="L508">				double number1 = 0.0;</span>
+<span class="nc" id="L509">				number1 = Double.parseDouble(value1);</span>
+<span class="nc" id="L510">				answer = ao.toDegrees(number1);</span>
+<span class="nc" id="L511">				sAnswer = Double.toString(answer);</span>
+<span class="nc" id="L512">				field_result.setText(sAnswer);</span>
+				
+			}
+		}
+		// Button radian
+<span class="nc bnc" id="L517" title="All 2 branches missed.">		if (e.getSource() == btn_radian) {</span>
 <span class="nc bnc" id="L518" title="All 2 branches missed.">			if (value1==null) {</span>
-<span class="nc" id="L519">				JOptionPane.showMessageDialog(frmCalculator, &quot;Pick the nr to convert to degrees&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
+<span class="nc" id="L519">				JOptionPane.showMessageDialog(frmCalculator, &quot;Pick the nr to convert to radians&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
 <span class="nc bnc" id="L520" title="All 2 branches missed.">			}else if (value1 != null){</span>
 <span class="nc" id="L521">				opChosen = true;</span>
 <span class="nc" id="L522">				equalsClicked = true;</span>
-<span class="nc" id="L523">				label_choosenOperation.setText(&quot;toDgr&quot;);</span>
-<span class="nc" id="L524">				operation = 'D';</span>
+<span class="nc" id="L523">				label_choosenOperation.setText(&quot;toRdn&quot;);</span>
+<span class="nc" id="L524">				operation = 'R';</span>
 <span class="nc" id="L525">				value2 = &quot;0&quot;;</span>
 				
 <span class="nc" id="L527">				double number1 = 0.0;</span>
 <span class="nc" id="L528">				number1 = Double.parseDouble(value1);</span>
-<span class="nc" id="L529">				answer = ao.toDegrees(number1);</span>
+<span class="nc" id="L529">				answer = ao.toRadians(number1);</span>
 <span class="nc" id="L530">				sAnswer = Double.toString(answer);</span>
 <span class="nc" id="L531">				field_result.setText(sAnswer);</span>
 				
-<span class="nc bnc" id="L533" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 != null){</span>
-<span class="nc" id="L534">				JOptionPane.showMessageDialog(frmCalculator, &quot;You can only do calc on 2 numbers..&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
-			}
-		}
-		// Button radian
-<span class="nc bnc" id="L538" title="All 2 branches missed.">		if (e.getSource() == btn_radian) {</span>
-<span class="nc bnc" id="L539" title="All 2 branches missed.">			if (value1==null) {</span>
-<span class="nc" id="L540">				JOptionPane.showMessageDialog(frmCalculator, &quot;Pick the nr to convert to radians&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
-<span class="nc bnc" id="L541" title="All 2 branches missed.">			}else if (value1 != null){</span>
-<span class="nc" id="L542">				opChosen = true;</span>
-<span class="nc" id="L543">				equalsClicked = true;</span>
-<span class="nc" id="L544">				label_choosenOperation.setText(&quot;toRdn&quot;);</span>
-<span class="nc" id="L545">				operation = 'R';</span>
-<span class="nc" id="L546">				value2 = &quot;0&quot;;</span>
-				
-<span class="nc" id="L548">				double number1 = 0.0;</span>
-<span class="nc" id="L549">				number1 = Double.parseDouble(value1);</span>
-<span class="nc" id="L550">				answer = ao.toRadians(number1);</span>
-<span class="nc" id="L551">				sAnswer = Double.toString(answer);</span>
-<span class="nc" id="L552">				field_result.setText(sAnswer);</span>
-				
-<span class="nc bnc" id="L554" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 != null){</span>
-<span class="nc" id="L555">				JOptionPane.showMessageDialog(frmCalculator, &quot;You can only do calc on 2 numbers..&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
 			}
 		}
 		// Button add
-<span class="nc bnc" id="L559" title="All 2 branches missed.">		if (e.getSource() == btn_addition) {</span>
-<span class="nc bnc" id="L560" title="All 2 branches missed.">			if (value1==null) {</span>
-<span class="nc" id="L561">				JOptionPane.showMessageDialog(frmCalculator, &quot;Pick the first number&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
-<span class="nc bnc" id="L562" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 == null){</span>
-<span class="nc" id="L563">				opChosen = true;</span>
-<span class="nc" id="L564">				label_choosenOperation.setText(&quot;+&quot;);</span>
-<span class="nc" id="L565">				operation = '+';</span>
-<span class="nc bnc" id="L566" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 != null){</span>
-<span class="nc" id="L567">				JOptionPane.showMessageDialog(frmCalculator, &quot;You can only do calc on 2 numbers..&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
+<span class="nc bnc" id="L536" title="All 2 branches missed.">		if (e.getSource() == btn_addition) {</span>
+<span class="nc bnc" id="L537" title="All 2 branches missed.">			if (value1==null) {</span>
+<span class="nc" id="L538">				JOptionPane.showMessageDialog(frmCalculator, &quot;Pick the first number&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
+<span class="nc bnc" id="L539" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 == null){</span>
+<span class="nc" id="L540">				opChosen = true;</span>
+<span class="nc" id="L541">				label_choosenOperation.setText(&quot;+&quot;);</span>
+<span class="nc" id="L542">				operation = '+';</span>
+<span class="nc bnc" id="L543" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 != null){</span>
+<span class="nc" id="L544">				JOptionPane.showMessageDialog(frmCalculator, &quot;You can only do calc on 2 numbers..&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
 			}
 		}
 
 		// Button subtract
-<span class="nc bnc" id="L572" title="All 2 branches missed.">		if (e.getSource() == btn_subtraction) {</span>
-<span class="nc bnc" id="L573" title="All 2 branches missed.">			if (value1==null) {</span>
-<span class="nc" id="L574">				JOptionPane.showMessageDialog(frmCalculator, &quot;Pick the first number&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
-<span class="nc bnc" id="L575" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 == null){</span>
-<span class="nc" id="L576">				opChosen = true;</span>
-<span class="nc" id="L577">				label_choosenOperation.setText(&quot;-&quot;);</span>
-<span class="nc" id="L578">				operation = '-';</span>
-<span class="nc bnc" id="L579" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 != null){</span>
-<span class="nc" id="L580">				JOptionPane.showMessageDialog(frmCalculator, &quot;You can only do calc on 2 numbers..&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
+<span class="nc bnc" id="L549" title="All 2 branches missed.">		if (e.getSource() == btn_subtraction) {</span>
+<span class="nc bnc" id="L550" title="All 2 branches missed.">			if (value1==null) {</span>
+<span class="nc" id="L551">				JOptionPane.showMessageDialog(frmCalculator, &quot;Pick the first number&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
+<span class="nc bnc" id="L552" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 == null){</span>
+<span class="nc" id="L553">				opChosen = true;</span>
+<span class="nc" id="L554">				label_choosenOperation.setText(&quot;-&quot;);</span>
+<span class="nc" id="L555">				operation = '-';</span>
+<span class="nc bnc" id="L556" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 != null){</span>
+<span class="nc" id="L557">				JOptionPane.showMessageDialog(frmCalculator, &quot;You can only do calc on 2 numbers..&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
 			}
 		}
 		// Button division
-<span class="nc bnc" id="L584" title="All 2 branches missed.">		if (e.getSource() == btn_division) {</span>
-<span class="nc bnc" id="L585" title="All 2 branches missed.">			if (value1==null) {</span>
-<span class="nc" id="L586">				JOptionPane.showMessageDialog(frmCalculator, &quot;Pick the first number&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
-<span class="nc bnc" id="L587" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 == null){</span>
-<span class="nc" id="L588">				opChosen = true;</span>
-<span class="nc" id="L589">				label_choosenOperation.setText(&quot;/&quot;);</span>
-<span class="nc" id="L590">				operation = '/';</span>
-<span class="nc bnc" id="L591" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 != null){</span>
-<span class="nc" id="L592">				JOptionPane.showMessageDialog(frmCalculator, &quot;You can only do calc on 2 numbers..&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
+<span class="nc bnc" id="L561" title="All 2 branches missed.">		if (e.getSource() == btn_division) {</span>
+<span class="nc bnc" id="L562" title="All 2 branches missed.">			if (value1==null) {</span>
+<span class="nc" id="L563">				JOptionPane.showMessageDialog(frmCalculator, &quot;Pick the first number&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
+<span class="nc bnc" id="L564" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 == null){</span>
+<span class="nc" id="L565">				opChosen = true;</span>
+<span class="nc" id="L566">				label_choosenOperation.setText(&quot;/&quot;);</span>
+<span class="nc" id="L567">				operation = '/';</span>
+<span class="nc bnc" id="L568" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 != null){</span>
+<span class="nc" id="L569">				JOptionPane.showMessageDialog(frmCalculator, &quot;You can only do calc on 2 numbers..&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
 			}
 		}
 		// Button multiplication
-<span class="nc bnc" id="L596" title="All 2 branches missed.">		if (e.getSource() == btn_multiply) {</span>
-<span class="nc bnc" id="L597" title="All 2 branches missed.">			if (value1==null) {</span>
-<span class="nc" id="L598">				JOptionPane.showMessageDialog(frmCalculator, &quot;Pick the first number&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
-<span class="nc bnc" id="L599" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 == null){</span>
-<span class="nc" id="L600">				opChosen = true;</span>
-<span class="nc" id="L601">				label_choosenOperation.setText(&quot;*&quot;);</span>
-<span class="nc" id="L602">				operation = '*';</span>
-<span class="nc bnc" id="L603" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 != null){</span>
-<span class="nc" id="L604">				JOptionPane.showMessageDialog(frmCalculator, &quot;You can only do calc on 2 numbers..&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
+<span class="nc bnc" id="L573" title="All 2 branches missed.">		if (e.getSource() == btn_multiply) {</span>
+<span class="nc bnc" id="L574" title="All 2 branches missed.">			if (value1==null) {</span>
+<span class="nc" id="L575">				JOptionPane.showMessageDialog(frmCalculator, &quot;Pick the first number&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
+<span class="nc bnc" id="L576" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 == null){</span>
+<span class="nc" id="L577">				opChosen = true;</span>
+<span class="nc" id="L578">				label_choosenOperation.setText(&quot;*&quot;);</span>
+<span class="nc" id="L579">				operation = '*';</span>
+<span class="nc bnc" id="L580" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 != null){</span>
+<span class="nc" id="L581">				JOptionPane.showMessageDialog(frmCalculator, &quot;You can only do calc on 2 numbers..&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
 			}
 		}
 		
 		// Button random
-<span class="nc bnc" id="L609" title="All 2 branches missed.">		if (e.getSource() == btn_random) {</span>
-<span class="nc bnc" id="L610" title="All 2 branches missed.">				if (value1==null) {</span>
-<span class="nc" id="L611">					double random1 = ao.Random();</span>
-<span class="nc" id="L612">					value1 = Double.toString(random1);</span>
-<span class="nc" id="L613">					field_input1.setText(value1);</span>
-<span class="nc bnc" id="L614" title="All 6 branches missed.">				}else if (value1 != null &amp;&amp; value2 == null &amp;&amp; opChosen == true){</span>
-<span class="nc" id="L615">					double random2 = ao.Random();</span>
-<span class="nc" id="L616">					value2 = Double.toString(random2);</span>
-<span class="nc" id="L617">					field_input2.setText(value2);</span>
-<span class="nc bnc" id="L618" title="All 6 branches missed.">				}else if (value1 != null &amp;&amp; value2 == null &amp;&amp; opChosen == false) {</span>
-<span class="nc" id="L619">					JOptionPane.showMessageDialog(frmCalculator, &quot;Pick operation before generating the second random nr&quot;, &quot;Error&quot;, JOptionPane.ERROR_MESSAGE);</span>
-<span class="nc bnc" id="L620" title="All 4 branches missed.">				}else if (value1 != null &amp;&amp; value2 != null){</span>
-<span class="nc" id="L621">					JOptionPane.showMessageDialog(frmCalculator, &quot;You can only do calc on 2 numbers..&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
+<span class="nc bnc" id="L586" title="All 2 branches missed.">		if (e.getSource() == btn_random) {</span>
+<span class="nc bnc" id="L587" title="All 2 branches missed.">				if (value1==null) {</span>
+<span class="nc" id="L588">					double random1 = ao.Random();</span>
+<span class="nc" id="L589">					value1 = Double.toString(random1);</span>
+<span class="nc" id="L590">					field_input1.setText(value1);</span>
+<span class="nc bnc" id="L591" title="All 6 branches missed.">				}else if (value1 != null &amp;&amp; value2 == null &amp;&amp; opChosen == true){</span>
+<span class="nc" id="L592">					double random2 = ao.Random();</span>
+<span class="nc" id="L593">					value2 = Double.toString(random2);</span>
+<span class="nc" id="L594">					field_input2.setText(value2);</span>
+<span class="nc bnc" id="L595" title="All 6 branches missed.">				}else if (value1 != null &amp;&amp; value2 == null &amp;&amp; opChosen == false) {</span>
+<span class="nc" id="L596">					JOptionPane.showMessageDialog(frmCalculator, &quot;Pick operation before generating the second random nr&quot;, &quot;Error&quot;, JOptionPane.ERROR_MESSAGE);</span>
+<span class="nc bnc" id="L597" title="All 4 branches missed.">				}else if (value1 != null &amp;&amp; value2 != null){</span>
+<span class="nc" id="L598">					JOptionPane.showMessageDialog(frmCalculator, &quot;You can only do calc on 2 numbers..&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
 				}
 		}
 		// Button mod
-<span class="nc bnc" id="L625" title="All 2 branches missed.">		if (e.getSource() == btn_mod) {</span>
-<span class="nc bnc" id="L626" title="All 2 branches missed.">			if (value1==null) {</span>
-<span class="nc" id="L627">				JOptionPane.showMessageDialog(frmCalculator, &quot;Pick the first number&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
-<span class="nc bnc" id="L628" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 == null){</span>
-<span class="nc" id="L629">				opChosen = true;</span>
-<span class="nc" id="L630">				label_choosenOperation.setText(&quot;%&quot;);</span>
-<span class="nc" id="L631">				operation = '%';</span>
-<span class="nc bnc" id="L632" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 != null){</span>
-<span class="nc" id="L633">				JOptionPane.showMessageDialog(frmCalculator, &quot;You can only do calc on 2 numbers..&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
+<span class="nc bnc" id="L602" title="All 2 branches missed.">		if (e.getSource() == btn_mod) {</span>
+<span class="nc bnc" id="L603" title="All 2 branches missed.">			if (value1==null) {</span>
+<span class="nc" id="L604">				JOptionPane.showMessageDialog(frmCalculator, &quot;Pick the first number&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
+<span class="nc bnc" id="L605" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 == null){</span>
+<span class="nc" id="L606">				opChosen = true;</span>
+<span class="nc" id="L607">				label_choosenOperation.setText(&quot;%&quot;);</span>
+<span class="nc" id="L608">				operation = '%';</span>
+<span class="nc bnc" id="L609" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 != null){</span>
+<span class="nc" id="L610">				JOptionPane.showMessageDialog(frmCalculator, &quot;You can only do calc on 2 numbers..&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
 			}
 		}
 		
 		// Button Equals
-<span class="nc bnc" id="L638" title="All 2 branches missed.">		if (e.getSource() == btn_equals) {</span>
-<span class="nc bnc" id="L639" title="All 2 branches missed.">			if (value1==null) {</span>
-<span class="nc" id="L640">				JOptionPane.showMessageDialog(frmCalculator, &quot;Pick the first number&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
-<span class="nc bnc" id="L641" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; opChosen == false){</span>
-<span class="nc" id="L642">				JOptionPane.showMessageDialog(frmCalculator, &quot;Choose operation&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
+<span class="nc bnc" id="L615" title="All 2 branches missed.">		if (e.getSource() == btn_equals) {</span>
+<span class="nc bnc" id="L616" title="All 2 branches missed.">			if (value1==null) {</span>
+<span class="nc" id="L617">				JOptionPane.showMessageDialog(frmCalculator, &quot;Pick the first number&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
+<span class="nc bnc" id="L618" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; opChosen == false){</span>
+<span class="nc" id="L619">				JOptionPane.showMessageDialog(frmCalculator, &quot;Choose operation&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
 
-<span class="nc bnc" id="L644" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 == null){</span>
-<span class="nc" id="L645">				JOptionPane.showMessageDialog(frmCalculator, &quot;Pick the second number&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
+<span class="nc bnc" id="L621" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 == null){</span>
+<span class="nc" id="L622">				JOptionPane.showMessageDialog(frmCalculator, &quot;Pick the second number&quot;, &quot;Info&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
 
-<span class="nc bnc" id="L647" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 != null){</span>
-<span class="nc" id="L648">				double number1 = 0.0;</span>
-<span class="nc" id="L649">				double number2 = 0.0;</span>
+<span class="nc bnc" id="L624" title="All 4 branches missed.">			}else if (value1 != null &amp;&amp; value2 != null){</span>
+<span class="nc" id="L625">				double number1 = 0.0;</span>
+<span class="nc" id="L626">				double number2 = 0.0;</span>
 				
-<span class="nc" id="L651">				number1 = Double.parseDouble(value1);</span>
-<span class="nc" id="L652">				number2 = Double.parseDouble(value2);</span>
+<span class="nc" id="L628">				number1 = Double.parseDouble(value1);</span>
+<span class="nc" id="L629">				number2 = Double.parseDouble(value2);</span>
 				
-<span class="nc bnc" id="L654" title="All 7 branches missed.">				switch (operation) {</span>
+<span class="nc bnc" id="L631" title="All 7 branches missed.">				switch (operation) {</span>
 				case '+':
-<span class="nc" id="L656">					answer = ao.Addition(number1, number2);</span>
-<span class="nc" id="L657">					break;</span>
+<span class="nc" id="L633">					answer = ao.Addition(number1, number2);</span>
+<span class="nc" id="L634">					break;</span>
 				case '-':
-<span class="nc" id="L659">					answer = ao.Subtraction(number1, number2);</span>
-<span class="nc" id="L660">					break;</span>
+<span class="nc" id="L636">					answer = ao.Subtraction(number1, number2);</span>
+<span class="nc" id="L637">					break;</span>
 				case '*':
-<span class="nc" id="L662">					answer = ao.Multiplication(number1, number2);</span>
-<span class="nc" id="L663">					break;</span>
+<span class="nc" id="L639">					answer = ao.Multiplication(number1, number2);</span>
+<span class="nc" id="L640">					break;</span>
 				case '/':
-<span class="nc" id="L665">					answer = ao.Division(number1, number2);</span>
-<span class="nc" id="L666">					break;</span>
+<span class="nc" id="L642">					answer = ao.Division(number1, number2);</span>
+<span class="nc" id="L643">					break;</span>
 				case '%':
-<span class="nc" id="L668">					answer = ao.Modula(number1, number2);</span>
-<span class="nc" id="L669">					break;</span>
+<span class="nc" id="L645">					answer = ao.Modula(number1, number2);</span>
+<span class="nc" id="L646">					break;</span>
 				case 'P':
-<span class="nc" id="L671">					answer = ao.Pow(number1, number2);</span>
-<span class="nc" id="L672">					break;</span>
-				case 'S':
-//					answer = ao.SquareRoot(number1);
-//					break;
-//				case 'D':
-//					answer = ao.toDegrees(number1);
-//					break;
-//				case 'R':
-//					answer = ao.toRadians(number1);
-//					break;
+<span class="nc" id="L648">					answer = ao.Pow(number1, number2);</span>
+<span class="nc" id="L649">					break;</span>
+
 
 				default:
 					break;
 				}
-<span class="nc" id="L686">				sAnswer = Double.toString(answer);</span>
-<span class="nc" id="L687">				field_result.setText(sAnswer);</span>
+<span class="nc" id="L655">				sAnswer = Double.toString(answer);</span>
+<span class="nc" id="L656">				field_result.setText(sAnswer);</span>
 			}
 		}
 
 		// Button clear, resetting all the variables
-<span class="nc bnc" id="L692" title="All 2 branches missed.">		if (e.getSource() == btn_clear) {</span>
-<span class="nc" id="L693">			label_choosenOperation.setText(&quot;&quot;);</span>
-<span class="nc" id="L694">			field_input1.setText(&quot;&quot;);</span>
-<span class="nc" id="L695">			field_input2.setText(&quot;&quot;);</span>
-<span class="nc" id="L696">			field_result.setText(&quot;&quot;);</span>
-<span class="nc" id="L697">			value1 = null;</span>
-<span class="nc" id="L698">			value2 = null;	</span>
-<span class="nc" id="L699">			answer = 0.0;</span>
-<span class="nc" id="L700">			equalsClicked = false;</span>
-<span class="nc" id="L701">			opChosen = false;</span>
-<span class="nc" id="L702">			operation = ' ';</span>
+<span class="nc bnc" id="L661" title="All 2 branches missed.">		if (e.getSource() == btn_clear) {</span>
+<span class="nc" id="L662">			label_choosenOperation.setText(&quot;&quot;);</span>
+<span class="nc" id="L663">			field_input1.setText(&quot;&quot;);</span>
+<span class="nc" id="L664">			field_input2.setText(&quot;&quot;);</span>
+<span class="nc" id="L665">			field_result.setText(&quot;&quot;);</span>
+<span class="nc" id="L666">			value1 = null;</span>
+<span class="nc" id="L667">			value2 = null;	</span>
+<span class="nc" id="L668">			answer = 0.0;</span>
+<span class="nc" id="L669">			equalsClicked = false;</span>
+<span class="nc" id="L670">			opChosen = false;</span>
+<span class="nc" id="L671">			operation = ' ';</span>
 			
 		}
 
-<span class="nc" id="L706">	} // Action performed</span>
+<span class="nc" id="L675">	} // Action performed</span>
+	
+	/**
+	 * Method for getting btn8
+	 * @return btn8
+	 */
+	public JButton getBtn8() {
+<span class="nc" id="L682">        return btn8;</span>
+    }
+	/**
+	 * Method for setting btn8
+	 * @param btn8
+	 */
+    public void setBtn8(JButton btn8) {
+<span class="nc" id="L689">        this.btn8 = btn8;</span>
+<span class="nc" id="L690">    }</span>
+	/**
+	 * Method for getting value1
+	 * @return value1
+	 */
+    public String getValue1() {
+<span class="nc" id="L696">        return value1;</span>
+    }
+	/**
+	 * Method for setting value1
+	 * @param value1
+	 */
+    public void setValue1(String value1) {
+<span class="nc" id="L703">        this.value1 = value1;</span>
+<span class="nc" id="L704">    }</span>
+	/**
+	 * Method for getting value2
+	 * @return value2
+	 */
+    public String getValue2() {
+<span class="nc" id="L710">        return value2;</span>
+    }
+	/**
+	 * Method for setting value2
+	 * @param value2
+	 */
+    public void setValue2(String value2) {
+<span class="nc" id="L717">        this.value2 = value2;</span>
+<span class="nc" id="L718">    }</span>
+	/**
+	 * Method for getting sAnswer
+	 * @return sAnswer
+	 */
+    public String getsAnswer() {
+<span class="nc" id="L724">        return sAnswer;</span>
+    }
+	/**
+	 * Method for setting sAnswer
+	 * @param sAnswer
+	 */
+    public void setsAnswer(String sAnswer) {
+<span class="nc" id="L731">        this.sAnswer = sAnswer;</span>
+<span class="nc" id="L732">    }</span>
+	/**
+	 * Method for getting answer
+	 * @return answer
+	 */
+    public double getAnswer() {
+<span class="nc" id="L738">        return answer;</span>
+    }
+	/**
+	 * Method for setting answer
+	 * @param answer
+	 */
+    public void setAnswer(double answer) {
+<span class="nc" id="L745">        this.answer = answer;</span>
+<span class="nc" id="L746">    }</span>
+	/**
+	 * Method for getting equalsClicked
+	 * @return equalsClicked
+	 */
+    public boolean isEqualsClicked() {
+<span class="nc" id="L752">        return equalsClicked;</span>
+    }
+	/**
+	 * Method for setting equalsClicked
+	 * @param equalsClicked
+	 */
+    public void setEqualsClicked(boolean equalsClicked) {
+<span class="nc" id="L759">        this.equalsClicked = equalsClicked;</span>
+<span class="nc" id="L760">    }</span>
+	/**
+	 * Method for getting opChosen
+	 * @return opChosen
+	 */
+    public boolean isOpChosen() {
+<span class="nc" id="L766">        return opChosen;</span>
+    }
+	/**
+	 * Method for setting opChosen
+	 * @param opChosen
+	 */
+    public void setOpChosen(boolean opChosen) {
+<span class="nc" id="L773">        this.opChosen = opChosen;</span>
+<span class="nc" id="L774">    }</span>
+	/**
+	 * Method for getting operation
+	 * @return operation
+	 */
+    public char getOperation() {
+<span class="nc" id="L780">        return operation;</span>
+    }
+	/**
+	 * Method for setting operation
+	 * @param operation
+	 */
+    public void setOperation(char operation) {
+<span class="nc" id="L787">        this.operation = operation;</span>
+<span class="nc" id="L788">    }</span>
+	/**
+	 * Method for getting btn7
+	 * @return btn7
+	 */
+    public JButton getBtn7() {
+<span class="nc" id="L794">        return btn7;</span>
+    }
+	/**
+	 * Method for setting btn7
+	 * @param btn7
+	 */
+    public void setBtn7(JButton btn7) {
+<span class="nc" id="L801">        this.btn7 = btn7;</span>
+<span class="nc" id="L802">    }</span>
+	/**
+	 * Method for getting btn9
+	 * @return btn9
+	 */
+    public JButton getBtn9() {
+<span class="nc" id="L808">        return btn9;</span>
+    }
+	/**
+	 * Method for setting btn9
+	 * @param btn9
+	 */
+    public void setBtn9(JButton btn9) {
+<span class="nc" id="L815">        this.btn9 = btn9;</span>
+<span class="nc" id="L816">    }</span>
+	/**
+	 * Method for getting btn4
+	 * @return btn4
+	 */
+    public JButton getBtn4() {
+<span class="nc" id="L822">        return btn4;</span>
+    }
+	/**
+	 * Method for setting btn4
+	 * @param btn4
+	 */
+    public void setBtn4(JButton btn4) {
+<span class="nc" id="L829">        this.btn4 = btn4;</span>
+<span class="nc" id="L830">    }</span>
+	/**
+	 * Method for getting btn5
+	 * @return btn5
+	 */
+    public JButton getBtn5() {
+<span class="nc" id="L836">        return btn5;</span>
+    }
+	/**
+	 * Method for setting btn5
+	 * @param btn5
+	 */
+    public void setBtn5(JButton btn5) {
+<span class="nc" id="L843">        this.btn5 = btn5;</span>
+<span class="nc" id="L844">    }</span>
+	/**
+	 * Method for getting btn6
+	 * @return btn6
+	 */
+    public JButton getBtn6() {
+<span class="nc" id="L850">        return btn6;</span>
+    }
+	/**
+	 * Method for setting btn6
+	 * @param btn6
+	 */
+    public void setBtn6(JButton btn6) {
+<span class="nc" id="L857">        this.btn6 = btn6;</span>
+<span class="nc" id="L858">    }</span>
+	/**
+	 * Method for getting btn1
+	 * @return btn1
+	 */
+    public JButton getBtn1() {
+<span class="nc" id="L864">        return btn1;</span>
+    }
+	/**
+	 * Method for setting btn1
+	 * @param btn1
+	 */
+    public void setBtn1(JButton btn1) {
+<span class="nc" id="L871">        this.btn1 = btn1;</span>
+<span class="nc" id="L872">    }</span>
+	/**
+	 * Method for getting btn2
+	 * @return btn2
+	 */
+    public JButton getBtn2() {
+<span class="nc" id="L878">        return btn2;</span>
+    }
+	/**
+	 * Method for setting btn2
+	 * @param btn2
+	 */
+    public void setBtn2(JButton btn2) {
+<span class="nc" id="L885">        this.btn2 = btn2;</span>
+<span class="nc" id="L886">    }</span>
+	/**
+	 * Method for getting btn3
+	 * @return btn3
+	 */
+    public JButton getBtn3() {
+<span class="nc" id="L892">        return btn3;</span>
+    }
+	/**
+	 * Method for setting btn3
+	 * @param btn3
+	 */
+    public void setBtn3(JButton btn3) {
+<span class="nc" id="L899">        this.btn3 = btn3;</span>
+<span class="nc" id="L900">    }</span>
+	/**
+	 * Method for getting btn0
+	 * @return btn0
+	 */
+    public JButton getBtn0() {
+<span class="nc" id="L906">        return btn0;</span>
+    }
+	/**
+	 * Method for setting btn0
+	 * @param btn0
+	 */
+    public void setBtn0(JButton btn0) {
+<span class="nc" id="L913">        this.btn0 = btn0;</span>
+<span class="nc" id="L914">    }</span>
+	/**
+	 * Method for getting btn_squirt
+	 * @return btn_squirt
+	 */
+    public JButton getBtn_squirt() {
+<span class="nc" id="L920">        return btn_squirt;</span>
+    }
+	/**
+	 * Method for setting btn_squirt
+	 * @param btn_squirt
+	 */
+    public void setBtn_squirt(JButton btn_squirt) {
+<span class="nc" id="L927">        this.btn_squirt = btn_squirt;</span>
+<span class="nc" id="L928">    }</span>
+	/**
+	 * Method for getting btn_pow
+	 * @return btn_pow
+	 */
+    public JButton getBtn_pow() {
+<span class="nc" id="L934">        return btn_pow;</span>
+    }
+	/**
+	 * Method for setting btn_pow
+	 * @param btn_pow
+	 */
+    public void setBtn_pow(JButton btn_pow) {
+<span class="nc" id="L941">        this.btn_pow = btn_pow;</span>
+<span class="nc" id="L942">    }</span>
+	/**
+	 * Method for getting btn_degrees
+	 * @return btn_degrees
+	 */
+    public JButton getBtn_degrees() {
+<span class="nc" id="L948">        return btn_degrees;</span>
+    }
+	/**
+	 * Method for setting btn_degrees
+	 * @param btn_degrees
+	 */
+    public void setBtn_degrees(JButton btn_degrees) {
+<span class="nc" id="L955">        this.btn_degrees = btn_degrees;</span>
+<span class="nc" id="L956">    }</span>
+	/**
+	 * Method for getting btn_radian
+	 * @return btn_radian
+	 */
+    public JButton getBtn_radian() {
+<span class="nc" id="L962">        return btn_radian;</span>
+    }
+	/**
+	 * Method for setting btn_radian
+	 * @param btn_radian
+	 */
+    public void setBtn_radian(JButton btn_radian) {
+<span class="nc" id="L969">        this.btn_radian = btn_radian;</span>
+<span class="nc" id="L970">    }</span>
+	/**
+	 * Method for getting btn_clear
+	 * @return btn_clear
+	 */
+    public JButton getBtn_clear() {
+<span class="nc" id="L976">        return btn_clear;</span>
+    }
+	/**
+	 * Method for setting btn_clear
+	 * @param btn_clear
+	 */
+    public void setBtn_clear(JButton btn_clear) {
+<span class="nc" id="L983">        this.btn_clear = btn_clear;</span>
+<span class="nc" id="L984">    }</span>
+	/**
+	 * Method for getting btn_addition
+	 * @return btn_addition
+	 */
+    public JButton getBtn_addition() {
+<span class="nc" id="L990">        return btn_addition;</span>
+    }
+	/**
+	 * Method for setting btn_addition
+	 * @param btn_addition
+	 */
+    public void setBtn_addition(JButton btn_addition) {
+<span class="nc" id="L997">        this.btn_addition = btn_addition;</span>
+<span class="nc" id="L998">    }</span>
+	/**
+	 * Method for getting btn_subtraction
+	 * @return btn_subtraction
+	 */
+    public JButton getBtn_subtraction() {
+<span class="nc" id="L1004">        return btn_subtraction;</span>
+    }
+	/**
+	 * Method for setting btn_subtraction
+	 * @param btn_subtraction
+	 */
+    public void setBtn_subtraction(JButton btn_subtraction) {
+<span class="nc" id="L1011">        this.btn_subtraction = btn_subtraction;</span>
+<span class="nc" id="L1012">    }</span>
+	/**
+	 * Method for getting btn_division
+	 * @return btn_division
+	 */
+    public JButton getBtn_division() {
+<span class="nc" id="L1018">        return btn_division;</span>
+    }
+	/**
+	 * Method for setting btn_division
+	 * @param btn_division
+	 */
+    public void setBtn_division(JButton btn_division) {
+<span class="nc" id="L1025">        this.btn_division = btn_division;</span>
+<span class="nc" id="L1026">    }</span>
+	/**
+	 * Method for getting btn_multiply
+	 * @return btn_multiply
+	 */
+    public JButton getBtn_multiply() {
+<span class="nc" id="L1032">        return btn_multiply;</span>
+    }
+	/**
+	 * Method for setting btn_multiply
+	 * @param btn_multiply
+	 */
+    public void setBtn_multiply(JButton btn_multiply) {
+<span class="nc" id="L1039">        this.btn_multiply = btn_multiply;</span>
+<span class="nc" id="L1040">    }</span>
+	/**
+	 * Method for getting btn_random
+	 * @return btn_random
+	 */
+    public JButton getBtn_random() {
+<span class="nc" id="L1046">        return btn_random;</span>
+    }
+	/**
+	 * Method for setting btn_random
+	 * @param btn_random
+	 */
+    public void setBtn_random(JButton btn_random) {
+<span class="nc" id="L1053">        this.btn_random = btn_random;</span>
+<span class="nc" id="L1054">    }</span>
+	/**
+	 * Method for getting btn_mod
+	 * @return btn_mod
+	 */
+    public JButton getBtn_mod() {
+<span class="nc" id="L1060">        return btn_mod;</span>
+    }
+	/**
+	 * Method for setting btn_mod
+	 * @param btn_mod
+	 */
+    public void setBtn_mod(JButton btn_mod) {
+<span class="nc" id="L1067">        this.btn_mod = btn_mod;</span>
+<span class="nc" id="L1068">    }</span>
+	/**
+	 * Method for getting btn_equals
+	 * @return btn_equals
+	 */
+    public JButton getBtn_equals() {
+<span class="nc" id="L1074">        return btn_equals;</span>
+    }
+	/**
+	 * Method for setting btn_equals
+	 * @param btn_equals
+	 */
+    public void setBtn_equals(JButton btn_equals) {
+<span class="nc" id="L1081">        this.btn_equals = btn_equals;</span>
+<span class="nc" id="L1082">    }</span>
+	/**
+	 * Method for getting field_input1
+	 * @return field_input1
+	 */
+    public JTextField getField_input1() {
+<span class="nc" id="L1088">        return field_input1;</span>
+    }
+	/**
+	 * Method for setting field_input1
+	 * @param field_input1
+	 */
+    public void setField_input1(JTextField field_input1) {
+<span class="nc" id="L1095">        this.field_input1 = field_input1;</span>
+<span class="nc" id="L1096">    }</span>
+	/**
+	 * Method for getting field_input2
+	 * @return field_input2
+	 */
+    public JTextField getField_input2() {
+<span class="nc" id="L1102">        return field_input2;</span>
+    }
+	/**
+	 * Method for setting field_input2
+	 * @param field_input2
+	 */
+    public void setField_input2(JTextField field_input2) {
+<span class="nc" id="L1109">        this.field_input2 = field_input2;</span>
+<span class="nc" id="L1110">    }</span>
+	/**
+	 * Method for getting field_result
+	 * @return field_result
+	 */
+    public JTextField getField_result() {
+<span class="nc" id="L1116">        return field_result;</span>
+    }
+	/**
+	 * Method for setting field_result
+	 * @param field_result
+	 */
+    public void setField_result(JTextField field_result) {
+<span class="nc" id="L1123">        this.field_result = field_result;</span>
+<span class="nc" id="L1124">    }</span>
+	/**
+	 * Method for getting label_equals
+	 * @return label_equals
+	 */
+    public JLabel getLabel_equals() {
+<span class="nc" id="L1130">        return label_equals;</span>
+    }
+	/**
+	 * Method for setting label_equals
+	 * @param label_equals
+	 */
+    public void setLabel_equals(JLabel label_equals) {
+<span class="nc" id="L1137">        this.label_equals = label_equals;</span>
+<span class="nc" id="L1138">    }</span>
+	/**
+	 * Method for getting label_choosenOperation
+	 * @return label_choosenOperation
+	 */
+    public JLabel getLabel_choosenOperation() {
+<span class="nc" id="L1144">        return label_choosenOperation;</span>
+    }
+	/**
+	 * Method for setting label_choosenOperation
+	 * @param label_choosenOperation
+	 */
+    public void setLabel_choosenOperation(JLabel label_choosenOperation) {
+<span class="nc" id="L1151">        this.label_choosenOperation = label_choosenOperation;</span>
+<span class="nc" id="L1152">    }</span>
 
 } // Class
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

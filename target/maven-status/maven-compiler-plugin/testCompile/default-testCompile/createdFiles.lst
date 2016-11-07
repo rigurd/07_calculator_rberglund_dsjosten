@@ -1,2 +1,4 @@
 junit_tests\BasicOperationsTest.class
 junit_tests\AdvancedOperationsTest.class
+junit_tests\MainTest.class
+junit_tests\GuiTest_d.class
