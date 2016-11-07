@@ -6,6 +6,7 @@ package interfaces;
  * @version 1.0
  * 
  */
+
 public interface CalculatorAdvancedOperationsInterface {
 	
 	public double SquareRoot(double firstNumber);

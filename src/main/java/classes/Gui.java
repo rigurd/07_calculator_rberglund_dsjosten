@@ -23,11 +23,10 @@ public class Gui extends JFrame implements ActionListener {
 	
 	JFrame frmCalculator;
 	private String value1 = null, value2 = null, sAnswer;
-
 	private double answer = 0.0;
-	boolean equalsClicked = false;
-	boolean opChosen = false;
-	char operation = ' ';
+	private boolean equalsClicked = false;
+	private boolean opChosen = false;
+	private char operation = ' ';
 
 	/**
 	 * Setting serialVersionUID
@@ -75,7 +74,7 @@ public class Gui extends JFrame implements ActionListener {
 	public Gui() {
 		createGUI();
 		addComponentsToFrame();
-		addActionListners();
+		addActionListeners();
 	}
 
 	/**
@@ -196,10 +195,10 @@ public class Gui extends JFrame implements ActionListener {
 		frmCalculator.getContentPane().add(lblInput_1);
 	}
 	/**
-	 * Method for adding the actionlistners to the buttons
+	 * Method for adding the actionlisteners to the buttons
 	 */
-	public void addActionListners() {
-		// add actionlistner to the buttons
+	public void addActionListeners() {
+		// add actionlistener to the buttons
 		btn7.addActionListener(this);
 		btn8.addActionListener(this);
 		btn9.addActionListener(this);

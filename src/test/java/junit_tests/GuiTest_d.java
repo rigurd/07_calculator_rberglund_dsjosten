@@ -29,7 +29,7 @@ public class GuiTest_d extends TestCase{
 	@Test
 	public void testGuiButton7(){
 		
-		gui.addActionListners();
+		gui.addActionListeners();
 		//Case1
 		gui.setOpChosen(false);
 		assertEquals("result should be null", null, gui.getValue1());
@@ -47,7 +47,7 @@ public class GuiTest_d extends TestCase{
 	 */
 	@Test
 	public void testGuiButton8(){
-		gui.addActionListners();
+		gui.addActionListeners();
 		//Case1
 		gui.setOpChosen(false);
 		assertEquals("result should be null", null, gui.getValue1());
@@ -64,7 +64,7 @@ public class GuiTest_d extends TestCase{
 	 */
 	@Test
 	public void testGuiButton9(){
-		gui.addActionListners();
+		gui.addActionListeners();
 		//Case1
 		gui.setOpChosen(false);
 		assertEquals("result should be null", null, gui.getValue1());
@@ -81,7 +81,7 @@ public class GuiTest_d extends TestCase{
 	 */
 	@Test
 	public void testGuiButton4(){
-		gui.addActionListners();
+		gui.addActionListeners();
 		//Case1
 		gui.setOpChosen(false);
 		assertEquals("result should be null", null, gui.getValue1());
@@ -98,7 +98,7 @@ public class GuiTest_d extends TestCase{
 	 */
 	@Test
 	public void testGuiButton5(){
-		gui.addActionListners();
+		gui.addActionListeners();
 		//Case1
 		gui.setOpChosen(false);
 		assertEquals("result should be null", null, gui.getValue1());
@@ -115,7 +115,7 @@ public class GuiTest_d extends TestCase{
 	 */
 	@Test
 	public void testGuiButton6(){
-		gui.addActionListners();
+		gui.addActionListeners();
 		//Case1
 		gui.setOpChosen(false);
 		assertEquals("result should be null", null, gui.getValue1());
@@ -132,7 +132,7 @@ public class GuiTest_d extends TestCase{
 	 */
 	@Test
 	public void testGuiButton1(){
-		gui.addActionListners();
+		gui.addActionListeners();
 		//Case1
 		gui.setOpChosen(false);
 		assertEquals("result should be null", null, gui.getValue1());
@@ -149,7 +149,7 @@ public class GuiTest_d extends TestCase{
 	 */
 	@Test
 	public void testGuiButton2(){
-		gui.addActionListners();
+		gui.addActionListeners();
 		//Case1
 		gui.setOpChosen(false);
 		assertEquals("result should be null", null, gui.getValue1());
@@ -166,7 +166,7 @@ public class GuiTest_d extends TestCase{
 	 */
 	@Test
 	public void testGuiButton3(){
-		gui.addActionListners();
+		gui.addActionListeners();
 		//Case1
 		gui.setOpChosen(false);
 		assertEquals("result should be null", null, gui.getValue1());
@@ -183,7 +183,7 @@ public class GuiTest_d extends TestCase{
 	 */
 	@Test
 	public void testGuiButton0(){
-		gui.addActionListners();
+		gui.addActionListeners();
 		//Case1
 		gui.setOpChosen(false);
 		assertEquals("result should be null", null, gui.getValue1());
@@ -201,7 +201,7 @@ public class GuiTest_d extends TestCase{
 	 */
 	@Test
 	public void testGuiButtonSqrt(){
-		gui.addActionListners();
+		gui.addActionListeners();
 		//Case1
 		gui.getBtn_squirt().doClick();
 		gui.setValue1("1");
@@ -218,7 +218,7 @@ public class GuiTest_d extends TestCase{
 	 */
 	@Test
 	public void testGuiButtonPow(){ 
-		gui.addActionListners();
+		gui.addActionListeners();
 		//Case1
 		gui.getBtn_pow().doClick();
 		gui.setValue1("1");
@@ -235,7 +235,7 @@ public class GuiTest_d extends TestCase{
 	 */
 	@Test
 	public void testGuiButtonDegrees(){
-		gui.addActionListners();
+		gui.addActionListeners();
 		//Case1
 		gui.getBtn_degrees().doClick();
 		gui.setValue1("1");
@@ -251,7 +251,7 @@ public class GuiTest_d extends TestCase{
 	 */
 	@Test
 	public void testGuiButtonRadian(){
-		gui.addActionListners();
+		gui.addActionListeners();
 		//Case1
 		gui.getBtn_radian().doClick();
 		gui.setValue1("1");
@@ -267,7 +267,7 @@ public class GuiTest_d extends TestCase{
 	 */
 	@Test
 	public void testGuiButtonAddition(){ 
-		gui.addActionListners();
+		gui.addActionListeners();
 		//Case1
 		gui.getBtn_addition().doClick();
 		gui.setValue1("1");
@@ -283,7 +283,7 @@ public class GuiTest_d extends TestCase{
 	 */
 	@Test
 	public void testGuiButtonSubtraction(){ 
-		gui.addActionListners();
+		gui.addActionListeners();
 		//Case1
 		gui.getBtn_subtraction().doClick();
 		gui.setValue1("1");
@@ -299,7 +299,7 @@ public class GuiTest_d extends TestCase{
 	 */
 	@Test
 	public void testGuiButtonDivision(){ 
-		gui.addActionListners();
+		gui.addActionListeners();
 		//Case1
 		gui.getBtn_division().doClick();
 		gui.setValue1("1");
@@ -315,7 +315,7 @@ public class GuiTest_d extends TestCase{
 	 */
 	@Test
 	public void testGuiButtonMultiply(){ 
-		gui.addActionListners();
+		gui.addActionListeners();
 		//Case1
 		gui.getBtn_multiply().doClick();
 		gui.setValue1("1");
@@ -331,7 +331,7 @@ public class GuiTest_d extends TestCase{
 	 */
 	@Test
 	public void testGuiButtonRandom(){ 
-		gui.addActionListners();
+		gui.addActionListeners();
 		//Case1
 		gui.getBtn_random().doClick();
 		//Case2. 
@@ -352,7 +352,7 @@ public class GuiTest_d extends TestCase{
 	 */
 	@Test
 	public void testGuiButtonMod(){ 
-		gui.addActionListners();
+		gui.addActionListeners();
 		//Case1
 		gui.getBtn_mod().doClick();
 		//Case2. 
@@ -369,7 +369,7 @@ public class GuiTest_d extends TestCase{
 	@Test
 	public void testGuiButtonEquals(){ 
 		
-		gui.addActionListners();
+		gui.addActionListeners();
 		//Case1
 		gui.setValue1(null);
 		gui.getBtn_equals().doClick();
@@ -410,7 +410,7 @@ public class GuiTest_d extends TestCase{
 	 */
 	@Test
 	public void testGuiButtonClear(){ 
-		gui.addActionListners();
+		gui.addActionListeners();
 		//Case1
 		gui.getLabel_choosenOperation().setText("asdf");
 		gui.getField_input1().setText("lorum ipsum");
