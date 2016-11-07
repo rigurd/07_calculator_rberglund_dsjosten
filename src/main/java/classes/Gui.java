@@ -13,9 +13,9 @@ import java.awt.Color;
 /**
  * <h1>GUI for the calculator</h1>
  * 
- * @author
+ * @author Rickard Berglund, Daniel Sjösten
  * @version 1.0
- * @since 2016-11-02
+ * @since 2016-11-09
  */
 public class Gui extends JFrame implements ActionListener {
 
@@ -200,7 +200,9 @@ public class Gui extends JFrame implements ActionListener {
 		
 		frmCalculator.getContentPane().add(lblInput_1);
 	}
-
+	/**
+	 * Method for adding the actionlistners to the buttons
+	 */
 	public void addActionListners() {
 		// add actionlistner to the buttons
 		btn7.addActionListener(this);
@@ -228,6 +230,9 @@ public class Gui extends JFrame implements ActionListener {
 
 	}
 
+	/**
+	 * Method for actionsPerformed for each button
+	 */
 	public void actionPerformed(ActionEvent e) {
 		// Button 7
 
@@ -674,274 +679,479 @@ public class Gui extends JFrame implements ActionListener {
 
 	} // Action performed
 	
+	/**
+	 * Method for getting btn8
+	 * @return btn8
+	 */
 	public JButton getBtn8() {
         return btn8;
     }
-
+	/**
+	 * Method for setting btn8
+	 * @param btn8
+	 */
     public void setBtn8(JButton btn8) {
         this.btn8 = btn8;
     }
-
+	/**
+	 * Method for getting value1
+	 * @return value1
+	 */
     public String getValue1() {
         return value1;
     }
-
+	/**
+	 * Method for setting value1
+	 * @param value1
+	 */
     public void setValue1(String value1) {
         this.value1 = value1;
     }
-
+	/**
+	 * Method for getting value2
+	 * @return value2
+	 */
     public String getValue2() {
         return value2;
     }
-
+	/**
+	 * Method for setting value2
+	 * @param value2
+	 */
     public void setValue2(String value2) {
         this.value2 = value2;
     }
-
+	/**
+	 * Method for getting sAnswer
+	 * @return sAnswer
+	 */
     public String getsAnswer() {
         return sAnswer;
     }
-
+	/**
+	 * Method for setting sAnswer
+	 * @param sAnswer
+	 */
     public void setsAnswer(String sAnswer) {
         this.sAnswer = sAnswer;
     }
-
+	/**
+	 * Method for getting answer
+	 * @return answer
+	 */
     public double getAnswer() {
         return answer;
     }
-
+	/**
+	 * Method for setting answer
+	 * @param answer
+	 */
     public void setAnswer(double answer) {
         this.answer = answer;
     }
-
+	/**
+	 * Method for getting equalsClicked
+	 * @return equalsClicked
+	 */
     public boolean isEqualsClicked() {
         return equalsClicked;
     }
-
+	/**
+	 * Method for setting equalsClicked
+	 * @param equalsClicked
+	 */
     public void setEqualsClicked(boolean equalsClicked) {
         this.equalsClicked = equalsClicked;
     }
-
+	/**
+	 * Method for getting opChosen
+	 * @return opChosen
+	 */
     public boolean isOpChosen() {
         return opChosen;
     }
-
+	/**
+	 * Method for setting opChosen
+	 * @param opChosen
+	 */
     public void setOpChosen(boolean opChosen) {
         this.opChosen = opChosen;
     }
-
+	/**
+	 * Method for getting operation
+	 * @return operation
+	 */
     public char getOperation() {
         return operation;
     }
-
+	/**
+	 * Method for setting operation
+	 * @param operation
+	 */
     public void setOperation(char operation) {
         this.operation = operation;
     }
-
+	/**
+	 * Method for getting btn7
+	 * @return btn7
+	 */
     public JButton getBtn7() {
         return btn7;
     }
-
+	/**
+	 * Method for setting btn7
+	 * @param btn7
+	 */
     public void setBtn7(JButton btn7) {
         this.btn7 = btn7;
     }
-
+	/**
+	 * Method for getting btn9
+	 * @return btn9
+	 */
     public JButton getBtn9() {
         return btn9;
     }
-
+	/**
+	 * Method for setting btn9
+	 * @param btn9
+	 */
     public void setBtn9(JButton btn9) {
         this.btn9 = btn9;
     }
-
+	/**
+	 * Method for getting btn4
+	 * @return btn4
+	 */
     public JButton getBtn4() {
         return btn4;
     }
-
+	/**
+	 * Method for setting btn4
+	 * @param btn4
+	 */
     public void setBtn4(JButton btn4) {
         this.btn4 = btn4;
     }
-
+	/**
+	 * Method for getting btn5
+	 * @return btn5
+	 */
     public JButton getBtn5() {
         return btn5;
     }
-
+	/**
+	 * Method for setting btn5
+	 * @param btn5
+	 */
     public void setBtn5(JButton btn5) {
         this.btn5 = btn5;
     }
-
+	/**
+	 * Method for getting btn6
+	 * @return btn6
+	 */
     public JButton getBtn6() {
         return btn6;
     }
-
+	/**
+	 * Method for setting btn6
+	 * @param btn6
+	 */
     public void setBtn6(JButton btn6) {
         this.btn6 = btn6;
     }
-
+	/**
+	 * Method for getting btn1
+	 * @return btn1
+	 */
     public JButton getBtn1() {
         return btn1;
     }
-
+	/**
+	 * Method for setting btn1
+	 * @param btn1
+	 */
     public void setBtn1(JButton btn1) {
         this.btn1 = btn1;
     }
-
+	/**
+	 * Method for getting btn2
+	 * @return btn2
+	 */
     public JButton getBtn2() {
         return btn2;
     }
-
+	/**
+	 * Method for setting btn2
+	 * @param btn2
+	 */
     public void setBtn2(JButton btn2) {
         this.btn2 = btn2;
     }
-
+	/**
+	 * Method for getting btn3
+	 * @return btn3
+	 */
     public JButton getBtn3() {
         return btn3;
     }
-
+	/**
+	 * Method for setting btn3
+	 * @param btn3
+	 */
     public void setBtn3(JButton btn3) {
         this.btn3 = btn3;
     }
-
+	/**
+	 * Method for getting btn0
+	 * @return btn0
+	 */
     public JButton getBtn0() {
         return btn0;
     }
-
+	/**
+	 * Method for setting btn0
+	 * @param btn0
+	 */
     public void setBtn0(JButton btn0) {
         this.btn0 = btn0;
     }
-
+	/**
+	 * Method for getting btn_squirt
+	 * @return btn_squirt
+	 */
     public JButton getBtn_squirt() {
         return btn_squirt;
     }
-
+	/**
+	 * Method for setting btn_squirt
+	 * @param btn_squirt
+	 */
     public void setBtn_squirt(JButton btn_squirt) {
         this.btn_squirt = btn_squirt;
     }
-
+	/**
+	 * Method for getting btn_pow
+	 * @return btn_pow
+	 */
     public JButton getBtn_pow() {
         return btn_pow;
     }
-
+	/**
+	 * Method for setting btn_pow
+	 * @param btn_pow
+	 */
     public void setBtn_pow(JButton btn_pow) {
         this.btn_pow = btn_pow;
     }
-
+	/**
+	 * Method for getting btn_degrees
+	 * @return btn_degrees
+	 */
     public JButton getBtn_degrees() {
         return btn_degrees;
     }
-
+	/**
+	 * Method for setting btn_degrees
+	 * @param btn_degrees
+	 */
     public void setBtn_degrees(JButton btn_degrees) {
         this.btn_degrees = btn_degrees;
     }
-
+	/**
+	 * Method for getting btn_radian
+	 * @return btn_radian
+	 */
     public JButton getBtn_radian() {
         return btn_radian;
     }
-
+	/**
+	 * Method for setting btn_radian
+	 * @param btn_radian
+	 */
     public void setBtn_radian(JButton btn_radian) {
         this.btn_radian = btn_radian;
     }
-
+	/**
+	 * Method for getting btn_clear
+	 * @return btn_clear
+	 */
     public JButton getBtn_clear() {
         return btn_clear;
     }
-
+	/**
+	 * Method for setting btn_clear
+	 * @param btn_clear
+	 */
     public void setBtn_clear(JButton btn_clear) {
         this.btn_clear = btn_clear;
     }
-
+	/**
+	 * Method for getting btn_addition
+	 * @return btn_addition
+	 */
     public JButton getBtn_addition() {
         return btn_addition;
     }
-
+	/**
+	 * Method for setting btn_addition
+	 * @param btn_addition
+	 */
     public void setBtn_addition(JButton btn_addition) {
         this.btn_addition = btn_addition;
     }
-
+	/**
+	 * Method for getting btn_subtraction
+	 * @return btn_subtraction
+	 */
     public JButton getBtn_subtraction() {
         return btn_subtraction;
     }
-
+	/**
+	 * Method for setting btn_subtraction
+	 * @param btn_subtraction
+	 */
     public void setBtn_subtraction(JButton btn_subtraction) {
         this.btn_subtraction = btn_subtraction;
     }
-
+	/**
+	 * Method for getting btn_division
+	 * @return btn_division
+	 */
     public JButton getBtn_division() {
         return btn_division;
     }
-
+	/**
+	 * Method for setting btn_division
+	 * @param btn_division
+	 */
     public void setBtn_division(JButton btn_division) {
         this.btn_division = btn_division;
     }
-
+	/**
+	 * Method for getting btn_multiply
+	 * @return btn_multiply
+	 */
     public JButton getBtn_multiply() {
         return btn_multiply;
     }
-
+	/**
+	 * Method for setting btn_multiply
+	 * @param btn_multiply
+	 */
     public void setBtn_multiply(JButton btn_multiply) {
         this.btn_multiply = btn_multiply;
     }
-
+	/**
+	 * Method for getting btn_random
+	 * @return btn_random
+	 */
     public JButton getBtn_random() {
         return btn_random;
     }
-
+	/**
+	 * Method for setting btn_random
+	 * @param btn_random
+	 */
     public void setBtn_random(JButton btn_random) {
         this.btn_random = btn_random;
     }
-
+	/**
+	 * Method for getting btn_mod
+	 * @return btn_mod
+	 */
     public JButton getBtn_mod() {
         return btn_mod;
     }
-
+	/**
+	 * Method for setting btn_mod
+	 * @param btn_mod
+	 */
     public void setBtn_mod(JButton btn_mod) {
         this.btn_mod = btn_mod;
     }
-
+	/**
+	 * Method for getting btn_equals
+	 * @return btn_equals
+	 */
     public JButton getBtn_equals() {
         return btn_equals;
     }
-
+	/**
+	 * Method for setting btn_equals
+	 * @param btn8btn_equals
+	 */
     public void setBtn_equals(JButton btn_equals) {
         this.btn_equals = btn_equals;
     }
-
+	/**
+	 * Method for getting field_input1
+	 * @return field_input1
+	 */
     public JTextField getField_input1() {
         return field_input1;
     }
-
+	/**
+	 * Method for setting field_input1
+	 * @param field_input1
+	 */
     public void setField_input1(JTextField field_input1) {
         this.field_input1 = field_input1;
     }
-
+	/**
+	 * Method for getting field_input2
+	 * @return field_input2
+	 */
     public JTextField getField_input2() {
         return field_input2;
     }
-
+	/**
+	 * Method for setting field_input2
+	 * @param field_input2
+	 */
     public void setField_input2(JTextField field_input2) {
         this.field_input2 = field_input2;
     }
-
+	/**
+	 * Method for getting field_result
+	 * @return field_result
+	 */
     public JTextField getField_result() {
         return field_result;
     }
-
+	/**
+	 * Method for setting field_result
+	 * @param field_result
+	 */
     public void setField_result(JTextField field_result) {
         this.field_result = field_result;
     }
-
+	/**
+	 * Method for getting label_equals
+	 * @return label_equals
+	 */
     public JLabel getLabel_equals() {
         return label_equals;
     }
-
+	/**
+	 * Method for setting label_equals
+	 * @param label_equals
+	 */
     public void setLabel_equals(JLabel label_equals) {
         this.label_equals = label_equals;
     }
-
+	/**
+	 * Method for getting label_choosenOperation
+	 * @return label_choosenOperation
+	 */
     public JLabel getLabel_choosenOperation() {
         return label_choosenOperation;
     }
-
+	/**
+	 * Method for setting label_choosenOperation
+	 * @param label_choosenOperation
+	 */
     public void setLabel_choosenOperation(JLabel label_choosenOperation) {
         this.label_choosenOperation = label_choosenOperation;
     }
