@@ -946,12 +946,5 @@ public class Gui extends JFrame implements ActionListener {
         this.label_choosenOperation = label_choosenOperation;
     }
 
-    public JLabel getLblInput() {
-        return lblInput;
-    }
-
-    public JLabel getLblInput_1() {
-        return lblInput_1;
-    }
 
 } // Class
