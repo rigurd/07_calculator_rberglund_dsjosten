@@ -1,4 +1,5 @@
 package classes;
+
 /**
  * <h1>GUI for the calculator</h1>
  * 

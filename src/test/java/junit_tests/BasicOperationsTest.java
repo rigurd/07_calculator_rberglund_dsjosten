@@ -7,6 +7,12 @@ import org.junit.Test;
 import classes.BasicOperations;
 import junit.framework.TestCase;
 
+/**
+ * @author Rickard Bergund & Daniel Sjösten
+ * @since 9/11 - 2016
+ * @version 1.0
+ * 
+ */
 public class BasicOperationsTest extends TestCase {
 
 	BasicOperations bo = new BasicOperations();
@@ -17,6 +23,9 @@ public class BasicOperationsTest extends TestCase {
 	double secondNumber = 0.0;
 	
 	
+	/**
+	 * Testing Addition method with positive numbers
+	 */
 	@Test
 	public void testAddition1() {
 		for (int i=0; i<50; i++){
@@ -28,6 +37,9 @@ public class BasicOperationsTest extends TestCase {
 			
 		}
 	}
+	/**
+	 * Testing Addition method with negative numbers
+	 */
 	@Test
 	public void testAddition2() {
 		for (int i=0; i<50; i++){
@@ -39,6 +51,9 @@ public class BasicOperationsTest extends TestCase {
 			
 		}
 	}
+	/**
+	 * Testing Addition method with zero
+	 */
 	@Test
 	public void testAddition3() {
 		for (int i=0; i<50; i++){
@@ -50,6 +65,9 @@ public class BasicOperationsTest extends TestCase {
 			
 		}
 	}
+	/**
+	 * Testing Subtraction method with positive numbers
+	 */
 	@Test
 	public void testSubtraction1() {
 		for (int i=0; i<50; i++){
@@ -61,6 +79,9 @@ public class BasicOperationsTest extends TestCase {
 			
 		}
 	}
+	/**
+	 * Testing Subtraction method with negative numbers
+	 */
 	@Test
 	public void testSubtraction2() {
 		for (int i=0; i<50; i++){
@@ -72,6 +93,9 @@ public class BasicOperationsTest extends TestCase {
 			
 		}
 	}
+	/**
+	 * Testing Subtraction method with zero
+	 */
 	@Test
 	public void testSubtraction3() {
 		for (int i=0; i<50; i++){
@@ -83,6 +107,9 @@ public class BasicOperationsTest extends TestCase {
 			
 		}
 	}
+	/**
+	 * Testing Multiplication method with positive numbers
+	 */
 	@Test
 	public void testMultiplication1() {
 		for (int i=0; i<50; i++){
@@ -94,6 +121,9 @@ public class BasicOperationsTest extends TestCase {
 			
 		}
 	}
+	/**
+	 * Testing Multiplication method with negative numbers
+	 */
 	@Test
 	public void testMultiplication2() {
 		for (int i=0; i<50; i++){
@@ -105,6 +135,9 @@ public class BasicOperationsTest extends TestCase {
 			
 		}
 	}
+	/**
+	 * Testing Multiplication method with zero
+	 */
 	@Test
 	public void testMultiplication3() {
 		for (int i=0; i<50; i++){
@@ -116,6 +149,9 @@ public class BasicOperationsTest extends TestCase {
 			
 		}
 	}
+	/**
+	 * Testing Division method with positive numbers
+	 */
 	@Test
 	public void testDivision1() {
 		for (int i=0; i<50; i++){
@@ -127,6 +163,9 @@ public class BasicOperationsTest extends TestCase {
 			
 		}
 	}
+	/**
+	 * Testing Multiplication method with negative numbers
+	 */
 	@Test
 	public void testDivision2() {
 		for (int i=0; i<50; i++){
@@ -138,6 +177,9 @@ public class BasicOperationsTest extends TestCase {
 			
 		}
 	}
+	/**
+	 * Testing Multiplication method with zero
+	 */
 	@Test
 	public void testDivision3() {
 		for (int i=0; i<50; i++){
