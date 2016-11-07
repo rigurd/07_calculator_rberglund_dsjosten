@@ -14,9 +14,10 @@ public class GuiTest_d extends TestCase{
 	Gui gui = new Gui();
 
 	@Test
-	public void GuiTest_dd(){
+	public void testAddComponentsToFrame(){
 		gui.addComponentsToFrame();
 	}
+	
 	@Test
 	public void testGuiButton7(){
 		
@@ -359,34 +360,73 @@ public class GuiTest_d extends TestCase{
 	public void testSetters(){
 		
 		gui.setBtn1(null);
+		gui.getBtn1();
 		gui.setBtn2(null);
+		gui.getBtn2();
 		gui.setBtn3(null);
+		gui.getBtn3();
 		gui.setBtn4(null);
+		gui.getBtn4();
 		gui.setBtn5(null);
+		gui.getBtn5();
 		gui.setBtn6(null);
+		gui.getBtn6();
 		gui.setBtn7(null);
+		gui.getBtn7();
 		gui.setBtn8(null);
+		gui.getBtn8();
 		gui.setBtn9(null);
+		gui.getBtn9();
 		gui.setBtn0(null);
+		gui.getBtn0();
 		gui.setBtn_addition(null);
+		gui.getBtn_addition();
 		gui.setBtn_subtraction(null);
+		gui.getBtn_subtraction();
 		gui.setBtn_division(null);
+		gui.getBtn_division();
 		gui.setBtn_multiply(null);
+		gui.getBtn_multiply();
 		gui.setBtn_squirt(null);
+		gui.getBtn_squirt();
 		gui.setBtn_degrees(null);
+		gui.getBtn_degrees();
 		gui.setBtn_radian(null);
+		gui.getBtn_radian();
 		gui.setBtn_random(null);
+		gui.getBtn_random();
 		gui.setBtn_pow(null);
+		gui.getBtn_pow();
 		gui.setBtn_mod(null);
+		gui.getBtn_mod();
 		gui.setBtn_equals(null);
+		gui.getBtn_equals();
 		gui.setBtn_clear(null);
+		gui.getBtn_clear();
 		gui.setAnswer(10.0);
+		gui.getAnswer();
+		gui.setsAnswer("Hej");
+		gui.getsAnswer();
+		gui.isEqualsClicked();
+		gui.isOpChosen();
+		gui.setOpChosen(true);
+		gui.setOperation('+');
+		gui.getOperation();
 		gui.setEqualsClicked(true);
 		gui.setField_input1(null);
+		gui.getField_input1();
 		gui.setField_input2(null);
+		gui.getField_input2();
 		gui.setField_result(null);
+		gui.getField_result();
 		gui.setLabel_choosenOperation(null);
+		gui.getLabel_choosenOperation();
 		gui.setLabel_equals(null);
+		gui.getLabel_equals();
+		gui.setValue1("Hej");
+		gui.getValue1();
+		gui.setValue2("Hej");
+		gui.getValue2();
 		
 		
 	}
