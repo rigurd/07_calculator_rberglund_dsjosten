@@ -1,23 +1,31 @@
 package junit_tests;
 
-import static org.junit.Assert.*;
-
-import java.awt.event.ActionEvent;
-
 import org.junit.Test;
 import classes.Gui;
 import junit.framework.TestCase;
 
+/**
+ * @author Rickard Bergund & Daniel Sjösten
+ * @since 9/11 - 2016
+ * @version 1.0
+ * 
+ */
 public class GuiTest_d extends TestCase{
 
 	
 	Gui gui = new Gui();
 
+	/**
+	 * Testing the method AddComponentsToFrame
+	 */
 	@Test
 	public void testAddComponentsToFrame(){
 		gui.addComponentsToFrame();
 	}
 	
+	/**
+	 * Testing GuiButton7 with 2 cases
+	 */
 	@Test
 	public void testGuiButton7(){
 		
@@ -34,6 +42,9 @@ public class GuiTest_d extends TestCase{
 		assertEquals("result should be 77", "77", gui.getValue2());
 	}
 	
+	/**
+	 * Testing GuiButton8 with 2 cases
+	 */
 	@Test
 	public void testGuiButton8(){
 		gui.addActionListners();
@@ -48,6 +59,9 @@ public class GuiTest_d extends TestCase{
 		gui.getBtn8().doClick();
 		assertEquals("result should be 88", "88", gui.getValue2());
 	}
+	/**
+	 * Testing GuiButton9 with 2 cases
+	 */
 	@Test
 	public void testGuiButton9(){
 		gui.addActionListners();
@@ -62,6 +76,9 @@ public class GuiTest_d extends TestCase{
 		gui.getBtn9().doClick();
 		assertEquals("result should be 99", "99", gui.getValue2());
 	}
+	/**
+	 * Testing GuiButton4 with 2 cases
+	 */
 	@Test
 	public void testGuiButton4(){
 		gui.addActionListners();
@@ -76,6 +93,9 @@ public class GuiTest_d extends TestCase{
 		gui.getBtn4().doClick();
 		assertEquals("result should be 44", "44", gui.getValue2());
 	}
+	/**
+	 * Testing GuiButton5 with 2 cases
+	 */
 	@Test
 	public void testGuiButton5(){
 		gui.addActionListners();
@@ -90,6 +110,9 @@ public class GuiTest_d extends TestCase{
 		gui.getBtn5().doClick();
 		assertEquals("result should be 55", "55", gui.getValue2());
 	}
+	/**
+	 * Testing GuiButton6 with 2 cases
+	 */
 	@Test
 	public void testGuiButton6(){
 		gui.addActionListners();
@@ -104,6 +127,9 @@ public class GuiTest_d extends TestCase{
 		gui.getBtn6().doClick();
 		assertEquals("result should be 66", "66", gui.getValue2());
 	}
+	/**
+	 * Testing GuiButton1 with 2 cases
+	 */
 	@Test
 	public void testGuiButton1(){
 		gui.addActionListners();
@@ -118,6 +144,9 @@ public class GuiTest_d extends TestCase{
 		gui.getBtn1().doClick();
 		assertEquals("result should be 11", "11", gui.getValue2());
 	}
+	/**
+	 * Testing GuiButton2 with 2 cases
+	 */
 	@Test
 	public void testGuiButton2(){
 		gui.addActionListners();
@@ -132,6 +161,9 @@ public class GuiTest_d extends TestCase{
 		gui.getBtn2().doClick();
 		assertEquals("result should be 22", "22", gui.getValue2());
 	}
+	/**
+	 * Testing GuiButton3 with 2 cases
+	 */
 	@Test
 	public void testGuiButton3(){
 		gui.addActionListners();
@@ -146,6 +178,9 @@ public class GuiTest_d extends TestCase{
 		gui.getBtn3().doClick();
 		assertEquals("result should be 33", "33", gui.getValue2());
 	}
+	/**
+	 * Testing GuiButton0 with 2 cases
+	 */
 	@Test
 	public void testGuiButton0(){
 		gui.addActionListners();
@@ -161,6 +196,9 @@ public class GuiTest_d extends TestCase{
 		assertEquals("result should be 00", "00", gui.getValue2());
 	}
 	
+	/**
+	 * Testing GuiButtonSqrt with 2 cases
+	 */
 	@Test
 	public void testGuiButtonSqrt(){
 		gui.addActionListners();
@@ -169,12 +207,15 @@ public class GuiTest_d extends TestCase{
 		gui.setValue1("1");
 		gui.getBtn_squirt().doClick();
 
-		//Case2. VARF�R T�CKER INTE DETTA DET ANDRA IF/ELSE????*****
+		//Case2
 		gui.setValue1("1");
 		gui.setValue2("2");
 		gui.getBtn_squirt().doClick();
 	}
 	
+	/**
+	 * Testing GuiButtonPow with 2 cases
+	 */
 	@Test
 	public void testGuiButtonPow(){ 
 		gui.addActionListners();
@@ -189,7 +230,9 @@ public class GuiTest_d extends TestCase{
 		gui.setValue2("2");
 		gui.getBtn_pow().doClick();
 	}
-	
+	/**
+	 * Testing GuiButtonDegrees with 2 cases
+	 */
 	@Test
 	public void testGuiButtonDegrees(){
 		gui.addActionListners();
@@ -203,7 +246,9 @@ public class GuiTest_d extends TestCase{
 		gui.setValue2("2");
 		gui.getBtn_degrees().doClick();
 	}
-	
+	/**
+	 * Testing GuiButtonRadian with 2 cases
+	 */
 	@Test
 	public void testGuiButtonRadian(){
 		gui.addActionListners();
@@ -217,6 +262,9 @@ public class GuiTest_d extends TestCase{
 		gui.setValue2("2");
 		gui.getBtn_radian().doClick();
 	}
+	/**
+	 * Testing GuiButtonAddition with 2 cases
+	 */
 	@Test
 	public void testGuiButtonAddition(){ 
 		gui.addActionListners();
@@ -230,6 +278,9 @@ public class GuiTest_d extends TestCase{
 		gui.setValue2("2");
 		gui.getBtn_addition().doClick();
 	}
+	/**
+	 * Testing GuiButtonSubtraction with 2 cases
+	 */
 	@Test
 	public void testGuiButtonSubtraction(){ 
 		gui.addActionListners();
@@ -243,6 +294,9 @@ public class GuiTest_d extends TestCase{
 		gui.setValue2("2");
 		gui.getBtn_subtraction().doClick();
 	}
+	/**
+	 * Testing GuiButtonDivision with 2 cases
+	 */
 	@Test
 	public void testGuiButtonDivision(){ 
 		gui.addActionListners();
@@ -256,6 +310,9 @@ public class GuiTest_d extends TestCase{
 		gui.setValue2("2");
 		gui.getBtn_division().doClick();
 	}
+	/**
+	 * Testing GuiButtonMultiply with 2 cases
+	 */
 	@Test
 	public void testGuiButtonMultiply(){ 
 		gui.addActionListners();
@@ -269,6 +326,9 @@ public class GuiTest_d extends TestCase{
 		gui.setValue2("2");
 		gui.getBtn_multiply().doClick();
 	}
+	/**
+	 * Testing GuiButtonRandom with 4 cases
+	 */
 	@Test
 	public void testGuiButtonRandom(){ 
 		gui.addActionListners();
@@ -287,6 +347,9 @@ public class GuiTest_d extends TestCase{
 		gui.setValue2("2");
 		gui.getBtn_random().doClick();
 	}
+	/**
+	 * Testing GuiButtonMod with 3 cases
+	 */
 	@Test
 	public void testGuiButtonMod(){ 
 		gui.addActionListners();
@@ -294,16 +357,17 @@ public class GuiTest_d extends TestCase{
 		gui.getBtn_mod().doClick();
 		//Case2. 
 		gui.setValue1("1");
-		//gui.setOpChosen(true);
 		gui.getBtn_mod().doClick();
 		//Case3. 
 		gui.setValue1("1");
 		gui.setValue2("2");
 		gui.getBtn_mod().doClick();
 	}
+	/**
+	 * Testing GuiButtonEquals with 4 cases
+	 */
 	@Test
 	public void testGuiButtonEquals(){ 
-		double a = gui.getAnswer();
 		
 		gui.addActionListners();
 		//Case1
@@ -341,6 +405,9 @@ public class GuiTest_d extends TestCase{
 		
 		
 	}
+	/**
+	 * Testing GuiButtonClear with 1 case
+	 */
 	@Test
 	public void testGuiButtonClear(){ 
 		gui.addActionListners();
@@ -356,6 +423,9 @@ public class GuiTest_d extends TestCase{
 
 
 	
+	/**
+	 * Testing all getters and setters
+	 */
 	@Test
 	public void testSetters(){
 		
