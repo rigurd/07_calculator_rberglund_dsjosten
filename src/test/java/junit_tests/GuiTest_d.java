@@ -302,7 +302,7 @@ public class GuiTest_d extends TestCase{
 	}
 	@Test
 	public void testGuiButtonEquals(){ 
-		double a = 0.0;
+		double a = gui.getAnswer();
 		
 		gui.addActionListners();
 		//Case1
@@ -321,28 +321,21 @@ public class GuiTest_d extends TestCase{
 		gui.setValue2("5");
 		
 		gui.setOperation('+');
-		a = 10.0;
-		assertEquals(a, 5.0, 5.0);
 		gui.getBtn_equals().doClick();
 		
 		gui.setOperation('-');
-		assertEquals(a, 15.0, 5.0);
 		gui.getBtn_equals().doClick();
 		
 		gui.setOperation('*');
-		assertEquals(a, 2.0, 10.0);
 		gui.getBtn_equals().doClick();
 		
 		gui.setOperation('/');
-		assertEquals(a, 10.0);
 		gui.getBtn_equals().doClick();
 		
 		gui.setOperation('%');
-		assertEquals(a, 50.0, 40.0);
 		gui.getBtn_equals().doClick();
 		
 		gui.setOperation('P');
-		assertEquals(a, 15.0, 5.0);
 		gui.getBtn_equals().doClick();
 		
 		
