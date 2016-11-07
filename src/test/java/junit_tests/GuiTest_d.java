@@ -1,9 +1,5 @@
 package junit_tests;
 
-import static org.junit.Assert.*;
-
-import java.awt.event.ActionEvent;
-
 import org.junit.Test;
 import classes.Gui;
 import junit.framework.TestCase;
@@ -303,7 +299,6 @@ public class GuiTest_d extends TestCase{
 	}
 	@Test
 	public void testGuiButtonEquals(){ 
-		double a = gui.getAnswer();
 		
 		gui.addActionListners();
 		//Case1
