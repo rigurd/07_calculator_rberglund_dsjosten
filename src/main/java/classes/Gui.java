@@ -23,11 +23,6 @@ public class Gui extends JFrame implements ActionListener {
 	
 	JFrame frmCalculator;
 	private String value1 = null, value2 = null, sAnswer;
-	// String value1 = "";
-	// String value2 = "";
-
-	// double number1 = 0;
-	// double number2 = 0;
 
 	private double answer = 0.0;
 	boolean equalsClicked = false;
@@ -946,12 +941,12 @@ public class Gui extends JFrame implements ActionListener {
         this.label_choosenOperation = label_choosenOperation;
     }
 
-    public JLabel getLblInput() {
-        return lblInput;
-    }
-
-    public JLabel getLblInput_1() {
-        return lblInput_1;
-    }
+//    public JLabel getLblInput() {
+//        return lblInput;
+//    }
+//
+//    public JLabel getLblInput_1() {
+//        return lblInput_1;
+//    }
 
 } // Class

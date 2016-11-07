@@ -14,7 +14,7 @@ public class GuiTest_d extends TestCase{
 	Gui gui = new Gui();
 
 	@Test
-	public void GuiTest_d(){
+	public void GuiTest_dd(){
 		gui.addComponentsToFrame();
 	}
 	@Test
