@@ -2,136 +2,136 @@
 <testng-results skipped="0" failed="0" total="31" passed="31">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="1077" started-at="2016-11-07T11:54:46Z" finished-at="2016-11-07T11:54:47Z">
+  <suite name="Surefire suite" duration-ms="1176" started-at="2016-11-07T12:02:43Z" finished-at="2016-11-07T12:02:44Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="1077" started-at="2016-11-07T11:54:46Z" finished-at="2016-11-07T11:54:47Z">
+    <test name="Surefire test" duration-ms="1176" started-at="2016-11-07T12:02:43Z" finished-at="2016-11-07T12:02:44Z">
       <class name="junit_tests.AdvancedOperationsTest">
-        <test-method status="PASS" signature="testPow1()[pri:0, instance:testPow1(junit_tests.AdvancedOperationsTest)]" name="testPow1" duration-ms="12" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testPow1()[pri:0, instance:testPow1(junit_tests.AdvancedOperationsTest)]" name="testPow1" duration-ms="15" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPow1 -->
-        <test-method status="PASS" signature="testPow2()[pri:0, instance:testPow2(junit_tests.AdvancedOperationsTest)]" name="testPow2" duration-ms="12" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testPow2()[pri:0, instance:testPow2(junit_tests.AdvancedOperationsTest)]" name="testPow2" duration-ms="30" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPow2 -->
-        <test-method status="PASS" signature="testPow3()[pri:0, instance:testPow3(junit_tests.AdvancedOperationsTest)]" name="testPow3" duration-ms="128" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testPow3()[pri:0, instance:testPow3(junit_tests.AdvancedOperationsTest)]" name="testPow3" duration-ms="16" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPow3 -->
-        <test-method status="PASS" signature="testToRadians1()[pri:0, instance:testToRadians1(junit_tests.AdvancedOperationsTest)]" name="testToRadians1" duration-ms="24" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testToRadians1()[pri:0, instance:testToRadians1(junit_tests.AdvancedOperationsTest)]" name="testToRadians1" duration-ms="12" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testToRadians1 -->
-        <test-method status="PASS" signature="testToRadians2()[pri:0, instance:testToRadians2(junit_tests.AdvancedOperationsTest)]" name="testToRadians2" duration-ms="20" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testToRadians2()[pri:0, instance:testToRadians2(junit_tests.AdvancedOperationsTest)]" name="testToRadians2" duration-ms="17" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testToRadians2 -->
-        <test-method status="PASS" signature="testToRadians3()[pri:0, instance:testToRadians3(junit_tests.AdvancedOperationsTest)]" name="testToRadians3" duration-ms="7" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testToRadians3()[pri:0, instance:testToRadians3(junit_tests.AdvancedOperationsTest)]" name="testToRadians3" duration-ms="20" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testToRadians3 -->
-        <test-method status="PASS" signature="testSquareRoot1()[pri:0, instance:testSquareRoot1(junit_tests.AdvancedOperationsTest)]" name="testSquareRoot1" duration-ms="6" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testSquareRoot1()[pri:0, instance:testSquareRoot1(junit_tests.AdvancedOperationsTest)]" name="testSquareRoot1" duration-ms="20" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSquareRoot1 -->
-        <test-method status="PASS" signature="testSquareRoot2()[pri:0, instance:testSquareRoot2(junit_tests.AdvancedOperationsTest)]" name="testSquareRoot2" duration-ms="7" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testSquareRoot2()[pri:0, instance:testSquareRoot2(junit_tests.AdvancedOperationsTest)]" name="testSquareRoot2" duration-ms="29" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSquareRoot2 -->
-        <test-method status="PASS" signature="testSquareRoot3()[pri:0, instance:testSquareRoot3(junit_tests.AdvancedOperationsTest)]" name="testSquareRoot3" duration-ms="5" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testSquareRoot3()[pri:0, instance:testSquareRoot3(junit_tests.AdvancedOperationsTest)]" name="testSquareRoot3" duration-ms="9" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSquareRoot3 -->
-        <test-method status="PASS" signature="testToDegrees1()[pri:0, instance:testToDegrees1(junit_tests.AdvancedOperationsTest)]" name="testToDegrees1" duration-ms="7" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testToDegrees1()[pri:0, instance:testToDegrees1(junit_tests.AdvancedOperationsTest)]" name="testToDegrees1" duration-ms="15" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testToDegrees1 -->
-        <test-method status="PASS" signature="testToDegrees2()[pri:0, instance:testToDegrees2(junit_tests.AdvancedOperationsTest)]" name="testToDegrees2" duration-ms="11" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testToDegrees2()[pri:0, instance:testToDegrees2(junit_tests.AdvancedOperationsTest)]" name="testToDegrees2" duration-ms="15" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testToDegrees2 -->
-        <test-method status="PASS" signature="testToDegrees3()[pri:0, instance:testToDegrees3(junit_tests.AdvancedOperationsTest)]" name="testToDegrees3" duration-ms="5" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testToDegrees3()[pri:0, instance:testToDegrees3(junit_tests.AdvancedOperationsTest)]" name="testToDegrees3" duration-ms="5" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testToDegrees3 -->
-        <test-method status="PASS" signature="testRandom1()[pri:0, instance:testRandom1(junit_tests.AdvancedOperationsTest)]" name="testRandom1" duration-ms="6" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testRandom1()[pri:0, instance:testRandom1(junit_tests.AdvancedOperationsTest)]" name="testRandom1" duration-ms="5" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRandom1 -->
-        <test-method status="PASS" signature="testRandom2()[pri:0, instance:testRandom2(junit_tests.AdvancedOperationsTest)]" name="testRandom2" duration-ms="5" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testRandom2()[pri:0, instance:testRandom2(junit_tests.AdvancedOperationsTest)]" name="testRandom2" duration-ms="6" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRandom2 -->
-        <test-method status="PASS" signature="testRandom3()[pri:0, instance:testRandom3(junit_tests.AdvancedOperationsTest)]" name="testRandom3" duration-ms="5" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testRandom3()[pri:0, instance:testRandom3(junit_tests.AdvancedOperationsTest)]" name="testRandom3" duration-ms="9" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRandom3 -->
-        <test-method status="PASS" signature="testModula1()[pri:0, instance:testModula1(junit_tests.AdvancedOperationsTest)]" name="testModula1" duration-ms="5" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testModula1()[pri:0, instance:testModula1(junit_tests.AdvancedOperationsTest)]" name="testModula1" duration-ms="25" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testModula1 -->
-        <test-method status="PASS" signature="testModula2()[pri:0, instance:testModula2(junit_tests.AdvancedOperationsTest)]" name="testModula2" duration-ms="6" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testModula2()[pri:0, instance:testModula2(junit_tests.AdvancedOperationsTest)]" name="testModula2" duration-ms="31" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testModula2 -->
-        <test-method status="PASS" signature="testModula3()[pri:0, instance:testModula3(junit_tests.AdvancedOperationsTest)]" name="testModula3" duration-ms="12" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testModula3()[pri:0, instance:testModula3(junit_tests.AdvancedOperationsTest)]" name="testModula3" duration-ms="23" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testModula3 -->
       </class> <!-- junit_tests.AdvancedOperationsTest -->
       <class name="junit_tests.BasicOperationsTest">
-        <test-method status="PASS" signature="testMultiplication1()[pri:0, instance:testMultiplication1(junit_tests.BasicOperationsTest)]" name="testMultiplication1" duration-ms="58" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testMultiplication1()[pri:0, instance:testMultiplication1(junit_tests.BasicOperationsTest)]" name="testMultiplication1" duration-ms="62" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMultiplication1 -->
-        <test-method status="PASS" signature="testMultiplication2()[pri:0, instance:testMultiplication2(junit_tests.BasicOperationsTest)]" name="testMultiplication2" duration-ms="79" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testMultiplication2()[pri:0, instance:testMultiplication2(junit_tests.BasicOperationsTest)]" name="testMultiplication2" duration-ms="37" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMultiplication2 -->
-        <test-method status="PASS" signature="testMultiplication3()[pri:0, instance:testMultiplication3(junit_tests.BasicOperationsTest)]" name="testMultiplication3" duration-ms="30" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testMultiplication3()[pri:0, instance:testMultiplication3(junit_tests.BasicOperationsTest)]" name="testMultiplication3" duration-ms="36" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMultiplication3 -->
-        <test-method status="PASS" signature="testDivision1()[pri:0, instance:testDivision1(junit_tests.BasicOperationsTest)]" name="testDivision1" duration-ms="27" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testDivision1()[pri:0, instance:testDivision1(junit_tests.BasicOperationsTest)]" name="testDivision1" duration-ms="37" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDivision1 -->
-        <test-method status="PASS" signature="testDivision2()[pri:0, instance:testDivision2(junit_tests.BasicOperationsTest)]" name="testDivision2" duration-ms="59" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testDivision2()[pri:0, instance:testDivision2(junit_tests.BasicOperationsTest)]" name="testDivision2" duration-ms="57" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDivision2 -->
-        <test-method status="PASS" signature="testDivision3()[pri:0, instance:testDivision3(junit_tests.BasicOperationsTest)]" name="testDivision3" duration-ms="61" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testDivision3()[pri:0, instance:testDivision3(junit_tests.BasicOperationsTest)]" name="testDivision3" duration-ms="59" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDivision3 -->
-        <test-method status="PASS" signature="testAddition1()[pri:0, instance:testAddition1(junit_tests.BasicOperationsTest)]" name="testAddition1" duration-ms="21" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testAddition1()[pri:0, instance:testAddition1(junit_tests.BasicOperationsTest)]" name="testAddition1" duration-ms="32" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddition1 -->
-        <test-method status="PASS" signature="testAddition2()[pri:0, instance:testAddition2(junit_tests.BasicOperationsTest)]" name="testAddition2" duration-ms="9" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testAddition2()[pri:0, instance:testAddition2(junit_tests.BasicOperationsTest)]" name="testAddition2" duration-ms="34" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddition2 -->
-        <test-method status="PASS" signature="testAddition3()[pri:0, instance:testAddition3(junit_tests.BasicOperationsTest)]" name="testAddition3" duration-ms="8" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testAddition3()[pri:0, instance:testAddition3(junit_tests.BasicOperationsTest)]" name="testAddition3" duration-ms="8" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddition3 -->
-        <test-method status="PASS" signature="testSubtraction1()[pri:0, instance:testSubtraction1(junit_tests.BasicOperationsTest)]" name="testSubtraction1" duration-ms="38" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testSubtraction1()[pri:0, instance:testSubtraction1(junit_tests.BasicOperationsTest)]" name="testSubtraction1" duration-ms="10" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSubtraction1 -->
-        <test-method status="PASS" signature="testSubtraction2()[pri:0, instance:testSubtraction2(junit_tests.BasicOperationsTest)]" name="testSubtraction2" duration-ms="9" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testSubtraction2()[pri:0, instance:testSubtraction2(junit_tests.BasicOperationsTest)]" name="testSubtraction2" duration-ms="19" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSubtraction2 -->
-        <test-method status="PASS" signature="testSubtraction3()[pri:0, instance:testSubtraction3(junit_tests.BasicOperationsTest)]" name="testSubtraction3" duration-ms="8" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:46Z">
+        <test-method status="PASS" signature="testSubtraction3()[pri:0, instance:testSubtraction3(junit_tests.BasicOperationsTest)]" name="testSubtraction3" duration-ms="6" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSubtraction3 -->
       </class> <!-- junit_tests.BasicOperationsTest -->
       <class name="junit_tests.MainTest">
-        <test-method status="PASS" signature="testMain()[pri:0, instance:testMain(junit_tests.MainTest)]" name="testMain" duration-ms="238" started-at="2016-11-07T12:54:46Z" finished-at="2016-11-07T12:54:47Z">
+        <test-method status="PASS" signature="testMain()[pri:0, instance:testMain(junit_tests.MainTest)]" name="testMain" duration-ms="325" started-at="2016-11-07T13:02:43Z" finished-at="2016-11-07T13:02:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMain -->
